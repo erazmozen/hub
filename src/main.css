@@ -1,3 +1,5 @@
+/* ------ Navbar */
+
 .background-rounded {
   background-color: gray;
   color: white;
@@ -19,3 +21,5 @@
   display: flex;
   align-items: baseline;
 }
+
+/* Navbar ------ */
