@@ -12,9 +12,10 @@
 .header-wrapper {
   justify-content: space-between;
   padding: 1rem 1.5rem;
+  color: white;
 }
 
-.icons-wrapper > p {
+.icons-wrapper > * {
   margin-left: 1rem;
 }
 
@@ -23,6 +24,13 @@
 .icons-wrapper {
   display: flex;
   align-items: baseline;
+}
+
+.header-settigns {
+  display: flex;
+}
+.header-settigns p {
+  margin-right: 0.4rem;
 }
 
 /* Navbar ------ */
