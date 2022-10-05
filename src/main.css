@@ -58,6 +58,28 @@
   background-color: var(--secondary);
 }
 
+.search-wrapper input {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background 0.15s ease-in-out;
+}
+
+.search-wrapper input::placeholder {
+  color: white;
+}
+
+.search-wrapper input:focus {
+  background-color: white;
+}
+
+.search-wrapper input::placeholder:focus {
+  color: black;
+}
+
 /* Navbar ------ */
 
 /* ------ Sidebar */

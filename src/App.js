@@ -44,7 +44,9 @@ function App() {
       </div>
       <div className="sidebar-wrapper background-rounded">
         <div className="sidebar-top">
-          <div>Search</div>
+          <div className="search-wrapper">
+            <input placeholder="Search" />
+          </div>
           <div className="todo">
             <div className="todo-icons">
               <FiPlusSquare />
