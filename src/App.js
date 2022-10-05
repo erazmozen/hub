@@ -6,6 +6,9 @@ import { FiSettings } from "react-icons/fi";
 import { FiPlusSquare } from "react-icons/fi";
 import { FiMinusSquare } from "react-icons/fi";
 import { FiFilter } from "react-icons/fi";
+import { FaUser } from "react-icons/fa";
+import { FaPaintBrush } from "react-icons/fa";
+import { FaChevronRight } from "react-icons/fa";
 
 function App() {
   return (
@@ -23,6 +26,20 @@ function App() {
         <div className="header-settigns">
           <p>Settings</p>
           <FiSettings size={18} />
+          <div className="settings-popup background-rounded">
+            <div>
+              <FaUser />
+              <p>Profile</p>
+            </div>
+            <div>
+              <FaPaintBrush />
+              <p>Theme</p>
+            </div>
+            <div>
+              <FaChevronRight />
+              <p>Logout</p>
+            </div>
+          </div>
         </div>
       </div>
       <div className="sidebar-wrapper background-rounded">

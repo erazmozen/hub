@@ -33,6 +33,31 @@
   margin-right: 0.4rem;
 }
 
+.settings-popup {
+  position: absolute;
+  right: 3px;
+  top: 80px;
+  padding: 0.6rem;
+  background-color: var(--secondary-pale);
+}
+
+.settings-popup > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.settings-popup > div > p {
+  margin-left: 0.4rem;
+}
+
+.settings-popup div:hover {
+  background-color: var(--secondary);
+}
+
 /* Navbar ------ */
 
 /* ------ Sidebar */
