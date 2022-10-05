@@ -1,0 +1,21 @@
+.background-rounded {
+  background-color: gray;
+  color: white;
+  border-radius: 12px;
+}
+
+.header-wrapper {
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.icons-wrapper > p {
+  margin-left: 1rem;
+}
+
+.header-wrapper,
+.logo-wrapper,
+.icons-wrapper {
+  display: flex;
+  align-items: baseline;
+}

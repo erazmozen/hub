@@ -3,11 +3,11 @@ import "./main.css";
 function App() {
   return (
     <div>
-      <div className="header-wrapper">
-        <div>
-          <div>
+      <div>
+        <div className="header-wrapper background-rounded">
+          <div className="logo-wrapper">
             <h3>Er</h3>
-            <div>
+            <div className="icons-wrapper">
               <p>Git</p>
               <p>LinkedIn</p>
               <p>Contact</p>
