@@ -1,7 +1,9 @@
+@import "./colorpalette.css";
+
 /* ------ Navbar */
 
 .background-rounded {
-  background-color: gray;
+  background-color: var(--secondary);
   color: white;
   border-radius: 12px;
   margin: 1rem;
