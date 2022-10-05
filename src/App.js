@@ -1,4 +1,4 @@
-import { MdAccessibilityNew } from "react-icons/md";
+import "./main.css";
 
 function App() {
   return (
