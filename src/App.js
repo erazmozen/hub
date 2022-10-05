@@ -28,7 +28,7 @@ function App() {
           <div>+38154443123</div>
         </div>
       </div>
-      <div>Footer</div>
+      <div className="footer-wrapper background-rounded">Footer</div>
     </div>
   );
 }
