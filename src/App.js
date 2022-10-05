@@ -3,6 +3,9 @@ import { FiGithub } from "react-icons/fi";
 import { GrLinkedinOption } from "react-icons/gr";
 import { FiBookOpen } from "react-icons/fi";
 import { FiSettings } from "react-icons/fi";
+import { FiPlusSquare } from "react-icons/fi";
+import { FiMinusSquare } from "react-icons/fi";
+import { FiFilter } from "react-icons/fi";
 
 function App() {
   return (
@@ -25,7 +28,26 @@ function App() {
       <div className="sidebar-wrapper background-rounded">
         <div className="sidebar-top">
           <div>Search</div>
-          <div>Todo</div>
+          <div className="todo">
+            <div className="todo-icons">
+              <FiPlusSquare />
+              <FiFilter />
+            </div>
+            <ul>
+              <li>
+                <FiMinusSquare />
+                <h4 className="todo-title">Lets put some</h4>
+              </li>
+              <li>
+                <FiMinusSquare />
+                <h4 className="todo-title">Random text here</h4>
+              </li>
+              <li>
+                <FiMinusSquare />
+                <h4 className="todo-title">To show some todos</h4>
+              </li>
+            </ul>
+          </div>
           <div>Projects</div>
           <div>Contact</div>
         </div>

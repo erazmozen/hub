@@ -50,6 +50,32 @@
   padding: 0.4rem;
 }
 
+.todo {
+  background-color: var(--secondary-pale);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.todo-icons {
+  padding-top: 0.1rem;
+  font-size: 1.4rem;
+}
+
+.todo-title {
+  margin-left: 0.3rem;
+}
+
+.todo ul {
+  margin-top: 0.4rem;
+  list-style: none;
+}
+
+.todo li {
+  display: flex;
+  padding: 0.4rem;
+  align-items: center;
+}
+
 /* Sidebar ------ */
 
 /* ------ Footer */
