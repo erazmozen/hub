@@ -17,7 +17,17 @@ function App() {
           <div>Settings</div>
         </div>
       </div>
-      <div>Sidebar</div>
+      <div className="sidebar-wrapper background-rounded">
+        <div className="sidebar-top">
+          <div>Search</div>
+          <div>Todo</div>
+          <div>Projects</div>
+          <div>Contact</div>
+        </div>
+        <div className="sidebar-bottom">
+          <div>+38154443123</div>
+        </div>
+      </div>
       <div>Footer</div>
     </div>
   );

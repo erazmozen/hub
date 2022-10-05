@@ -4,6 +4,7 @@
   background-color: gray;
   color: white;
   border-radius: 12px;
+  margin: 1rem;
 }
 
 .header-wrapper {
@@ -23,3 +24,20 @@
 }
 
 /* Navbar ------ */
+
+/* ------ Sidebar */
+
+.sidebar-wrapper {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.4rem;
+}
+
+.sidebar-top > div {
+  padding: 0.4rem;
+}
+
+/* Sidebar ------ */
