@@ -1,14 +1,5 @@
 import "./main.css";
-import { FiGithub } from "react-icons/fi";
-import { GrLinkedinOption } from "react-icons/gr";
-import { FiBookOpen } from "react-icons/fi";
-import { FiSettings } from "react-icons/fi";
-import { FiPlusSquare } from "react-icons/fi";
-import { FiMinusSquare } from "react-icons/fi";
-import { FiFilter } from "react-icons/fi";
-import { FaUser } from "react-icons/fa";
-import { FaPaintBrush } from "react-icons/fa";
-import { FaChevronRight } from "react-icons/fa";
+import icons from "./icons";
 
 function App() {
   return (
@@ -17,26 +8,26 @@ function App() {
         <div className="logo-wrapper">
           <h3>Er</h3>
           <div className="icons-wrapper">
-            <FiGithub />
-            <GrLinkedinOption />
-            <FiBookOpen />
+            <icons.FiGithub />
+            <icons.GrLinkedinOption />
+            <icons.FiBookOpen />
           </div>
         </div>
         <div>Clock</div>
         <div className="header-settigns">
           <p>Settings</p>
-          <FiSettings size={18} />
+          <icons.FiSettings size={18} />
           <div className="settings-popup background-rounded">
             <div>
-              <FaUser />
+              <icons.FaUser />
               <p>Profile</p>
             </div>
             <div>
-              <FaPaintBrush />
+              <icons.FaPaintBrush />
               <p>Theme</p>
             </div>
             <div>
-              <FaChevronRight />
+              <icons.FaChevronRight />
               <p>Logout</p>
             </div>
           </div>
@@ -49,20 +40,20 @@ function App() {
           </div>
           <div className="todo">
             <div className="todo-icons">
-              <FiPlusSquare />
-              <FiFilter />
+              <icons.FiPlusSquare />
+              <icons.FiFilter />
             </div>
             <ul>
               <li>
-                <FiMinusSquare />
+                <icons.FiMinusSquare />
                 <h4 className="todo-title">Lets put some</h4>
               </li>
               <li>
-                <FiMinusSquare />
+                <icons.FiMinusSquare />
                 <h4 className="todo-title">Random text here</h4>
               </li>
               <li>
-                <FiMinusSquare />
+                <icons.FiMinusSquare />
                 <h4 className="todo-title">To show some todos</h4>
               </li>
             </ul>
