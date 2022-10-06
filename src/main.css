@@ -151,9 +151,14 @@ body {
 .todo li {
   display: flex;
   padding: 0.4rem;
-  align-items: center;
   opacity: 0.8;
   transition: opacity 0.4s ease;
+}
+
+.todo button {
+  background: none;
+  border: none;
+  color: white;
 }
 
 .minus-icon {
