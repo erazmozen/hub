@@ -12,15 +12,15 @@ const Sidebar = ({ icons }) => {
           </div>
           <ul>
             <li>
-              <icons.FiMinusSquare />
+              <icons.FiMinusSquare className="minus-icon" />
               <h4 className="todo-title">Lets put some</h4>
             </li>
             <li>
-              <icons.FiMinusSquare />
+              <icons.FiMinusSquare className="minus-icon" />
               <h4 className="todo-title">Random text here</h4>
             </li>
             <li>
-              <icons.FiMinusSquare />
+              <icons.FiMinusSquare className="minus-icon" />
               <h4 className="todo-title">To show some todos</h4>
             </li>
           </ul>
