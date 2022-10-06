@@ -14,7 +14,6 @@ function App() {
     <div className="main">
       <Header icons={icons} />
       <Sidebar icons={icons} setSidebarToggle={setSidebarToggle} />
-      {toString(sidebarToggle)}
       <Footer />
     </div>
   );
