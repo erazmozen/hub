@@ -20,6 +20,19 @@ body {
   position: relative;
 }
 
+.header-wrapper button {
+  font-size: 1rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.header-wrapper h3 {
+  margin-left: 0.3rem;
+}
+
 .icons-wrapper > * {
   margin-left: 1rem;
 }
