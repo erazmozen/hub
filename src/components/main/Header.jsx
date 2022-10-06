@@ -1,25 +1,31 @@
+import { useState } from "react";
 import Button from "../side/Button";
 import Popup from "../side/Popup";
 
 const Header = ({ icons, toggleSidebar }) => {
+  const [togglePopup, setTogglePopup] = useState(true);
+
+  function togglePopupFunction() {
+    setTogglePopup((prev) => (prev = !prev));
+  }
+
   return (
     <div className="header-wrapper background-rounded">
       <div className="logo-wrapper">
         <button onClick={toggleSidebar}>
           <icons.BsToggles />
         </button>
-        <h3>Er</h3>
         <div className="icons-wrapper">
-          <icons.FiGithub />
           <icons.GrLinkedinOption />
+          <icons.FiGithub />
           <icons.FiBookOpen />
         </div>
       </div>
       <div>Clock</div>
-      <div className="header-settigns">
+      <div onClick={togglePopupFunction} className="header-settigns">
         <p>Settings</p>
-        <icons.FiSettings size={18} />
-        <Popup icons={icons} />
+        <icons.FiSettings />
+        {togglePopup && <Popup icons={icons} />}
       </div>
     </div>
   );
