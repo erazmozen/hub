@@ -6,14 +6,19 @@ import Footer from "./components/main/Footer";
 import { useState } from "react";
 
 function App() {
-  const [sidebarToggle, setSidebarToggle] = useState(1);
+  const [sidebarToggle, setSidebarToggle] = useState(true);
+
+  function toggleSidebar() {
+    console.log("toggleSiedbar");
+    setSidebarToggle((prev) => (prev = !prev));
+  }
 
   console.log(sidebarToggle);
 
   return (
     <div className="main">
-      <Header icons={icons} />
-      <Sidebar icons={icons} setSidebarToggle={setSidebarToggle} />
+      <Header icons={icons} toggleSidebar={toggleSidebar} />
+      {sidebarToggle && <Sidebar icons={icons} toggleSidebar={toggleSidebar} />}
       <Footer />
     </div>
   );

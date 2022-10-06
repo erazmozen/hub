@@ -2,12 +2,7 @@ import Button from "../side/Button";
 import Todo from "../side/Todo";
 import { useRef } from "react";
 
-const Sidebar = ({ icons, setSidebarToggle }) => {
-  function updateSidebar() {
-    console.log("updateSiedbar");
-    setSidebarToggle((prev) => (prev = !prev));
-  }
-
+const Sidebar = ({ icons, toggleSidebar }) => {
   const searchInput = useRef("");
 
   return (
@@ -15,7 +10,7 @@ const Sidebar = ({ icons, setSidebarToggle }) => {
       <div className="sidebar-top">
         <div className="search-wrapper">
           <input ref={searchInput} placeholder="Search" />
-          <button onClick={updateSidebar}>
+          <button onClick={toggleSidebar}>
             <icons.IoMdClose />
           </button>
         </div>

@@ -1,9 +1,13 @@
+import Button from "../side/Button";
 import Popup from "../side/Popup";
 
-const Header = ({ icons }) => {
+const Header = ({ icons, toggleSidebar }) => {
   return (
     <div className="header-wrapper background-rounded">
       <div className="logo-wrapper">
+        <button onClick={toggleSidebar}>
+          <icons.BsToggles />
+        </button>
         <h3>Er</h3>
         <div className="icons-wrapper">
           <icons.FiGithub />
