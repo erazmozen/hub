@@ -1,4 +1,5 @@
 import Button from "../side/Button";
+import Todo from "../side/Todo";
 
 const Sidebar = ({ icons, setSidebarToggle }) => {
   function updateSidebar() {
@@ -15,26 +16,8 @@ const Sidebar = ({ icons, setSidebarToggle }) => {
             <icons.IoMdClose />
           </button>
         </div>
-        <div className="todo">
-          <div className="todo-icons">
-            <icons.FiPlusSquare />
-            <icons.FiFilter />
-          </div>
-          <ul>
-            <li>
-              <icons.FiMinusSquare className="minus-icon" />
-              <h4 className="todo-title">Lets put some</h4>
-            </li>
-            <li>
-              <icons.FiMinusSquare className="minus-icon" />
-              <h4 className="todo-title">Random text here</h4>
-            </li>
-            <li>
-              <icons.FiMinusSquare className="minus-icon" />
-              <h4 className="todo-title">To show some todos</h4>
-            </li>
-          </ul>
-        </div>
+
+        <Todo icons={icons} />
 
         <Button title="Projects" />
         <Button title="Contact" />
