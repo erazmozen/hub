@@ -46,24 +46,25 @@ body {
   background-color: var(--secondary-pale);
 }
 
-.settings-popup > button {
+.common-button {
   background-color: var(--secondary-pale);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.6rem 0.8rem;
+  margin: 0.2rem 0;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   transition: background 0.2s ease-in-out;
 }
 
-.settings-popup > button:hover {
+.common-button:hover {
   background-color: var(--secondary);
 }
 
-.settings-popup > button svg {
+.common-button svg {
   margin-right: 0.3rem;
 }
 
@@ -116,6 +117,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   padding: 1.4rem;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
 }
 
 .sidebar-top > div {
