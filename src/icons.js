@@ -8,6 +8,7 @@ import { FiFilter } from "react-icons/fi";
 import { FaUser } from "react-icons/fa";
 import { FaPaintBrush } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 const icons = {
   FiGithub,
@@ -20,6 +21,7 @@ const icons = {
   FaUser,
   FaPaintBrush,
   FaChevronRight,
+  IoMdClose,
 };
 
 export default icons;

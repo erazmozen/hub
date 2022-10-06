@@ -1,9 +1,17 @@
-const Sidebar = ({ icons }) => {
+const Sidebar = ({ icons, setSidebarToggle }) => {
+  function updateSidebar() {
+    console.log("updateSiedbar");
+    setSidebarToggle((prev) => (prev = !prev));
+  }
+
   return (
     <div className="sidebar-wrapper background-rounded">
       <div className="sidebar-top">
         <div className="search-wrapper">
           <input placeholder="Search" />
+          <button onClick={updateSidebar}>
+            <icons.IoMdClose />
+          </button>
         </div>
         <div className="todo">
           <div className="todo-icons">

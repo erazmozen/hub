@@ -63,8 +63,13 @@ body {
   background-color: var(--secondary);
 }
 
-.search-wrapper input {
-  width: 100%;
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-wrapper input,
+.search-wrapper button {
   padding: 0.6rem;
   border-radius: 12px;
   border: none;
@@ -73,16 +78,27 @@ body {
   transition: background 0.15s ease-in-out;
 }
 
-.search-wrapper input::placeholder {
+.search-wrapper button {
+  width: 35px;
   color: white;
+}
+
+.search-wrapper input {
+  width: 70%;
+  color: white;
+}
+
+.search-wrapper input:active {
+  color: black;
 }
 
 .search-wrapper input:focus {
   background-color: white;
+  color: black;
 }
 
-.search-wrapper input::placeholder:focus {
-  color: black;
+.search-wrapper input::placeholder {
+  color: white;
 }
 
 /* Navbar ------ */
