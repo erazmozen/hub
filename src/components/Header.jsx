@@ -1,3 +1,5 @@
+import Popup from "./Popup";
+
 const Header = ({ icons }) => {
   return (
     <div className="header-wrapper background-rounded">
@@ -13,20 +15,7 @@ const Header = ({ icons }) => {
       <div className="header-settigns">
         <p>Settings</p>
         <icons.FiSettings size={18} />
-        <div className="settings-popup background-rounded">
-          <div>
-            <icons.FaUser />
-            <p>Profile</p>
-          </div>
-          <div>
-            <icons.FaPaintBrush />
-            <p>Theme</p>
-          </div>
-          <div>
-            <icons.FaChevronRight />
-            <p>Logout</p>
-          </div>
-        </div>
+        <Popup icons={icons} />
       </div>
     </div>
   );
