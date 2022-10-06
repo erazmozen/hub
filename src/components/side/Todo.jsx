@@ -21,8 +21,8 @@ const Todo = ({ icons, searchInput }) => {
         <icons.FiFilter />
       </div>
       <ul>
-        {todos.map((todo) => (
-          <li>
+        {todos.map((todo, index) => (
+          <li key={index}>
             <icons.FiMinusSquare className="minus-icon" />
             <h4 className="todo-title">{todo.title}</h4>
           </li>
