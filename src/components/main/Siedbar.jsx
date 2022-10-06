@@ -1,3 +1,5 @@
+import Button from "../side/Button";
+
 const Sidebar = ({ icons, setSidebarToggle }) => {
   function updateSidebar() {
     console.log("updateSiedbar");
@@ -33,8 +35,9 @@ const Sidebar = ({ icons, setSidebarToggle }) => {
             </li>
           </ul>
         </div>
-        <div>Projects</div>
-        <div>Contact</div>
+
+        <Button title="Projects" />
+        <Button title="Contact" />
       </div>
       <div className="sidebar-bottom">
         <div>+38154443123</div>
