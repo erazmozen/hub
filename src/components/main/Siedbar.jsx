@@ -14,9 +14,7 @@ const Sidebar = ({ icons, toggleSidebar }) => {
             <icons.IoMdClose />
           </button>
         </div>
-
         <Todo icons={icons} searchInput={searchInput} />
-
         <Button title="Projects" />
         <Button title="Contact" />
       </div>
