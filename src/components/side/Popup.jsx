@@ -1,18 +1,11 @@
+import Button from "./Button";
+
 const Popup = ({ icons }) => {
   return (
     <div className="settings-popup background-rounded">
-      <div>
-        <icons.FaUser />
-        <p>Profile</p>
-      </div>
-      <div>
-        <icons.FaPaintBrush />
-        <p>Theme</p>
-      </div>
-      <div>
-        <icons.FaChevronRight />
-        <p>Logout</p>
-      </div>
+      <Button icon={<icons.FaUser />} title="Profile" />
+      <Button icon={<icons.FaPaintBrush />} title="Theme" />
+      <Button icon={<icons.FaChevronRight />} title="Logout" />
     </div>
   );
 };

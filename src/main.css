@@ -46,21 +46,25 @@ body {
   background-color: var(--secondary-pale);
 }
 
-.settings-popup > div {
+.settings-popup > button {
+  background-color: var(--secondary-pale);
+  color: white;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.6rem 0.8rem;
+  border: none;
   border-radius: 8px;
   cursor: pointer;
+  transition: background 0.2s ease-in-out;
 }
 
-.settings-popup > div > p {
-  margin-left: 0.4rem;
-}
-
-.settings-popup div:hover {
+.settings-popup > button:hover {
   background-color: var(--secondary);
+}
+
+.settings-popup > button svg {
+  margin-right: 0.3rem;
 }
 
 .search-wrapper {
