@@ -1,4 +1,4 @@
-import Popup from "./Popup";
+import Popup from "../side/Popup";
 
 const Header = ({ icons }) => {
   return (
