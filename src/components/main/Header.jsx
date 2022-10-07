@@ -1,6 +1,5 @@
 import "../css/main/header.css";
 import { useState } from "react";
-import Button from "../side/Button";
 import Popup from "../side/Popup";
 
 const Header = ({ icons, toggleSidebar }) => {
