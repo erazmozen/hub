@@ -1,3 +1,61 @@
 /* ------ Sidebar Taskbar */
 
+.sidebar-taskbar {
+  background-color: var(--secondary-pale);
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  padding: 0.4rem 0.6rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  transition: background 0.2s ease-in;
+}
+
+.sidebar-taskbar:hover {
+  background-color: white;
+}
+
+.sidebar-taskbar:hover > svg {
+  color: var(--primary);
+}
+
+.sidebar-taskbar svg {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  font-size: 1.5rem;
+  margin-right: 0.4rem;
+  height: 100%;
+}
+
+.sidebar-taskbar svg:last-child {
+  margin-bottom: 0;
+}
+
+.sidebar-taskbar-vertical {
+  background-color: var(--secondary);
+  color: white;
+  position: absolute;
+  right: -60px;
+  flex-direction: column;
+}
+
+.sidebar-taskbar-vertical svg {
+  margin: 0.4rem;
+}
+
+.sidebar-taskbar-vertical svg:last-child {
+  margin: 0.4rem;
+}
+
+.sidebar-taskbar-vertical:hover {
+  background-color: var(--secondary);
+}
+
+.sidebar-taskbar-vertical:hover > svg {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.sidebar-taskbar-vertical > svg:hover {
+  color: white;
+}
 /* Sidebar Taskbar ------ */
