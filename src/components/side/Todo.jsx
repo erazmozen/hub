@@ -21,11 +21,16 @@ const Todo = ({ icons, searchInput }) => {
     setTodos(todosFiltered);
   };
 
+  function clearTodo() {
+    setTodos([]);
+  }
+
   return (
     <div className="todo">
       <div className="todo-icons">
         <icons.FiPlusSquare onClick={addRandomTodo} />
         <icons.FiFilter />
+        <icons.AiOutlineClear onClick={clearTodo} />
       </div>
       <ul>
         {todos.map((todo, index) => (
