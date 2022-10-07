@@ -10,6 +10,8 @@ import { FaPaintBrush } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
 import { BsToggles } from "react-icons/bs";
+import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
+import { BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
 
 const icons = {
   FiGithub,
@@ -24,6 +26,8 @@ const icons = {
   FaChevronRight,
   IoMdClose,
   BsToggles,
+  BsReverseLayoutSidebarInsetReverse,
+  BsReverseLayoutTextSidebarReverse,
 };
 
 export default icons;
