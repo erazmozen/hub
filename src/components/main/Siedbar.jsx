@@ -2,9 +2,16 @@ import "../css/main/sidebar.css";
 import Button from "../side/Button";
 import Todo from "../side/Todo";
 import { useRef } from "react";
+import SidebarTaskbar from "../side/SidebarTaskbar";
+import { useState } from "react";
 
 const Sidebar = ({ icons, toggleSidebar }) => {
   const searchInput = useRef("");
+  const [toggleSidebarTaskbar, setToggleSidebarTaskbar] = useState(false);
+
+  function toggleTaskbar() {
+    setToggleSidebarTaskbar((prev) => !prev);
+  }
 
   return (
     <div className="sidebar-wrapper background-rounded">
@@ -22,6 +29,11 @@ const Sidebar = ({ icons, toggleSidebar }) => {
       <div className="sidebar-bottom">
         <div>+38154443123</div>
       </div>
+      <SidebarTaskbar
+        icons={icons}
+        toggleSidebarTaskbar={toggleSidebarTaskbar}
+        toggleTaskbar={toggleTaskbar}
+      />
     </div>
   );
 };
