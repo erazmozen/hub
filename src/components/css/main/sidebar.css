@@ -1,0 +1,59 @@
+/* ------ Sidebar */
+
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-wrapper input,
+.search-wrapper button {
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background 0.15s ease-in-out;
+}
+
+.search-wrapper button {
+  width: 35px;
+  color: white;
+}
+
+.search-wrapper input {
+  width: 70%;
+  color: white;
+}
+
+.search-wrapper input:active {
+  color: black;
+}
+
+.search-wrapper input:focus {
+  background-color: white;
+  color: black;
+}
+
+.search-wrapper input::placeholder {
+  color: white;
+}
+
+.sidebar-wrapper {
+  width: 300px;
+  min-height: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.4rem;
+}
+
+.sidebar-top {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-top > div {
+  padding: 0.4rem;
+}
+
+/* Sidebar ------ */

@@ -1,3 +1,4 @@
+import "../css/main/sidebar.css";
 import Button from "../side/Button";
 import Todo from "../side/Todo";
 import { useRef } from "react";

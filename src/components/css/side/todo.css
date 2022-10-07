@@ -1,0 +1,56 @@
+/* ------ Todo */
+
+.todo {
+  background-color: var(--secondary-pale);
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+.todo-icons {
+  padding-top: 0.1rem;
+  font-size: 1.4rem;
+}
+
+.todo-icons svg {
+  cursor: pointer;
+  margin-right: 0.2rem;
+}
+
+.todo-title {
+  margin-left: 0.3rem;
+}
+
+.todo ul {
+  margin-top: 0.4rem;
+  list-style: none;
+}
+
+.todo li {
+  display: flex;
+  padding: 0.4rem;
+  opacity: 0.8;
+  transition: opacity 0.4s ease;
+}
+
+.todo button {
+  background: none;
+  border: none;
+  color: white;
+}
+
+.minus-icon {
+  font-size: 20px;
+  opacity: 0.2;
+  cursor: pointer;
+  transition: opacity 0.4s ease;
+}
+
+.minus-icon:hover {
+  opacity: 1;
+}
+
+.todo li:hover {
+  opacity: 1;
+}
+
+/* Todo ------ */

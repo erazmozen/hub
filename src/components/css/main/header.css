@@ -1,0 +1,42 @@
+/* ------ Navbar */
+
+.header-wrapper {
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  color: white;
+  position: relative;
+}
+
+.header-wrapper button {
+  font-size: 1rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.header-wrapper h3 {
+  margin-left: 0.3rem;
+}
+
+.icons-wrapper > * {
+  margin-left: 1rem;
+}
+
+.header-wrapper,
+.logo-wrapper,
+.icons-wrapper {
+  display: flex;
+  align-items: baseline;
+}
+
+.header-settigns {
+  display: flex;
+  cursor: pointer;
+}
+.header-settigns p {
+  margin-right: 0.4rem;
+}
+
+/* Navbar ------ */

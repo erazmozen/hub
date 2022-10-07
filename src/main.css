@@ -4,60 +4,13 @@ body {
   background-color: #e7e8ff;
 }
 
-/* ------ Navbar */
+/* ------ Common Classes */
 
 .background-rounded {
   background-color: var(--secondary);
   color: white;
   border-radius: 12px;
   margin: 1rem;
-}
-
-.header-wrapper {
-  justify-content: space-between;
-  padding: 1rem 1.5rem;
-  color: white;
-  position: relative;
-}
-
-.header-wrapper button {
-  font-size: 1rem;
-  background: none;
-  color: white;
-  border: none;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-}
-
-.header-wrapper h3 {
-  margin-left: 0.3rem;
-}
-
-.icons-wrapper > * {
-  margin-left: 1rem;
-}
-
-.header-wrapper,
-.logo-wrapper,
-.icons-wrapper {
-  display: flex;
-  align-items: baseline;
-}
-
-.header-settigns {
-  display: flex;
-  cursor: pointer;
-}
-.header-settigns p {
-  margin-right: 0.4rem;
-}
-
-.settings-popup {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  padding: 0.6rem;
-  background-color: var(--secondary-pale);
 }
 
 .common-button {
@@ -82,121 +35,4 @@ body {
   margin-right: 0.3rem;
 }
 
-.search-wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
-.search-wrapper input,
-.search-wrapper button {
-  padding: 0.6rem;
-  border-radius: 12px;
-  border: none;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.1);
-  transition: background 0.15s ease-in-out;
-}
-
-.search-wrapper button {
-  width: 35px;
-  color: white;
-}
-
-.search-wrapper input {
-  width: 70%;
-  color: white;
-}
-
-.search-wrapper input:active {
-  color: black;
-}
-
-.search-wrapper input:focus {
-  background-color: white;
-  color: black;
-}
-
-.search-wrapper input::placeholder {
-  color: white;
-}
-
-/* Navbar ------ */
-
-/* ------ Sidebar */
-
-.sidebar-wrapper {
-  width: 300px;
-  min-height: 440px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 1.4rem;
-}
-
-.sidebar-top {
-  display: flex;
-  flex-direction: column;
-}
-
-.sidebar-top > div {
-  padding: 0.4rem;
-}
-
-.todo {
-  background-color: var(--secondary-pale);
-  border-radius: 8px;
-  margin: 1rem 0;
-}
-
-.todo-icons {
-  padding-top: 0.1rem;
-  font-size: 1.4rem;
-}
-
-.todo-title {
-  margin-left: 0.3rem;
-}
-
-.todo ul {
-  margin-top: 0.4rem;
-  list-style: none;
-}
-
-.todo li {
-  display: flex;
-  padding: 0.4rem;
-  opacity: 0.8;
-  transition: opacity 0.4s ease;
-}
-
-.todo button {
-  background: none;
-  border: none;
-  color: white;
-}
-
-.minus-icon {
-  font-size: 20px;
-  opacity: 0.2;
-  cursor: pointer;
-  transition: opacity 0.4s ease;
-}
-
-.minus-icon:hover {
-  opacity: 1;
-}
-
-.todo li:hover {
-  opacity: 1;
-}
-
-/* Sidebar ------ */
-
-/* ------ Footer */
-
-.footer-wrapper {
-  text-align: center;
-  padding: 1rem;
-}
-
-/* Footer ------ */
+/* Common Classes ------ */

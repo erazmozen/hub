@@ -1,3 +1,4 @@
+import "../css/side/popup.css";
 import Button from "./Button";
 
 const Popup = ({ icons }) => {

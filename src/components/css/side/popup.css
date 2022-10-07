@@ -1,0 +1,11 @@
+/* ------ Popup */
+
+.settings-popup {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  padding: 0.6rem;
+  background-color: var(--secondary-pale);
+}
+
+/* Popup ------ */

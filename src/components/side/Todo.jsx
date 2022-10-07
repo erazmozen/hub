@@ -1,3 +1,4 @@
+import "../css/side/todo.css";
 import { useState } from "react";
 
 const Todo = ({ icons, searchInput }) => {
