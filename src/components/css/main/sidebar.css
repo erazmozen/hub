@@ -3,6 +3,7 @@
 .search-wrapper {
   display: flex;
   justify-content: space-between;
+  min-width: 250px;
 }
 
 .search-wrapper input,
