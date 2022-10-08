@@ -28,7 +28,9 @@
 .link {
     display: flex;
     justify-content: space-between;
-    min-width: 300px
+    align-items: baseline;
+    min-width: 300px;
+    padding-right: 1rem;
 }
 
 .projects-preview {

@@ -7,13 +7,13 @@ const ProjectLink = ({ title, icons }) => {
     <div className="common-button link">
       <div className="redirect">
         <a href={`${git}${title}`} target="_blank">
-          {<icons.FiGithub />}
+          {<icons.GoPlay size={22} />}
         </a>
         <a href={`${git}${title}`} target="_blank">
-          {<icons.GoPlay />}
+          {<icons.FiGithub />}
         </a>
       </div>
-      <h3>{title}</h3>
+      <h3>{`${title}`}</h3>
     </div>
   );
 };

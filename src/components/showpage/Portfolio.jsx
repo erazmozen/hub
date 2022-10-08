@@ -6,11 +6,11 @@ const ContentBox = ({ title, body }) => {
 
   return (
     <div className="background-rounded section">
+      <h2>{title}</h2>
       <div className="body">
-        <h2>{title}</h2>
         <p>{body}</p>
+        <div className="count">{`Words: ${countWords.length}`}</div>
       </div>
-      <div className="count">{`Words: ${countWords.length}`}</div>
     </div>
   );
 };
