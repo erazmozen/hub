@@ -6,7 +6,9 @@ import SidebarTaskbar from "../side/SidebarTaskbar";
 
 const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
   const searchInput = useRef("");
+
   console.log('Sidebar render')
+
   return (
     <div className="sidebar-wrapper background-rounded">
       <div className="sidebar-top">
