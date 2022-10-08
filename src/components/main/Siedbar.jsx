@@ -3,18 +3,10 @@ import Button from "../side/Button";
 import Todo from "../side/Todo";
 import { useRef } from "react";
 import SidebarTaskbar from "../side/SidebarTaskbar";
-import { useState } from "react";
 
 const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
   const searchInput = useRef("");
-  const [toggleSidebarTaskbar, setToggleSidebarTaskbar] = useState(false);
-
-  function toggleTaskbar() {
-    setToggleSidebarTaskbar((prev) => !prev);
-  }
-
   console.log('Sidebar render')
-
   return (
     <div className="sidebar-wrapper background-rounded">
       <div className="sidebar-top">
@@ -33,8 +25,6 @@ const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
       </div>
       <SidebarTaskbar
         icons={icons}
-        toggleSidebarTaskbar={toggleSidebarTaskbar}
-        toggleTaskbar={toggleTaskbar}
         toggleShowpage={toggleShowpage}
       />
     </div>

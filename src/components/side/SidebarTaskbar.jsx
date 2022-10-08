@@ -1,6 +1,11 @@
 import "../css/side/sidebartaskbar.css";
+import { useState } from "react";
 
-const SidebarTaskbar = ({ icons, toggleSidebarTaskbar, toggleTaskbar, toggleShowpage }) => {
+const SidebarTaskbar = ({ icons, toggleShowpage }) => {
+  const [toggleSidebarTaskbar, setToggleSidebarTaskbar] = useState(false);
+  function toggleTaskbar() {
+    setToggleSidebarTaskbar((prev) => !prev);
+  }
   console.log('SidebarTaskbar render')
   return (
     <div
