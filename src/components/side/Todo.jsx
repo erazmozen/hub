@@ -9,20 +9,21 @@ const Todo = ({ icons, searchInput }) => {
   ]);
 
   function addRandomTodo() {
-    console.log("add random todo");
     const todoTitle = searchInput.current.value;
-    if (todoTitle === "") return;
+    if (todoTitle === "") return console.log('you must type the name!');
     setTodos((prev) => [...prev, { id: todos.length, title: todoTitle }]);
+    console.log('added new todo, title:', todoTitle)
   }
 
   const deleteTodo = (index) => {
     const todosFiltered = [...todos].filter((todo) => todo.id !== index);
-    console.log(todosFiltered);
+    console.log('deleted todo, left: ', todosFiltered);
     setTodos(todosFiltered);
   };
 
   function clearTodo() {
     setTodos([]);
+    console.log('cleared all todos')
   }
 
   return (
