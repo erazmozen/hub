@@ -15,7 +15,7 @@
   background-color: white;
 }
 
-.sidebar-taskbar:hover > svg {
+.sidebar-taskbar:hover>svg {
   color: var(--primary);
 }
 
@@ -51,11 +51,12 @@
   background-color: var(--secondary);
 }
 
-.sidebar-taskbar-vertical:hover > svg {
+.sidebar-taskbar-vertical:hover>svg {
   color: rgba(255, 255, 255, 0.8);
 }
 
-.sidebar-taskbar-vertical > svg:hover {
+.sidebar-taskbar-vertical>svg:hover {
   color: white;
 }
+
 /* Sidebar Taskbar ------ */

@@ -2,7 +2,7 @@
 
 .settings-popup {
   position: absolute;
-  top: 42px;
+  top: 4px;
   right: -34px;
   padding: 0.6rem;
   background-color: var(--secondary-pale);

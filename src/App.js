@@ -12,12 +12,12 @@ function App() {
 
   function toggleSidebar() {
     setSidebarToggle((prev) => (prev = !prev));
-    console.log('sidebar toggled, state:', !sidebarToggle )
+    console.log('sidebar toggled, state:', !sidebarToggle)
   }
 
   function toggleShowpage() {
     setShowpageToggle((prev) => (prev = !prev));
-    console.log('showpage toggled, state:', !showpageToggle )
+    console.log('showpage toggled, state:', !showpageToggle)
   }
 
   console.log('App render')
@@ -27,9 +27,9 @@ function App() {
       <Header icons={icons} toggleSidebar={toggleSidebar} />
       <div className="content-wrapper">
         {sidebarToggle
-        && <Sidebar icons={icons}
-        toggleSidebar={toggleSidebar}
-        toggleShowpage={toggleShowpage} />
+          && <Sidebar icons={icons}
+            toggleSidebar={toggleSidebar}
+            toggleShowpage={toggleShowpage} />
         }
         {showpageToggle && <ShowPage />}
       </div>

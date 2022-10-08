@@ -1,5 +1,5 @@
 const Button = ({ icon, title }) => {
-console.log('Button render')
+  console.log('Button render')
   return (
     <button className="common-button">
       {icon} {title}
