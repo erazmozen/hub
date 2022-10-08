@@ -1,6 +1,6 @@
 import "../css/side/sidebartaskbar.css";
 
-const SidebarTaskbar = ({ icons, toggleSidebarTaskbar, toggleTaskbar }) => {
+const SidebarTaskbar = ({ icons, toggleSidebarTaskbar, toggleTaskbar, toggleShowpage }) => {
   return (
     <div
       className={
@@ -10,7 +10,7 @@ const SidebarTaskbar = ({ icons, toggleSidebarTaskbar, toggleTaskbar }) => {
       }
     >
       <icons.BsReverseLayoutSidebarInsetReverse onClick={toggleTaskbar} />
-      <icons.BsReverseLayoutTextSidebarReverse size={22} />
+      <icons.BsReverseLayoutTextSidebarReverse onClick={toggleShowpage} size={22} />
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { useState } from "react";
 import Popup from "../side/Popup";
 
 const Header = ({ icons, toggleSidebar }) => {
-  const [togglePopup, setTogglePopup] = useState(true);
+  const [togglePopup, setTogglePopup] = useState(false);
 
   function togglePopupFunction() {
     setTogglePopup((prev) => (prev = !prev));

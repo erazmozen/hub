@@ -5,7 +5,7 @@ import { useRef } from "react";
 import SidebarTaskbar from "../side/SidebarTaskbar";
 import { useState } from "react";
 
-const Sidebar = ({ icons, toggleSidebar }) => {
+const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
   const searchInput = useRef("");
   const [toggleSidebarTaskbar, setToggleSidebarTaskbar] = useState(false);
 
@@ -33,6 +33,7 @@ const Sidebar = ({ icons, toggleSidebar }) => {
         icons={icons}
         toggleSidebarTaskbar={toggleSidebarTaskbar}
         toggleTaskbar={toggleTaskbar}
+        toggleShowpage={toggleShowpage}
       />
     </div>
   );
