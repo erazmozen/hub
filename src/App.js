@@ -4,6 +4,7 @@ import Header from "./components/main/Header";
 import Sidebar from "./components/main/Siedbar";
 import Footer from "./components/main/Footer";
 import { useState } from "react";
+import ShowPage from "./components/main/ShowPage";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
@@ -13,12 +14,14 @@ function App() {
     setSidebarToggle((prev) => (prev = !prev));
   }
 
-  console.log(sidebarToggle);
-
   return (
     <div className="main">
       <Header icons={icons} toggleSidebar={toggleSidebar} />
-      {sidebarToggle && <Sidebar icons={icons} toggleSidebar={toggleSidebar} />}
+      <div className="content-wrapper">
+        {sidebarToggle && <Sidebar icons={icons}
+        toggleSidebar={toggleSidebar} />}
+        <ShowPage />
+      </div>
       <Footer />
     </div>
   );

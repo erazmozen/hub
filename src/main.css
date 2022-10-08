@@ -35,4 +35,14 @@ body {
   margin-right: 0.3rem;
 }
 
+.content-wrapper {
+  display: flex;
+}
+
+.showpage {
+  flex-grow: 1;
+  margin: 0 1rem;
+  padding: 1rem;
+}
+
 /* Common Classes ------ */
