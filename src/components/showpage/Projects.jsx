@@ -2,7 +2,7 @@ import '../css/showpage/showpage.css'
 
 const ProjectLink = ({ title, icons }) => {
     const git = "https://github.com/erazmozen/"
-    console.log(icons)
+    console.log('ProjectLink render')
     return (
         <div className='common-button link'>
             <div className='redirect'>
@@ -15,6 +15,7 @@ const ProjectLink = ({ title, icons }) => {
 }
 
 const ProjectPreview = () => {
+    console.log('ProjectPreview render')
     return (
         <div className='projects-preview'>
             <div>
@@ -31,7 +32,7 @@ const ProjectPreview = () => {
 
 const Projects = ({ icons }) => {
 
-    console.log('projects render')
+    console.log('Projects render')
     return (
         <div className="projects">
             <div className='slink-holder'>
