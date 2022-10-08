@@ -14,6 +14,7 @@ import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
 import { BsReverseLayoutTextSidebarReverse } from "react-icons/bs";
 import { AiOutlineClear } from "react-icons/ai";
 import { GoPlay } from 'react-icons/go'
+import { BsArrowRightShort } from 'react-icons/bs'
 
 const icons = {
   FiGithub,
@@ -32,6 +33,7 @@ const icons = {
   BsReverseLayoutTextSidebarReverse,
   AiOutlineClear,
   GoPlay,
+  BsArrowRightShort,
 };
 
 export default icons;
