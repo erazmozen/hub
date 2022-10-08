@@ -11,16 +11,16 @@ function App() {
   const [showpageToggle, setShowpageToggle] = useState(true);
 
   function toggleSidebar() {
-    console.log("toggleSiedbar");
     setSidebarToggle((prev) => (prev = !prev));
+    console.log('sidebar toggled, state:', !sidebarToggle )
   }
 
   function toggleShowpage() {
-    console.log("toggleShowpage");
     setShowpageToggle((prev) => (prev = !prev));
+    console.log('showpage toggled, state:', !showpageToggle )
   }
 
-  console.log(sidebarToggle)
+  console.log('App render')
 
   return (
     <div className="main">

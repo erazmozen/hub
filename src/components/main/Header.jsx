@@ -9,6 +9,8 @@ const Header = ({ icons, toggleSidebar }) => {
     setTogglePopup((prev) => (prev = !prev));
   }
 
+  console.log('Header render')
+
   return (
     <div className="header-wrapper background-rounded">
       <div className="logo-wrapper">

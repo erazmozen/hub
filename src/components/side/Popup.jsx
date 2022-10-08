@@ -2,6 +2,7 @@ import "../css/side/popup.css";
 import Button from "./Button";
 
 const Popup = ({ icons }) => {
+  console.log('Popup render')
   return (
     <div className="settings-popup background-rounded">
       <Button icon={<icons.FaUser />} title="Profile" />

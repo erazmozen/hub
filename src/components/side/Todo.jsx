@@ -26,6 +26,8 @@ const Todo = ({ icons, searchInput }) => {
     console.log('cleared all todos')
   }
 
+  console.log('Todo render')
+
   return (
     <div className="todo">
       <div className="todo-icons">

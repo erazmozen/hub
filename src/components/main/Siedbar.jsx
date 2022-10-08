@@ -13,6 +13,8 @@ const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
     setToggleSidebarTaskbar((prev) => !prev);
   }
 
+  console.log('Sidebar render')
+
   return (
     <div className="sidebar-wrapper background-rounded">
       <div className="sidebar-top">

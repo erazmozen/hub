@@ -1,6 +1,7 @@
 import "../css/side/sidebartaskbar.css";
 
 const SidebarTaskbar = ({ icons, toggleSidebarTaskbar, toggleTaskbar, toggleShowpage }) => {
+  console.log('SidebarTaskbar render')
   return (
     <div
       className={
