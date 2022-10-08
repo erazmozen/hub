@@ -10,23 +10,23 @@ const Todo = ({ icons, searchInput }) => {
 
   function addRandomTodo() {
     const todoTitle = searchInput.current.value;
-    if (todoTitle === "") return console.log('you must type the name!');
+    if (todoTitle === "") return console.log("you must type the name!");
     setTodos((prev) => [...prev, { id: todos.length, title: todoTitle }]);
-    console.log('added new todo, title:', todoTitle)
+    console.log("added new todo, title:", todoTitle);
   }
 
   const deleteTodo = (index) => {
     const todosFiltered = [...todos].filter((todo) => todo.id !== index);
-    console.log('deleted todo, left: ', todosFiltered);
+    console.log("deleted todo, left: ", todosFiltered);
     setTodos(todosFiltered);
   };
 
   function clearTodo() {
     setTodos([]);
-    console.log('cleared all todos')
+    console.log("cleared all todos");
   }
 
-  console.log('Todo render')
+  console.log("Todo render");
 
   return (
     <div className="todo">

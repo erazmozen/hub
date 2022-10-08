@@ -7,7 +7,7 @@ import SidebarTaskbar from "../side/SidebarTaskbar";
 const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
   const searchInput = useRef("");
 
-  console.log('Sidebar render')
+  console.log("Sidebar render");
 
   return (
     <div className="sidebar-wrapper background-rounded">
@@ -25,10 +25,7 @@ const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
       <div className="sidebar-bottom">
         <div>+38154443123</div>
       </div>
-      <SidebarTaskbar
-        icons={icons}
-        toggleShowpage={toggleShowpage}
-      />
+      <SidebarTaskbar icons={icons} toggleShowpage={toggleShowpage} />
     </div>
   );
 };

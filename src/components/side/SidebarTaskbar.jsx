@@ -6,7 +6,7 @@ const SidebarTaskbar = ({ icons, toggleShowpage }) => {
   function toggleTaskbar() {
     setToggleSidebarTaskbar((prev) => !prev);
   }
-  console.log('SidebarTaskbar render')
+  console.log("SidebarTaskbar render");
   return (
     <div
       className={
@@ -16,7 +16,10 @@ const SidebarTaskbar = ({ icons, toggleShowpage }) => {
       }
     >
       <icons.BsReverseLayoutSidebarInsetReverse onClick={toggleTaskbar} />
-      <icons.BsReverseLayoutTextSidebarReverse onClick={toggleShowpage} size={22} />
+      <icons.BsReverseLayoutTextSidebarReverse
+        onClick={toggleShowpage}
+        size={22}
+      />
     </div>
   );
 };
