@@ -2,11 +2,31 @@
     display: flex;
     flex-direction: column;
     margin: 2rem 1rem;
+    align-items: flex-start;
+    align-items: flex-start;
+}
+
+.link-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.link-holder .common-button {
+    width: 100%;
 }
 
 .projects a {
     color: white;
     font-size: 1.1rem;
     text-decoration: none;
+}
 
+.redirect {
+    margin-right: 1rem;
+}
+
+.link {
+    display: flex;
+    justify-content: space-between;
 }

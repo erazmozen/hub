@@ -31,7 +31,7 @@ function App() {
             toggleSidebar={toggleSidebar}
             toggleShowpage={toggleShowpage} />
         }
-        {showpageToggle && <ShowPage />}
+        {showpageToggle && <ShowPage icons={icons} />}
       </div>
       <Footer />
     </div>
