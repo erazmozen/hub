@@ -6,15 +6,31 @@ const ProjectLink = ({ title, icons }) => {
     return (
         <div className='common-button link'>
             <div className='redirect'>
-                 <a href={`${git}${title}`} target="_blank">{<icons.FiGithub />}</a>
-                 <a href={`${git}${title}`} target="_blank">{<icons.GoPlay />}</a>
+                <a href={`${git}${title}`} target="_blank">{<icons.FiGithub />}</a>
+                <a href={`${git}${title}`} target="_blank">{<icons.GoPlay />}</a>
             </div>
             <h3>{title}</h3>
         </div>
     )
 }
 
+const ProjectPreview = () => {
+    return (
+        <div className='projects-preview'>
+            <div>
+                <h2>My Projects</h2>
+                <p>Here are some of the projects that i have done just to showcase what i am capeable of doing. Feel free to contact me in case of a biz offer, or any other thing that may pop up.</p>
+            </div>
+            <div>
+                <small>+38121732712</small>
+                <small>dummt@dummy.com</small>
+            </div>
+        </div>
+    )
+}
+
 const Projects = ({ icons }) => {
+
     console.log('projects render')
     return (
         <div className="projects">
@@ -28,6 +44,7 @@ const Projects = ({ icons }) => {
                 <ProjectLink icons={icons} title="React-Note-App" />
                 <ProjectLink icons={icons} title="Password-Generator" />
             </div>
+            <ProjectPreview />
         </div>
     )
 }
