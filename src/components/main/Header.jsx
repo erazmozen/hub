@@ -21,7 +21,7 @@ const Header = ({ icons, toggleSidebar }) => {
           <icons.FiBookOpen />
         </div>
       </div>
-      <div>Clock</div>
+      <div>{new Date().toLocaleString() + ""}</div>
       <div onClick={togglePopupFunction} className="header-settigns">
         <p>Settings</p>
         <icons.FiSettings />
