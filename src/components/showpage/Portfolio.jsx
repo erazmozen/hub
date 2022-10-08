@@ -1,12 +1,16 @@
 import data from "../../data/portfolioData.json";
-
-console.log(data);
+import "../css/showpage/portfolio.css";
 
 const ContentBox = ({ title, body }) => {
+  const countWords = body.split(" ");
+
   return (
-    <div className="background-rounded">
-      <h2>{title}</h2>
-      <p>{body}</p>
+    <div className="background-rounded section">
+      <div className="body">
+        <h2>{title}</h2>
+        <p>{body}</p>
+      </div>
+      <div className="count">{`Words: ${countWords.length}`}</div>
     </div>
   );
 };

@@ -1,0 +1,21 @@
+.section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.body {
+    max-width: 460px;
+}
+
+.count {
+    background: var(--secondary-pale);
+    padding: .6rem;
+    margin: .6rem .4rem;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    width: 120px;
+    height: 40px;
+    font-weight: bold;
+}
