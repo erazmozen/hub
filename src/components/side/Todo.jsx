@@ -7,6 +7,7 @@ const Todo = ({ icons, searchInput }) => {
     { id: 1, title: "Random text here" },
     { id: 2, title: "To show some todos" },
   ]);
+  const [quarry, setquarry] = useState("");
 
   function addRandomTodo() {
     const todoTitle = searchInput.current.value;
@@ -26,24 +27,30 @@ const Todo = ({ icons, searchInput }) => {
     console.log("cleared all todos");
   }
 
+  function filterTodos() {
+    setquarry(searchInput.current.value.toLowerCase());
+  }
+
   console.log("Todo render");
 
   return (
     <div className="todo">
       <div className="todo-icons">
         <icons.FiPlusSquare onClick={addRandomTodo} />
-        <icons.FiFilter />
+        <icons.FiFilter onClick={filterTodos} />
         <icons.AiOutlineClear onClick={clearTodo} />
       </div>
       <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>
-            <button onClick={() => deleteTodo(todo.id)}>
-              <icons.FiMinusSquare className="minus-icon" />
-            </button>
-            <h4 className="todo-title">{todo.title}</h4>
-          </li>
-        ))}
+        {todos
+          .filter((todo) => todo.title.toLowerCase().includes(quarry))
+          .map((todo) => (
+            <li key={todo.id}>
+              <button onClick={() => deleteTodo(todo.id)}>
+                <icons.FiMinusSquare className="minus-icon" />
+              </button>
+              <h4 className="todo-title">{todo.title}</h4>
+            </li>
+          ))}
       </ul>
     </div>
   );
