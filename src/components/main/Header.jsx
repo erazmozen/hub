@@ -1,6 +1,19 @@
 import "../css/main/header.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Popup from "../side/Popup";
+
+const Clock = () => {
+  const [clockState, setClockState] = useState();
+
+  useEffect(() => {
+    setInterval(() => {
+      const date = new Date();
+      setClockState(date.toLocaleString());
+    }, 1000);
+  }, []);
+
+  return <div>{clockState}</div>;
+};
 
 const Header = ({ icons, toggleSidebar }) => {
   const [togglePopup, setTogglePopup] = useState(false);
@@ -23,7 +36,9 @@ const Header = ({ icons, toggleSidebar }) => {
           <icons.FiBookOpen />
         </div>
       </div>
-      <div>{new Date().toLocaleString() + ""}</div>
+
+      <Clock />
+
       <div onClick={togglePopupFunction} className="header-settigns">
         <p>Settings</p>
         <icons.FiSettings />
