@@ -47,7 +47,12 @@
     color: white;
 }
 
+.projects-contact {
+    display: flex;
+    flex-direction: column;
+}
+
 .projects-preview small {
-    margin-top: 1rem;
+    margin-top: .3rem;
     margin-bottom: 0;
 }

@@ -30,7 +30,7 @@ const ProjectPreview = () => {
           or any other thing that may pop up.
         </p>
       </div>
-      <div>
+      <div className="projects-contact">
         <small>+38121732712</small>
         <small>dummt@dummy.com</small>
       </div>
