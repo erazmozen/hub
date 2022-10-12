@@ -45,7 +45,6 @@
   min-height: 440px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 1.4rem;
   margin: 0;
 }
