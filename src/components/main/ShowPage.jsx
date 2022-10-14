@@ -1,5 +1,6 @@
 import Portfolio from "../showpage/Portfolio";
 import Projects from "../showpage/Projects";
+import Poll from "../side/Poll";
 
 const ShowPage = ({ icons }) => {
   console.log("ShowPage render");
@@ -7,6 +8,7 @@ const ShowPage = ({ icons }) => {
     <div className="background-rounded showpage">
       <Projects icons={icons} />
       <Portfolio />
+      <Poll />
     </div>
   );
 };
