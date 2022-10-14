@@ -26,12 +26,17 @@
 
 .yes-bar h2,
 .no-bar h2 {
-  width: 100px;
+  width: 80px;
+  align-self: center;
 }
 
 .yes-bar h3,
 .no-bar h3 {
-  margin: 0;
+  background-color: var(--secondary-pale);
+  margin: 0.2rem;
+  padding: 0.8rem 1rem;
   align-self: center;
-  margin-left: 2rem;
+  width: 200px;
+  border-radius: 12px;
+  text-align: center;
 }
