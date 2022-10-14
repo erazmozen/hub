@@ -4,14 +4,13 @@ import "../css/side/poll.css";
 const Poll = () => {
   const [poll, setPoll] = useState({ yes: 8351231236, no: 2573, voted: null });
 
-  function changeYesPoll() {
+  function changePoll(e) {
     if (poll.voted) return;
-    setPoll((prev) => ({ ...prev, yes: prev.yes + 1, voted: 1 }));
-  }
-
-  function changeNoPoll() {
-    if (poll.voted) return;
-    setPoll((prev) => ({ ...prev, no: prev.no + 1, voted: 1 }));
+    if (e.target.dataset.payload === "yes") {
+      setPoll((prev) => ({ ...prev, yes: prev.yes + 1, voted: 1 }));
+    } else {
+      setPoll((prev) => ({ ...prev, no: prev.no + 1, voted: 1 }));
+    }
   }
 
   return (
@@ -27,13 +26,13 @@ const Poll = () => {
       </div>
       <div className="vote-wrapper">
         <div className="yes-bar">
-          <h2 onClick={changeYesPoll}>Yes</h2>
+          <h2 onClick={changePoll} data-payload="yes">
+            Yes
+          </h2>
           <h3>yesCount ( {poll.yes} )</h3>
         </div>
-        <div className="no-bar">
-          <h2 value="no" onClick={changeNoPoll}>
-            No
-          </h2>
+        <div className="no-bar" data-payload="no">
+          <h2 onClick={changePoll}>No</h2>
           <h3>noCount ( {poll.no} )</h3>
         </div>
       </div>
