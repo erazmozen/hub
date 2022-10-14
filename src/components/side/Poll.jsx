@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../css/side/poll.css";
 
 const Poll = () => {
-  const [poll, setPoll] = useState({ yes: 8351231236, no: 2573, voted: null });
+  const [poll, setPoll] = useState({ yes: 13512336, no: 203573, voted: null });
 
   function changePoll(e) {
     if (poll.voted) return;
@@ -29,11 +29,11 @@ const Poll = () => {
           <h2 onClick={changePoll} data-payload="yes">
             Yes
           </h2>
-          <h3>yesCount ( {poll.yes} )</h3>
+          <h3>{poll.yes}</h3>
         </div>
         <div className="no-bar" data-payload="no">
           <h2 onClick={changePoll}>No</h2>
-          <h3>noCount ( {poll.no} )</h3>
+          <h3>{poll.no}</h3>
         </div>
       </div>
 

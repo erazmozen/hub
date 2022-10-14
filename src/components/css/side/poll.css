@@ -37,11 +37,12 @@
 
 .yes-bar h3,
 .no-bar h3 {
+  position: relative;
   background-color: var(--secondary-pale);
   margin: 0.2rem;
   padding: 0.8rem 1rem;
   align-self: center;
-  min-width: 190px;
+  min-width: 160px;
   border-radius: 12px;
   text-align: center;
 }
