@@ -7,44 +7,31 @@
 .poll-wrapper h3,
 .poll-wrapper p {
   margin-bottom: 1rem;
-  max-width: 520px;
 }
 
 .vote-wrapper {
   display: flex;
+  flex-direction: column;
 }
 
 .vote-wrapper h2 {
   padding: 0.6rem 1rem;
 }
 
-.progressbar {
-  flex-grow: 1;
+.yes-bar,
+.no-bar {
   display: flex;
-  flex-direction: column;
-  height: 120px;
-}
-
-.yes-no-buttons h2 {
-  margin: 0.5rem;
-}
-
-.yes-progressbar,
-.no-progressbar {
-  background-color: var(--secondary);
-  font-size: 1.2rem;
-  padding: 0.2rem;
-  margin-left: 1rem;
   flex-grow: 1;
-  justify-self: baseline;
-  display: flex;
-  align-items: center;
-  border-radius: 12px;
-  margin: 0.3rem;
 }
 
-.yes-progressbar h3,
-.no-progressbar h3 {
+.yes-bar h2,
+.no-bar h2 {
+  width: 100px;
+}
+
+.yes-bar h3,
+.no-bar h3 {
   margin: 0;
-  margin-left: 1rem;
+  align-self: center;
+  margin-left: 2rem;
 }

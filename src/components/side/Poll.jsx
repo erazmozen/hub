@@ -3,7 +3,7 @@ import "../css/side/poll.css";
 const Poll = () => {
   return (
     <div className="poll-wrapper">
-      <div className="question-wrapepr">
+      <div className="question-wrapper">
         <h3>Pitanje naslov</h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -13,17 +13,13 @@ const Poll = () => {
         <p>What do u think?</p>
       </div>
       <div className="vote-wrapper">
-        <div className="yes-no-buttons">
+        <div className="yes-bar">
           <h2>Yes</h2>
-          <h2>No</h2>
+          <h3>yesCount ( 8356 )</h3>
         </div>
-        <div className="progressbar">
-          <div className="yes-progressbar">
-            <h3>yesCount</h3>
-          </div>
-          <div className="no-progressbar">
-            <h3>noCount</h3>
-          </div>
+        <div className="no-bar">
+          <h2>No</h2>
+          <h3>noCount ( 2573 )</h3>
         </div>
       </div>
     </div>
