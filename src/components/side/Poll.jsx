@@ -15,13 +15,14 @@ const Poll = () => {
       <div className="vote-wrapper">
         <div className="yes-bar">
           <h2>Yes</h2>
-          <h3>yesCount ( 8356 )</h3>
+          <h3>yesCount ( 8351231236 )</h3>
         </div>
         <div className="no-bar">
           <h2>No</h2>
           <h3>noCount ( 2573 )</h3>
         </div>
       </div>
+      <h3>Thanks for voting!</h3>
     </div>
   );
 };
