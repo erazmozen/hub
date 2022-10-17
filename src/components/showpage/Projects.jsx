@@ -2,6 +2,7 @@ import "../css/showpage/showpage.css";
 
 const ProjectLink = ({ title, icons }) => {
   const git = "https://github.com/erazmozen/";
+
   console.log("ProjectLink render");
   return (
     <div className="common-button link">
@@ -34,6 +35,7 @@ const ProjectPreview = () => {
         <small>+38121732712</small>
         <small>dummt@dummy.com</small>
       </div>
+      <div className="projects-slider"></div>
     </div>
   );
 };

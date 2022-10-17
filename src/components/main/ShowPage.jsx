@@ -1,5 +1,6 @@
 import Portfolio from "../showpage/Portfolio";
 import Projects from "../showpage/Projects";
+import Notes from "../side/Notes";
 import Poll from "../side/Poll";
 import ProfileShowpage from "../side/ProfileShowpage";
 
@@ -11,6 +12,7 @@ const ShowPage = ({ icons }) => {
       <Projects icons={icons} />
       <Poll />
       <Portfolio />
+      <Notes />
     </div>
   );
 };

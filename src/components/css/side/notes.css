@@ -1,0 +1,64 @@
+.notes {
+  background-color: var(--secondary-pale);
+  margin: 1rem;
+  padding: 2rem;
+  border-radius: 18px;
+}
+
+.notes > form {
+  display: flex;
+  flex-direction: column;
+}
+
+.notes > form > input {
+  font-size: 1.5rem;
+}
+
+.notes textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  overflow: auto;
+  font-size: 1.1rem;
+}
+
+.textarea-h400 {
+  height: 400px;
+  transition: height 0.3s ease;
+}
+
+.textarea-h700 {
+  height: 700px;
+  transition: height 0.3s ease;
+}
+
+.notes .common-button {
+  background-color: var(--secondary);
+}
+
+.notes-wrapper {
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.note {
+  background-color: white;
+  color: black;
+  margin: 0.3rem;
+  min-width: 200px;
+  flex-grow: 1;
+  padding: 1rem;
+  padding-bottom: 2rem;
+  border-radius: 12px;
+}
+
+.toggles-wrapper {
+  display: flex;
+  margin: 0 0.8rem;
+}
+.toggles-wrapper button {
+  margin-right: 0.4rem;
+}
