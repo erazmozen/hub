@@ -24,6 +24,7 @@ import { AiOutlineDelete } from "react-icons/ai";
 import { CgGhostCharacter } from "react-icons/cg";
 import { VscSymbolKeyword } from "react-icons/vsc";
 import { MdDateRange } from "react-icons/md";
+import { BsInfo } from "react-icons/bs";
 
 const icons = {
   FiGithub,
@@ -52,6 +53,7 @@ const icons = {
   CgGhostCharacter,
   VscSymbolKeyword,
   MdDateRange,
+  BsInfo,
 };
 
 export default icons;
