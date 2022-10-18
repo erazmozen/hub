@@ -2,26 +2,26 @@
   "section1": {
     "id": "1",
     "title": "Opis:",
-    "body": "Posedujem dugogodisnje iskustvo u razlicitim oblastima IT-a, programiranju, grafickom dizajnu, foto i video montazi kao i u odrzavanju servea."
+    "body": "Posedujem dugogodišnje iskustvo u različitim oblastima IT-a, programiranju, grafičkom dizajnu, foto i video montaži kao i u održavanju servera."
   },
   "section2": {
     "id": "2",
     "title": "Edukacija",
-    "body": "Gimnazija Mladenovac (Prirodno matematicki smer)"
+    "body": "Gimnazija u Mladenovcu/n (Prirodno-matematički smer)"
   },
   "section3": {
     "id": "3",
     "title": "Radovi",
-    "body": "Github"
+    "body": "/n- github.com/erazmozen/n- kosmajkafa.rs"
   },
   "section4": {
     "id": "4",
     "title": "Radno iskustvo",
-    "body": "Svasta nesto ovde"
+    "body": "/n- Izrada web stranica./n- Održavanje Linux servera (Nginx, SSH, bash / zsh)./n- Rad u Wordpress, Shopify i ostalim CMS-ovima, kao i različitim FTP solucijama./n- Rad u većini Adobe kao i MS Office programima."
   },
   "section5": {
     "id": "5",
-    "title": "tehnologije",
-    "body": "HTML 5 CCS3 Bootsrap React Firebase Github Python"
+    "title": "Tehnologije",
+    "body": "/n- HTML5- CSS3 (Flexbox, Grid)/n- Bootstrap, Tailwind/n- Javascript- React (Hooks, API)/n- Firebase / MongoDB/n- Github/n- Python ( Scripts )"
   }
 }
