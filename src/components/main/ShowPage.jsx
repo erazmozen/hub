@@ -12,7 +12,7 @@ const ShowPage = ({ icons }) => {
       <Projects icons={icons} />
       <Poll />
       <Portfolio />
-      <Notes />
+      <Notes icons={icons} />
     </div>
   );
 };

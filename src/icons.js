@@ -16,6 +16,9 @@ import { AiOutlineClear } from "react-icons/ai";
 import { GoPlay } from "react-icons/go";
 import { BsArrowRightShort } from "react-icons/bs";
 import { CgProfile } from "react-icons/cg";
+import { TbArrowsDiagonalMinimize } from "react-icons/tb";
+import { TbArrowsDiagonal2 } from "react-icons/tb";
+import { FiMaximize } from "react-icons/fi";
 
 const icons = {
   FiGithub,
@@ -36,6 +39,9 @@ const icons = {
   GoPlay,
   BsArrowRightShort,
   CgProfile,
+  TbArrowsDiagonalMinimize,
+  TbArrowsDiagonal2,
+  FiMaximize,
 };
 
 export default icons;
