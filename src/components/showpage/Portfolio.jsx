@@ -1,4 +1,5 @@
 import data from "../../data/portfolioData.json";
+import Projects from "../showpage/Projects";
 import "../css/showpage/portfolio.css";
 
 const ContentBox = ({ title, body }) => {
@@ -40,6 +41,7 @@ const Portfolio = ({ icons }) => {
           body={section.body}
         />
       ))}
+      <Projects icons={icons} />
     </div>
   );
 };

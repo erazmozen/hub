@@ -11,9 +11,10 @@
 
 .portfolio-header {
   display: flex;
-  flex-grow: 1;
+  width: 100%;
   align-items: flex-end;
   justify-content: space-between;
+  margin-bottom: 0.6rem;
 }
 
 .portfolio-header svg {
@@ -22,9 +23,18 @@
 
 .section {
   background-color: var(--primary);
+  font-weight: 600;
+  line-height: 1.6rem;
+  font-size: 1.1rem;
   padding: 2rem;
   flex-grow: 1;
   max-width: 100%;
+  transition: box-shadow 0.3s;
+}
+
+.section:hover {
+  box-shadow: 0 -0.22rem 0 0 white;
+  transition: box-shadow 0.2s;
 }
 
 .body {
@@ -34,4 +44,5 @@
 
 .body p {
   margin-top: 0.8rem;
+  margin-left: 0.4rem;
 }
