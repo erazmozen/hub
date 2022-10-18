@@ -104,6 +104,10 @@ const Notes = ({ icons }) => {
 
   return (
     <div className="notes">
+      <div className="note-header">
+        <h1>Add a Note</h1>
+        <icons.FaRegStickyNote />
+      </div>
       <form onSubmit={saveNote}>
         <input
           ref={titleInput}
@@ -143,7 +147,10 @@ const Notes = ({ icons }) => {
         </button>
       </form>
 
-      <h1 style={{ marginTop: "1.4rem" }}>Saved notes:</h1>
+      <div className="saved-notes-header">
+        <h1>Saved notes:</h1>
+        <icons.MdOutlineSave />
+      </div>
 
       <div className="notes-wrapper">
         {notesState.map((note) => (
@@ -162,8 +169,8 @@ const Notes = ({ icons }) => {
             <div className="note-footer">
               <WordCounter icons={icons} toCount={note.body} />
               <div className="date-footer">
-                <icons.MdDateRange />
                 {note.date}
+                <icons.MdDateRange />
               </div>
             </div>
           </div>

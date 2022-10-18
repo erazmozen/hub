@@ -11,7 +11,7 @@
 }
 
 .notes > form > input {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
 }
 
 .notes textarea {
@@ -19,6 +19,7 @@
   width: 100%;
   height: 200px;
   overflow: auto;
+  letter-spacing: 0.015rem;
   font-size: 1.1rem;
 }
 
@@ -85,6 +86,22 @@
   margin-top: 0.4rem;
 }
 
+.note-header,
+.saved-notes-header {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.saved-notes-header {
+  margin-top: 2rem;
+}
+
+.note-header svg,
+.saved-notes-header svg {
+  font-size: 1.8rem;
+}
+
 .toggles-wrapper {
   display: flex;
   margin: 0 0.8rem;
@@ -104,4 +121,9 @@
   flex-direction: column;
   align-items: flex-end;
   margin-top: 1rem;
+}
+
+.note-footer svg {
+  margin-right: 0.3rem;
+  margin-left: 0.1rem;
 }
