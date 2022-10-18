@@ -36,6 +36,11 @@
   background-color: var(--secondary);
 }
 
+.notes .common-button svg {
+  pointer-events: none;
+  margin: 0;
+}
+
 .notes-wrapper {
   position: relative;
   margin: 1rem;
