@@ -6,16 +6,14 @@ const Notes = ({ icons }) => {
   const titleInput = useRef();
   const bodyInput = useRef();
 
+  const [skipRender, setSkipRender] = useState(true);
+
+  const [notesState, setNotesState] = useState([]);
+
   const heightClass = {
     transition: "height 0.3s ease",
     height: `${bodyHeight}`,
   };
-
-  const notes = [
-    { id: 122312, title: "title1", body: "body", date: "2321122" },
-    { id: 123212, title: "title", body: "body", date: "2321122" },
-    { id: 1231312, title: "title", body: "body", date: "2321122" },
-  ];
 
   const buttons = [
     {
@@ -37,7 +35,6 @@ const Notes = ({ icons }) => {
 
   function changeHeight(e) {
     e.preventDefault();
-    // setBodyHeight(e.target.value);
     if (bodyHeight === e.target.value) {
       console.log("Value is same, exiting function...");
       return;
@@ -46,11 +43,62 @@ const Notes = ({ icons }) => {
     console.log("Value is not the same, setting state to ", e.target.value);
   }
 
+  function saveNote(e) {
+    e.preventDefault();
+    console.log("Form submit");
+    setNotesState((prev) => [
+      ...prev,
+      {
+        id: Math.floor(Math.random() * 100000),
+        title: titleInput.current.value,
+        body: bodyInput.current.value,
+      },
+    ]);
+  }
+
+  const clearInputs = (e) => {
+    console.log("clearig inputs");
+    e.preventDefault();
+    titleInput.current.value = "";
+    bodyInput.current.value = "";
+  };
+
+  function clearNotes(e) {
+    e.preventDefault();
+    setNotesState([]);
+  }
+
+  function deleteNote(e) {
+    console.log("brisemo note sa id: ", e.target.id);
+    const externalId = e.target.id;
+    const filteredNotes = notesState.filter((note) => note.id != externalId);
+    setNotesState(filteredNotes);
+  }
+
+  useEffect(() => {
+    console.log("useEffect [notes]");
+    if (skipRender) setSkipRender(false);
+    if (!skipRender) {
+      console.log("useEffect set note");
+      localStorage.setItem("notes", JSON.stringify(notesState));
+      titleInput.current.value = "";
+      bodyInput.current.value = "";
+    }
+  }, [notesState]);
+
+  useEffect(() => {
+    console.log("useEffect []");
+    const savedNotes = JSON.parse(localStorage.getItem("notes") || "[]");
+    console.log("notes we get from local storage: ", savedNotes);
+    setNotesState(savedNotes);
+    console.log("saved local notes to notes state");
+  }, []);
+
   console.log("Notes render");
 
   return (
     <div className="notes">
-      <form>
+      <form onSubmit={saveNote}>
         <input
           ref={titleInput}
           placeholder="Title"
@@ -69,7 +117,10 @@ const Notes = ({ icons }) => {
             </button>
           ))}
 
-          <button className="common-button">
+          <button className="common-button" onClick={clearInputs}>
+            <icons.BsEraserFill size={18} />
+          </button>
+          <button className="common-button" onClick={clearNotes}>
             <icons.AiOutlineClear size={18} />
           </button>
         </div>
@@ -89,8 +140,11 @@ const Notes = ({ icons }) => {
       <h1 style={{ marginTop: "1.4rem" }}>Saved notes:</h1>
 
       <div className="notes-wrapper">
-        {notes.map((note) => (
+        {notesState.map((note) => (
           <div key={note.id} className="note">
+            <button className="common-button" onClick={deleteNote} id={note.id}>
+              <icons.AiOutlineDelete size={22} />
+            </button>
             <h2>{note.title}</h2>
             <p>{note.body}</p>
             <p>{note.date}</p>
