@@ -1,8 +1,13 @@
+.showpage > * {
+  margin: 2rem 1rem;
+}
+
 .projects {
   display: flex;
   margin: 2rem 1rem;
   position: relative;
   align-items: flex-start;
+  flex-grow: 1;
 }
 
 .link-holder {
