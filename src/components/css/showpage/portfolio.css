@@ -1,23 +1,37 @@
 .section {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio {
+  margin: 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-header {
+  display: flex;
+  flex-grow: 1;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.portfolio-header svg {
+  font-size: 2rem;
+}
+
+.section {
+  background-color: var(--primary);
+  padding: 2rem;
+  flex-grow: 1;
+  max-width: 100%;
 }
 
 .body {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .body p {
-    max-width: 460px;
-}
-
-.count {
-    background: var(--secondary-pale);
-    padding: .6rem;
-    margin: .6rem .4rem;
-    border-radius: 12px;
-    display: flex;
-    align-items: flex-end;
-    font-weight: bold;
+  margin-top: 0.8rem;
 }
