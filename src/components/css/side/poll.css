@@ -12,6 +12,7 @@
 .poll-wrapper > h3 {
   text-align: right;
   margin: 0;
+  margin-top: 1.6rem;
 }
 
 .vote-wrapper {
