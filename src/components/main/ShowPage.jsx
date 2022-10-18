@@ -11,7 +11,7 @@ const ShowPage = ({ icons }) => {
       <ProfileShowpage icons={icons} />
       <Projects icons={icons} />
       <Poll />
-      <Portfolio />
+      <Portfolio icons={icons} />
       <Notes icons={icons} />
     </div>
   );
