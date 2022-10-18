@@ -21,6 +21,9 @@ import { TbArrowsDiagonal2 } from "react-icons/tb";
 import { FiMaximize } from "react-icons/fi";
 import { BsEraserFill } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
+import { CgGhostCharacter } from "react-icons/cg";
+import { VscSymbolKeyword } from "react-icons/vsc";
+import { MdDateRange } from "react-icons/md";
 
 const icons = {
   FiGithub,
@@ -46,6 +49,9 @@ const icons = {
   FiMaximize,
   BsEraserFill,
   AiOutlineDelete,
+  CgGhostCharacter,
+  VscSymbolKeyword,
+  MdDateRange,
 };
 
 export default icons;
