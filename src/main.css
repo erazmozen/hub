@@ -1,7 +1,7 @@
 @import "./colorpalette.css";
 
 body {
-  background-color: #e7e8ff;
+  background-color: var(--primary-dark);
 }
 
 /* ------ Common Classes */
