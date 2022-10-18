@@ -6,10 +6,10 @@ function WordCounter({ toCount, icons }) {
 
   return (
     <div className="counter">
-      <icons.VscSymbolKeyword />
       {splitByWord.length}
-      <icons.CgGhostCharacter />
+      <icons.FaRegFileWord size={14} />
       {splitByChar.length}
+      <icons.CgGhostCharacter />
     </div>
   );
 }
