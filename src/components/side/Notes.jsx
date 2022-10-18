@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import "../css/side/notes.css";
+import WordCounter from "./WordCounter";
 
 const Notes = ({ icons }) => {
   const [bodyHeight, setBodyHeight] = useState("200px");
@@ -52,6 +53,7 @@ const Notes = ({ icons }) => {
         id: Math.floor(Math.random() * 100000),
         title: titleInput.current.value,
         body: bodyInput.current.value,
+        date: `${new Date().getDate()}. ${new Date().getDay()}. ${new Date().getFullYear()}.`,
       },
     ]);
   }
@@ -147,7 +149,13 @@ const Notes = ({ icons }) => {
             </button>
             <h2>{note.title}</h2>
             <p>{note.body}</p>
-            <p>{note.date}</p>
+            <div className="note-footer">
+              <WordCounter icons={icons} toCount={note.body} />
+              <div className="date-footer">
+                <icons.MdDateRange />
+                {note.date}
+              </div>
+            </div>
           </div>
         ))}
       </div>

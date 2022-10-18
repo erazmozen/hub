@@ -66,7 +66,6 @@
   max-width: 100%;
   flex-grow: 1;
   padding: 1rem;
-  padding-bottom: 2rem;
   border-radius: 12px;
   word-break: break-all;
 }
@@ -88,4 +87,17 @@
 }
 .toggles-wrapper button {
   margin-right: 0.4rem;
+}
+
+.counter,
+.date-footer {
+  display: flex;
+  align-items: center;
+}
+
+.note-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1rem;
 }
