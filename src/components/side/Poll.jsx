@@ -9,7 +9,7 @@ const Poll = () => {
     if (e.target.dataset.payload === "yes") {
       setPoll((prev) => ({ ...prev, yes: prev.yes + 1, voted: 1 }));
     } else {
-      setPoll((prev) => ({ ...prev, no: prev.no + 1, voted: 1 }));
+      setPoll((prev) => ({ ...prev, no: prev.no + 1, voted: 2 }));
     }
   }
 
@@ -24,15 +24,34 @@ const Poll = () => {
         </p>
         <p>What do u think?</p>
       </div>
+
       <div className="vote-wrapper">
         <div className="yes-bar">
-          <h2 onClick={changePoll} data-payload="yes">
+          <h2
+            onClick={changePoll}
+            data-payload="yes"
+            style={{
+              marginRight: poll.voted === 1 ? "1rem" : "",
+              background: poll.voted === 1 ? "var(--secondary)" : "",
+            }}
+          >
             Yes
           </h2>
+
           <h3>{poll.yes}</h3>
         </div>
-        <div className="no-bar" data-payload="no">
-          <h2 onClick={changePoll}>No</h2>
+        <div className="no-bar">
+          <h2
+            onClick={changePoll}
+            data-payload="no"
+            style={{
+              marginRight: poll.voted === 2 ? "1rem" : "",
+              background: poll.voted === 2 ? "var(--secondary)" : "",
+            }}
+          >
+            No
+          </h2>
+
           <h3>{poll.no}</h3>
         </div>
       </div>
