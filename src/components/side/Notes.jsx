@@ -51,8 +51,12 @@ const Notes = ({ icons }) => {
       ...prev,
       {
         id: Math.floor(Math.random() * 100000),
-        title: titleInput.current.value,
-        body: bodyInput.current.value,
+        title:
+          titleInput.current.value.charAt(0).toUpperCase() +
+          titleInput.current.value.slice(1),
+        body:
+          bodyInput.current.value.charAt(0).toUpperCase() +
+          bodyInput.current.value.slice(1),
         date: `${new Date().getDate()}. ${new Date().getDay()}. ${new Date().getFullYear()}.`,
       },
     ]);
@@ -144,11 +148,17 @@ const Notes = ({ icons }) => {
       <div className="notes-wrapper">
         {notesState.map((note) => (
           <div key={note.id} className="note">
-            <button className="common-button" onClick={deleteNote} id={note.id}>
-              <icons.AiOutlineDelete size={22} />
-            </button>
-            <h2>{note.title}</h2>
-            <p>{note.body}</p>
+            <div className="note-body">
+              <button
+                className="common-button"
+                onClick={deleteNote}
+                id={note.id}
+              >
+                <icons.AiOutlineDelete size={22} />
+              </button>
+              <h2>{note.title}</h2>
+              <p>{note.body}</p>
+            </div>
             <div className="note-footer">
               <WordCounter icons={icons} toCount={note.body} />
               <div className="date-footer">
