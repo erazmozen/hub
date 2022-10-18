@@ -22,9 +22,11 @@ import { FiMaximize } from "react-icons/fi";
 import { BsEraserFill } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
 import { CgGhostCharacter } from "react-icons/cg";
-import { VscSymbolKeyword } from "react-icons/vsc";
+import { FaRegFileWord } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
 import { BsInfo } from "react-icons/bs";
+import { FaRegStickyNote } from "react-icons/fa";
+import { MdOutlineSave } from "react-icons/md";
 
 const icons = {
   FiGithub,
@@ -51,9 +53,11 @@ const icons = {
   BsEraserFill,
   AiOutlineDelete,
   CgGhostCharacter,
-  VscSymbolKeyword,
+  FaRegFileWord,
   MdDateRange,
   BsInfo,
+  FaRegStickyNote,
+  MdOutlineSave,
 };
 
 export default icons;
