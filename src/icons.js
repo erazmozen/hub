@@ -27,6 +27,8 @@ import { MdDateRange } from "react-icons/md";
 import { BsInfo } from "react-icons/bs";
 import { FaRegStickyNote } from "react-icons/fa";
 import { MdOutlineSave } from "react-icons/md";
+import { MdOutlineNavigateNext } from "react-icons/md";
+import { MdOutlineNavigateBefore } from "react-icons/md";
 
 const icons = {
   FiGithub,
@@ -58,6 +60,8 @@ const icons = {
   BsInfo,
   FaRegStickyNote,
   MdOutlineSave,
+  MdOutlineNavigateNext,
+  MdOutlineNavigateBefore,
 };
 
 export default icons;
