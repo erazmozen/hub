@@ -1,6 +1,6 @@
 import "../css/side/projectspreview.css";
 
-const ProjectPreview = ({ prevImages }) => {
+const ProjectPreview = ({ prevImages, index }) => {
   console.log("ProjectPreview render");
 
   return (
@@ -15,9 +15,7 @@ const ProjectPreview = ({ prevImages }) => {
       </div>
       <div className="projects-contact"></div>
       <div className="projects-slider">
-        {prevImages.map((src) => (
-          <img key={src} src={src} alt="" />
-        ))}
+        <img key={prevImages.index} src={prevImages[index]} alt="" />
       </div>
     </div>
   );
