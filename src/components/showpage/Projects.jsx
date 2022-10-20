@@ -1,44 +1,8 @@
 import "../css/showpage/showpage.css";
-
-const ProjectLink = ({ title, icons }) => {
-  const git = "https://github.com/erazmozen/";
-
-  console.log("ProjectLink render");
-  return (
-    <div className="common-button link">
-      <div className="redirect">
-        <a href={`${git}${title}`} target="_blank" rel="noreferrer">
-          {<icons.GoPlay size={22} />}
-        </a>
-        <a href={`${git}${title}`} target="_blank" rel="noreferrer">
-          {<icons.FiGithub />}
-        </a>
-      </div>
-      <h3>{`${title}`}</h3>
-    </div>
-  );
-};
-
-const ProjectPreview = () => {
-  console.log("ProjectPreview render");
-  return (
-    <div className="projects-preview">
-      <div>
-        <h2>My Projects</h2>
-        <p>
-          Here are some of the projects that i have done just to showcase what i
-          am capeable of doing. Feel free to contact me in case of a biz offer,
-          or any other thing that may pop up.
-        </p>
-      </div>
-      <div className="projects-contact">
-        <small>+38121732712</small>
-        <small>dummt@dummy.com</small>
-      </div>
-      <div className="projects-slider"></div>
-    </div>
-  );
-};
+import ProjectLink from "../side/ProjectLink";
+import ProjectPreview from "../side/ProjectsPreview";
+import prevImages from "../../data/prevData";
+import { useState } from "react";
 
 const Projects = ({ icons }) => {
   console.log("Projects render");
@@ -54,7 +18,7 @@ const Projects = ({ icons }) => {
         <ProjectLink icons={icons} title="React-Note-App" />
         <ProjectLink icons={icons} title="Password-Generator" />
       </div>
-      <ProjectPreview />
+      <ProjectPreview prevImages={prevImages} />
     </div>
   );
 };
