@@ -8,14 +8,14 @@ import slidePrev from "../imgprev/slider-prev-min.jpg";
 import tenzPrev from "../imgprev/tenzies-prev-min.jpg";
 
 const prevImages = [
-  calcPrev,
   fitPrev,
-  genPrev,
   logPrev,
-  memePrev,
   portPrev,
+  calcPrev,
+  memePrev,
   slidePrev,
   tenzPrev,
+  genPrev,
 ];
 
 export default prevImages;
