@@ -90,7 +90,7 @@ const Notes = ({ icons }) => {
       titleInput.current.value = "";
       bodyInput.current.value = "";
     }
-  }, [notesState]);
+  }, [notesState, skipRender]);
 
   useEffect(() => {
     console.log("useEffect []");
