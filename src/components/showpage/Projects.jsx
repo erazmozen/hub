@@ -2,7 +2,6 @@ import "../css/showpage/showpage.css";
 import ProjectLink from "../side/ProjectLink";
 import ProjectPreview from "../side/ProjectsPreview";
 import prevImages from "../../data/prevData";
-import { useState } from "react";
 
 const Projects = ({ icons }) => {
   console.log("Projects render");
