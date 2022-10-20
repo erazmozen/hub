@@ -1,10 +1,10 @@
 import { useState } from "react";
-import "./main.css";
 import icons from "./icons";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 import ShowPage from "./components/Showpage/ShowPage";
+import "./main.css";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
