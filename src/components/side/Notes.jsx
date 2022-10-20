@@ -76,8 +76,8 @@ const Notes = ({ icons }) => {
 
   function deleteNote(e) {
     console.log("brisemo note sa id: ", e.target.id);
-    const externalId = e.target.id;
-    const filteredNotes = notesState.filter((note) => note.id != externalId);
+    const externalId = parseInt(e.target.id);
+    const filteredNotes = notesState.filter((note) => note.id !== externalId);
     setNotesState(filteredNotes);
   }
 
