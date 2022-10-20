@@ -27,7 +27,7 @@ const Projects = ({ icons }) => {
       title: "React-ImageSlider",
     },
     {
-      title: "React-Note-App",
+      title: "Tenzies-Game",
     },
     {
       title: "Password-Generator",
