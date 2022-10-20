@@ -1,7 +1,7 @@
 @import "./colorpalette.css";
 
 body {
-  background-color: rgb(21, 19, 31);
+  background-color: var(--secondary);
 }
 
 /* ------ Common Classes */
