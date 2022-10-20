@@ -1,6 +1,6 @@
-import "../css/main/header.css";
+import "./header.css";
 import { useEffect, useState } from "react";
-import Popup from "../side/Popup";
+import Popup from "./comps/Popup";
 
 const Clock = () => {
   const [clockState, setClockState] = useState();

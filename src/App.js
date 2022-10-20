@@ -1,10 +1,10 @@
+import { useState } from "react";
 import "./main.css";
 import icons from "./icons";
-import Header from "./components/main/Header";
-import Sidebar from "./components/main/Siedbar";
-import Footer from "./components/main/Footer";
-import { useState } from "react";
-import ShowPage from "./components/main/ShowPage";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar";
+import Footer from "./components/Footer/Footer";
+import ShowPage from "./components/Showpage/ShowPage";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);

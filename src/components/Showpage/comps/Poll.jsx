@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../css/side/poll.css";
+import "./poll.css";
 
 const Poll = () => {
   const [poll, setPoll] = useState({ yes: 13512336, no: 203573, voted: null });
@@ -15,7 +15,7 @@ const Poll = () => {
 
   return (
     <div className="poll-wrapper">
-      <div className="question-wrapper">
+      <div className="question-holder">
         <h3>Pitanje naslov</h3>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -37,9 +37,9 @@ const Poll = () => {
           >
             Yes
           </h2>
-
           <h3>{poll.yes}</h3>
         </div>
+
         <div className="no-bar">
           <h2
             onClick={changePoll}
@@ -51,7 +51,6 @@ const Poll = () => {
           >
             No
           </h2>
-
           <h3>{poll.no}</h3>
         </div>
       </div>

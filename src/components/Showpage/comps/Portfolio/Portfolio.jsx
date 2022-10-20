@@ -1,6 +1,6 @@
-import data from "../../data/portfolioData.json";
-import Projects from "../showpage/Projects";
-import "../css/showpage/portfolio.css";
+import data from "../../../../data/portfolioData.json";
+import Projects from "./Projects/Projects";
+import "./portfolio.css";
 
 const ContentBox = ({ title, body }) => {
   const splitBody = body.split("/n");
@@ -8,7 +8,7 @@ const ContentBox = ({ title, body }) => {
   return (
     <div className="background-rounded section">
       <h2>{title}</h2>
-      <div className="body">
+      <div className="section-body">
         <div>
           {splitBody.map((line) => (
             <p key={Math.floor(Math.random() * 1000)}>{line}</p>

@@ -1,0 +1,41 @@
+.projects-preview {
+  background: var(--primary);
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  min-width: 300px;
+  padding: 2rem;
+  border-radius: 18px;
+  margin: 1rem;
+}
+
+.projects-preview p,
+.projects-preview h2,
+.projects-preview h3,
+.projects-preview small {
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.projects-contact {
+  display: flex;
+  flex-direction: column;
+}
+
+.projects-preview small {
+  margin-top: 0.3rem;
+  margin-bottom: 0;
+}
+.projects-preview img {
+  border-radius: 8px;
+}
+.projects-slider {
+  display: flex;
+  justify-content: center;
+}
+
+.projects-slider img {
+  height: 300px;
+  margin: 0.3rem;
+  object-fit: cover;
+}

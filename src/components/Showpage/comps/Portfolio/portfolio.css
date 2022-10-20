@@ -37,12 +37,12 @@
   transition: box-shadow 0.2s;
 }
 
-.body {
+.section-body {
   display: flex;
   justify-content: space-between;
 }
 
-.body p {
+.section-body p {
   margin-top: 0.8rem;
   margin-left: 0.4rem;
 }

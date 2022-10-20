@@ -1,0 +1,29 @@
+/* Showpage Header ------ */
+
+.showpageheader-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary);
+  padding: 1.3rem 1rem;
+  border-radius: 18px;
+}
+
+.showpageheader-wrapper h2 {
+  margin: 0.2rem 0.8rem;
+}
+
+.showpageheader-wrapper p {
+  font-size: 1.3rem;
+}
+
+.showpageheader-info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.showpageheader-settings {
+  font-size: 2rem;
+  margin: 0.2rem;
+}
+
+/* ------ Showpage Header */

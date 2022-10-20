@@ -1,8 +1,8 @@
-import "../css/main/sidebar.css";
-import Button from "../side/Button";
-import Todo from "../side/Todo";
+import "./sidebar.css";
+import Button from "../common/Button";
+import Todo from "./Todo/Todo";
 import { useRef } from "react";
-import SidebarTaskbar from "../side/SidebarTaskbar";
+import SidebarTaskbar from "./SidebarTaskbar";
 
 const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
   const searchInput = useRef("");

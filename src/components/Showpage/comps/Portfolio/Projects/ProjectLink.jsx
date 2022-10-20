@@ -1,3 +1,5 @@
+import "./projectlink.css";
+
 const ProjectLink = ({ title, icons, changeSlide, linkIndex, index }) => {
   const git = "https://github.com/erazmozen/";
   const gitIo = "https://erazmozen.github.io/";
@@ -7,7 +9,7 @@ const ProjectLink = ({ title, icons, changeSlide, linkIndex, index }) => {
     <div
       onClick={() => changeSlide(linkIndex)}
       title={title}
-      className={` common-button link`}
+      className={`common-button link`}
       style={index === linkIndex ? { background: "var(--primary)" } : {}}
     >
       <div className="redirect">

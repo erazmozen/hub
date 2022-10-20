@@ -1,8 +1,8 @@
-import "../css/showpage/showpage.css";
-import ProjectLink from "../side/ProjectLink";
-import ProjectPreview from "../side/ProjectsPreview";
-import prevImages from "../../data/prevData";
 import { useState } from "react";
+import prevImages from "../../../../../data/prevData";
+import ProjectLink from "./ProjectLink";
+import ProjectPreview from "./ProjectsPreview";
+import "./projects.css";
 
 const Projects = ({ icons }) => {
   const [index, setIndex] = useState(0);

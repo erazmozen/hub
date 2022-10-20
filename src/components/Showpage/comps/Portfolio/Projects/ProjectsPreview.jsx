@@ -1,4 +1,4 @@
-import "../css/side/projectspreview.css";
+import "./projectspreview.css";
 
 const ProjectPreview = ({ prevImages, index }) => {
   console.log("ProjectPreview render");

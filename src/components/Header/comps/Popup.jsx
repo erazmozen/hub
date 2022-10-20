@@ -1,5 +1,5 @@
-import "../css/side/popup.css";
-import Button from "./Button";
+import "./popup.css";
+import Button from "../../common/Button";
 
 const Popup = ({ icons }) => {
   console.log("Popup render");

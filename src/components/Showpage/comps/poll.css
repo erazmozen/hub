@@ -1,3 +1,5 @@
+/* Poll ------ */
+
 .poll-wrapper {
   background-color: var(--primary);
   padding: 1.3rem 2rem;
@@ -59,3 +61,5 @@
   margin-right: 1rem;
   transition: margin 0.2s ease;
 }
+
+/* ------ Poll */

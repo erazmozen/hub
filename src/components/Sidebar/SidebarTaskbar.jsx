@@ -1,4 +1,4 @@
-import "../css/side/sidebartaskbar.css";
+import "./sidebartaskbar.css";
 import { useState } from "react";
 
 const SidebarTaskbar = ({ icons, toggleShowpage }) => {

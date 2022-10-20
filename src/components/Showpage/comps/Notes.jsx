@@ -1,15 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import "../css/side/notes.css";
-import WordCounter from "./WordCounter";
+import WordCounter from "../../common/WordCounter";
+import "./notes.css";
 
 const Notes = ({ icons }) => {
+  const [skipRender, setSkipRender] = useState(true);
   const [bodyHeight, setBodyHeight] = useState("200px");
+  const [notesState, setNotesState] = useState([]);
   const titleInput = useRef();
   const bodyInput = useRef();
-
-  const [skipRender, setSkipRender] = useState(true);
-
-  const [notesState, setNotesState] = useState([]);
 
   const heightClass = {
     transition: "height 0.3s ease",
