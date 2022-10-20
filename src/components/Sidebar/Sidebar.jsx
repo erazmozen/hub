@@ -8,13 +8,16 @@ const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
   const searchInput = useRef("");
 
   console.log("Sidebar render");
-
   return (
     <div className="sidebar-wrapper background-rounded">
       <div className="sidebar-top">
         <div className="search-wrapper">
-          <input ref={searchInput} placeholder="Search" />
-          <button onClick={toggleSidebar}>
+          <input
+            className="common-input"
+            ref={searchInput}
+            placeholder="Search"
+          />
+          <button className="common-button" onClick={toggleSidebar}>
             <icons.IoMdClose />
           </button>
         </div>
