@@ -61,10 +61,10 @@ const Notes = ({ icons }) => {
   }
 
   const clearInputs = (e) => {
-    console.log("clearig inputs");
     e.preventDefault();
     titleInput.current.value = "";
     bodyInput.current.value = "";
+    console.log("clear inputs");
   };
 
   function clearNotes(e) {
@@ -73,29 +73,26 @@ const Notes = ({ icons }) => {
   }
 
   function deleteNote(e) {
-    console.log("brisemo note sa id: ", e.target.id);
     const externalId = parseInt(e.target.id);
     const filteredNotes = notesState.filter((note) => note.id !== externalId);
     setNotesState(filteredNotes);
+    console.log("deleting: ", e.target.id);
   }
 
   useEffect(() => {
-    console.log("useEffect [notes]");
     if (skipRender) setSkipRender(false);
     if (!skipRender) {
-      console.log("useEffect set note");
       localStorage.setItem("notes", JSON.stringify(notesState));
       titleInput.current.value = "";
       bodyInput.current.value = "";
+      console.log("clear inputs and set to local storage");
     }
   }, [notesState, skipRender]);
 
   useEffect(() => {
-    console.log("useEffect []");
     const savedNotes = JSON.parse(localStorage.getItem("notes") || "[]");
-    console.log("notes we get from local storage: ", savedNotes);
     setNotesState(savedNotes);
-    console.log("saved local notes to notes state");
+    console.log("saved to local storage");
   }, []);
 
   console.log("Notes render");
