@@ -8,9 +8,9 @@ const ShowPage = ({ icons }) => {
   return (
     <div className="background-rounded showpage">
       <ProfileShowpage icons={icons} />
-      <Poll />
       <Portfolio icons={icons} />
       <Notes icons={icons} />
+      <Poll />
     </div>
   );
 };
