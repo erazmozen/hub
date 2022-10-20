@@ -12,25 +12,27 @@ function App() {
 
   function toggleSidebar() {
     setSidebarToggle((prev) => (prev = !prev));
-    console.log('sidebar toggled, state:', !sidebarToggle)
+    console.log("sidebar toggled, state:", !sidebarToggle);
   }
 
   function toggleShowpage() {
     setShowpageToggle((prev) => (prev = !prev));
-    console.log('showpage toggled, state:', !showpageToggle)
+    console.log("showpage toggled, state:", !showpageToggle);
   }
 
-  console.log('App render')
+  console.log("App render");
 
   return (
     <div className="main">
       <Header icons={icons} toggleSidebar={toggleSidebar} />
       <div className="content-wrapper">
-        {sidebarToggle
-          && <Sidebar icons={icons}
+        {sidebarToggle && (
+          <Sidebar
+            icons={icons}
             toggleSidebar={toggleSidebar}
-            toggleShowpage={toggleShowpage} />
-        }
+            toggleShowpage={toggleShowpage}
+          />
+        )}
         {showpageToggle && <ShowPage icons={icons} />}
       </div>
       <Footer />
