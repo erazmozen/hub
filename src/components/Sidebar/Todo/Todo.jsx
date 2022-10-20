@@ -1,18 +1,18 @@
 import "./todo.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Todo = ({ icons, searchInput }) => {
-  const [todos, setTodos] = useState([
-    { id: 0, title: "Lets put some" },
-    { id: 1, title: "Random text here" },
-    { id: 2, title: "To show some todos" },
-  ]);
+  const [skipRender, setSkipRender] = useState(true);
+  const [todos, setTodos] = useState([]);
   const [quarry, setquarry] = useState("");
 
   function addRandomTodo() {
     const todoTitle = searchInput.current.value;
     if (todoTitle === "") return console.log("you must type the name!");
-    setTodos((prev) => [...prev, { id: todos.length, title: todoTitle }]);
+    setTodos((prev) => [
+      ...prev,
+      { id: todos.length, title: todoTitle, done: false },
+    ]);
     console.log("added new todo, title:", todoTitle);
   }
 
@@ -30,6 +30,18 @@ const Todo = ({ icons, searchInput }) => {
   function filterTodos() {
     setquarry(searchInput.current.value.toLowerCase());
   }
+
+  useEffect(() => {
+    const savedTodos = JSON.parse(localStorage.getItem("todos") || "[]");
+    setTodos(savedTodos);
+  }, []);
+
+  useEffect(() => {
+    if (skipRender) setSkipRender(false);
+    if (!skipRender) {
+      localStorage.setItem("todos", JSON.stringify(todos));
+    }
+  }, [todos]);
 
   console.log("Todo render");
 
