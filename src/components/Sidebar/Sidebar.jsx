@@ -3,8 +3,9 @@ import Button from "../common/Button";
 import Todo from "./Todo/Todo";
 import { useRef } from "react";
 import SidebarTaskbar from "./SidebarTaskbar";
+import { DataConsumer } from "../../contexts/DataContext";
 
-const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
+const Sidebar = ({ icons }) => {
   const searchInput = useRef("");
 
   console.log("Sidebar render");
@@ -17,9 +18,18 @@ const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
             ref={searchInput}
             placeholder="Search"
           />
-          <button className="common-button" onClick={toggleSidebar}>
-            <icons.IoMdClose />
-          </button>
+          <DataConsumer>
+            {(functions) => {
+              return (
+                <button
+                  className="common-button"
+                  onClick={functions.toggleSidebar}
+                >
+                  <icons.IoMdClose />
+                </button>
+              );
+            }}
+          </DataConsumer>
         </div>
         <Todo icons={icons} searchInput={searchInput} />
         <Button title="Projects" />
@@ -28,7 +38,8 @@ const Sidebar = ({ icons, toggleShowpage, toggleSidebar }) => {
       <div className="sidebar-bottom">
         <div>+38154443123</div>
       </div>
-      <SidebarTaskbar icons={icons} toggleShowpage={toggleShowpage} />
+
+      <SidebarTaskbar icons={icons} />
     </div>
   );
 };

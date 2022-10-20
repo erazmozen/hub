@@ -1,7 +1,8 @@
 import "./sidebartaskbar.css";
 import { useState } from "react";
+import { DataConsumer } from "../../contexts/DataContext";
 
-const SidebarTaskbar = ({ icons, toggleShowpage }) => {
+const SidebarTaskbar = ({ icons }) => {
   const [toggleSidebarTaskbar, setToggleSidebarTaskbar] = useState(false);
   function toggleTaskbar() {
     setToggleSidebarTaskbar((prev) => !prev);
@@ -16,10 +17,16 @@ const SidebarTaskbar = ({ icons, toggleShowpage }) => {
       }
     >
       <icons.BsReverseLayoutSidebarInsetReverse onClick={toggleTaskbar} />
-      <icons.BsReverseLayoutTextSidebarReverse
-        onClick={toggleShowpage}
-        size={22}
-      />
+      <DataConsumer>
+        {(functions) => {
+          return (
+            <icons.BsReverseLayoutTextSidebarReverse
+              onClick={functions.toggleShowpage}
+              size={22}
+            />
+          );
+        }}
+      </DataConsumer>
     </div>
   );
 };

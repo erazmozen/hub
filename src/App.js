@@ -1,14 +1,20 @@
 import { useState } from "react";
+import "./main.css";
 import icons from "./icons";
 import Header from "./components/Header/Header";
 import Sidebar from "./components/Sidebar/Sidebar";
 import Footer from "./components/Footer/Footer";
 import ShowPage from "./components/Showpage/ShowPage";
-import "./main.css";
+import { DataProvider } from "./contexts/DataContext";
 
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
   const [showpageToggle, setShowpageToggle] = useState(true);
+
+  const functions = {
+    toggleSidebar,
+    toggleShowpage,
+  };
 
   function toggleSidebar() {
     setSidebarToggle((prev) => (prev = !prev));
@@ -24,18 +30,14 @@ function App() {
 
   return (
     <div className="main">
-      <Header icons={icons} toggleSidebar={toggleSidebar} />
-      <div className="content-wrapper">
-        {sidebarToggle && (
-          <Sidebar
-            icons={icons}
-            toggleSidebar={toggleSidebar}
-            toggleShowpage={toggleShowpage}
-          />
-        )}
-        {showpageToggle && <ShowPage icons={icons} />}
-      </div>
-      <Footer />
+      <DataProvider value={functions}>
+        <Header icons={icons} />
+        <div className="content-wrapper">
+          {sidebarToggle && <Sidebar icons={icons} />}
+          {showpageToggle && <ShowPage icons={icons} />}
+        </div>
+        <Footer />
+      </DataProvider>
     </div>
   );
 }

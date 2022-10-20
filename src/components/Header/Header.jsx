@@ -1,6 +1,7 @@
 import "./header.css";
 import { useEffect, useState } from "react";
 import Popup from "./comps/Popup";
+import { DataConsumer } from "../../contexts/DataContext";
 
 const Clock = () => {
   const [clockState, setClockState] = useState();
@@ -15,7 +16,7 @@ const Clock = () => {
   return <div>{clockState}</div>;
 };
 
-const Header = ({ icons, toggleSidebar }) => {
+const Header = ({ icons }) => {
   const [togglePopup, setTogglePopup] = useState(false);
 
   function togglePopupFunction() {
@@ -27,9 +28,13 @@ const Header = ({ icons, toggleSidebar }) => {
   return (
     <div className="header-wrapper background-rounded">
       <div className="logo-wrapper">
-        <button onClick={toggleSidebar}>
-          <icons.BsToggles />
-        </button>
+        <DataConsumer>
+          {(functions) => (
+            <button onClick={functions.toggleSidebar}>
+              <icons.BsToggles />
+            </button>
+          )}
+        </DataConsumer>
         <div className="icons-wrapper">
           <icons.GrLinkedinOption />
           <icons.FiGithub />
