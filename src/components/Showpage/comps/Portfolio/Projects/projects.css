@@ -13,8 +13,8 @@
   flex-direction: column;
   justify-content: center;
   flex-grow: 1;
-  min-width: 300px;
-  max-width: 70%;
+  min-width: 240px;
+  max-width: 380px;
 }
 
 .projects a {
