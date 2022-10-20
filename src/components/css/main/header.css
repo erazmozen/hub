@@ -1,6 +1,7 @@
 /* ------ Navbar */
 
 .header-wrapper {
+  background-color: var(--primary);
   justify-content: space-between;
   padding: 1rem 1.5rem;
   color: white;
@@ -20,7 +21,7 @@
   margin-left: 0.3rem;
 }
 
-.icons-wrapper>* {
+.icons-wrapper > * {
   margin-left: 1rem;
 }
 
