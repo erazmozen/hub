@@ -13,7 +13,7 @@
 }
 
 .notes > form > input {
-  font-size: 1.3rem;
+  font-size: 1.3em;
 }
 
 .notes textarea {
@@ -22,7 +22,7 @@
   height: 200px;
   overflow: auto;
   letter-spacing: 0.015rem;
-  font-size: 1.1rem;
+  font-size: 1.1em;
 }
 
 .textarea-h400 {
@@ -79,7 +79,7 @@
 .note p {
   white-space: pre-wrap;
   margin-left: 0.3rem;
-  font-size: 1.1rem;
+  font-size: 1.1em;
   max-width: 600px;
 }
 
