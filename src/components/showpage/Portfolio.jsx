@@ -9,11 +9,11 @@ const ContentBox = ({ title, body }) => {
     <div className="background-rounded section">
       <h2>{title}</h2>
       <div className="body">
-        <p>
+        <div>
           {splitBody.map((line) => (
-            <div>{line}</div>
+            <p key={Math.floor(Math.random() * 1000)}>{line}</p>
           ))}
-        </p>
+        </div>
       </div>
     </div>
   );
@@ -37,6 +37,7 @@ const Portfolio = ({ icons }) => {
       {dataArray.map((section) => (
         <ContentBox
           key={section.id}
+          id={section.id}
           title={section.title}
           body={section.body}
         />
