@@ -29,6 +29,9 @@ import { FaRegStickyNote } from "react-icons/fa";
 import { MdOutlineSave } from "react-icons/md";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { MdOutlineNavigateBefore } from "react-icons/md";
+import { TbCurrentLocation } from "react-icons/tb";
+import { TiWeatherNight } from "react-icons/ti";
+import { TiWeatherSunny } from "react-icons/ti";
 
 const icons = {
   FiGithub,
@@ -62,6 +65,9 @@ const icons = {
   MdOutlineSave,
   MdOutlineNavigateNext,
   MdOutlineNavigateBefore,
+  TbCurrentLocation,
+  TiWeatherNight,
+  TiWeatherSunny,
 };
 
 export default icons;
