@@ -1,0 +1,14 @@
+.weather-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.weather-title svg,
+.weather-cords svg {
+  margin-right: 0.5rem;
+}
+
+.wather-body {
+  margin-top: 0.5rem;
+}
