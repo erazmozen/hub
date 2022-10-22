@@ -1,7 +1,7 @@
 import "./header.css";
 import { useEffect, useState } from "react";
 import Popup from "./comps/Popup";
-import { DataConsumer } from "../../contexts/DataContext";
+import DataContext from "../../contexts/DataContext";
 
 const Clock = () => {
   const [clockState, setClockState] = useState();
@@ -28,13 +28,13 @@ const Header = ({ icons }) => {
   return (
     <div className="header-wrapper background-rounded">
       <div className="logo-wrapper">
-        <DataConsumer>
+        <DataContext.Consumer>
           {(functions) => (
             <button onClick={functions.toggleSidebar}>
               <icons.BsToggles />
             </button>
           )}
-        </DataConsumer>
+        </DataContext.Consumer>
         <div className="icons-wrapper">
           <icons.GrLinkedinOption />
           <icons.FiGithub />

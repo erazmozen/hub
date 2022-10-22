@@ -1,6 +1,6 @@
 import "./sidebartaskbar.css";
 import { useState } from "react";
-import { DataConsumer } from "../../contexts/DataContext";
+import DataContext from "../../contexts/DataContext";
 
 const SidebarTaskbar = ({ icons }) => {
   const [toggleSidebarTaskbar, setToggleSidebarTaskbar] = useState(false);
@@ -17,7 +17,7 @@ const SidebarTaskbar = ({ icons }) => {
       }
     >
       <icons.BsReverseLayoutSidebarInsetReverse onClick={toggleTaskbar} />
-      <DataConsumer>
+      <DataContext.Consumer>
         {(functions) => {
           return (
             <icons.BsReverseLayoutTextSidebarReverse
@@ -26,7 +26,7 @@ const SidebarTaskbar = ({ icons }) => {
             />
           );
         }}
-      </DataConsumer>
+      </DataContext.Consumer>
     </div>
   );
 };

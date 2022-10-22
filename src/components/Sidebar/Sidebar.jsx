@@ -1,9 +1,9 @@
 import "./sidebar.css";
 import Button from "../common/Button";
 import Todo from "./Todo/Todo";
-import { useRef } from "react";
+import { useContext, useRef } from "react";
 import SidebarTaskbar from "./SidebarTaskbar";
-import { DataConsumer } from "../../contexts/DataContext";
+import DataContext from "../../contexts/DataContext";
 
 const Sidebar = ({ icons }) => {
   const searchInput = useRef("");
@@ -18,7 +18,7 @@ const Sidebar = ({ icons }) => {
             ref={searchInput}
             placeholder="Search"
           />
-          <DataConsumer>
+          <DataContext.Consumer>
             {(functions) => {
               return (
                 <button
@@ -29,7 +29,7 @@ const Sidebar = ({ icons }) => {
                 </button>
               );
             }}
-          </DataConsumer>
+          </DataContext.Consumer>
         </div>
         <Todo icons={icons} searchInput={searchInput} />
         <Button title="Projects" />
