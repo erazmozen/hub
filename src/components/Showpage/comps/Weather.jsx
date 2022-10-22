@@ -20,6 +20,10 @@ const Weather = ({ icons }) => {
 
   console.log("weather render, data:", weatherData);
 
+  if (weatherData === null) {
+    return <h2>There is no data to display, api calls must have run out..</h2>;
+  }
+
   return (
     <div className="card weather-wrapper">
       <div className="weather-header">
