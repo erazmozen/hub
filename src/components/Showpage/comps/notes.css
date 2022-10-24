@@ -10,16 +10,15 @@
   margin: 0.1rem;
   padding: 2rem;
   border-radius: 18px;
-  flex-grow: 1;
-  max-width: 500px;
+  max-width: 700px;
 }
 
-.notes>form {
+.notes > form {
   display: flex;
   flex-direction: column;
 }
 
-.notes>form>input {
+.notes > form > input {
   font-size: 1.3em;
 }
 
@@ -115,7 +114,6 @@
   display: flex;
   margin: 0 0.8rem;
 }
-
 .toggles-wrapper button {
   margin-right: 0.4rem;
 }
