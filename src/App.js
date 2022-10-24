@@ -11,41 +11,37 @@ import axios from "axios";
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
   const [showpageToggle, setShowpageToggle] = useState(true);
-  const [weatherData, setWeatherData] = useState(null);
+  const [meteoWeatherData, setMeteoWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const getWeatherData = async () => {
+  const getOpenMeteoData = async () => {
     const options = {
       method: "GET",
-      url: "https://aerisweather1.p.rapidapi.com/forecasts/44.444330,20.606940",
-      headers: {
-        "X-RapidAPI-Key": "358eefedb5mshd1c04f32ace0284p164d29jsn9f2a63a83d79",
-        "X-RapidAPI-Host": "aerisweather1.p.rapidapi.com",
-      },
+      url: "https://api.open-meteo.com/v1/forecast?latitude=44.43&longitude=20.64&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,direct_radiation,diffuse_radiation&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset&current_weather=true&timezone=auto",
     };
 
-    await axios
-      .request(options)
-      .then(function (response) {
-        console.log("iz axiosa", response.data);
-        setWeatherData(response.data);
-        setLoading(false);
-      })
-      .catch(function (error) {
-        console.error("axios error", error);
-      });
-  };
+    await axios.request(options).then(function (response) {
+      console.log("axios, Meteo:",response.data )
+      setMeteoWeatherData(response.data);
+      setLoading(false);
+    })
+    .catch(
+      function (error) {
+        console.error("axios error", error)
+      }
+    )
+  }
 
   useEffect(() => {
-    console.log("run useEffect[]");
-    getWeatherData();
+    console.log("run useEffect[] for getOpenMeteoData");
+    getOpenMeteoData();
   }, []);
 
   const functions = {
     toggleSidebar,
     toggleShowpage,
-    weatherData,
     loading,
+    meteoWeatherData
   };
 
   function toggleSidebar() {
@@ -58,7 +54,7 @@ function App() {
     console.log("showpage toggled, state:", !showpageToggle);
   }
 
-  console.log("App render", weatherData);
+  console.log("App render");
 
   return (
     <div className="main">

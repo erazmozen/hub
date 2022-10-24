@@ -1,26 +1,19 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import DataContext from "../../../contexts/DataContext";
 import "./weather.css";
 
 const Weather = ({ icons }) => {
-  const weather = useContext(DataContext);
-  const weatherData = weather.weatherData.response[0];
+  const { meteoWeatherData } = useContext(DataContext);
 
   const weatherDataObject = {
-    city: `Mladenovac, Koracica (${weatherData.place.name}) `,
-    cords: `${weatherData.loc.lat} ${weatherData.loc.long}`,
-    currTemp: `Currently: ${weatherData.periods[0].avgTempC}℃,
-    but feels like: ${weatherData.periods[0].feelslikeC}℃`,
-    intervalIcon: weatherData.interval ? (
-      <icons.TiWeatherSunny size={32} />
-    ) : (
-      <icons.TiWeatherNight />
-    ),
+    city: `Mladenovac, Koracica`,
+    cords: `${meteoWeatherData.latitude} ${meteoWeatherData.longitude}`,
+    currTemp: `Currently: ${meteoWeatherData.current_weather.temperature}℃`,
   };
 
-  console.log("weather render, data:", weatherData);
+  console.log("Weather render");
 
-  if (weatherData === null) {
+  if (meteoWeatherData === null) {
     return <h2>There is no data to display, api calls must have run out..</h2>;
   }
 
