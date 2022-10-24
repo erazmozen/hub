@@ -56,6 +56,7 @@ const Projects = ({ icons }) => {
       <div className="link-holder">
         {projectLinks.map((link, linkIndex) => (
           <ProjectLink
+            key={linkIndex}
             icons={icons}
             index={index}
             linkIndex={linkIndex}
