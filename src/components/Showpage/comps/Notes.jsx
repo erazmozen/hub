@@ -3,9 +3,8 @@ import WordCounter from "../../common/WordCounter";
 import "./notes.css";
 
 const Notes = ({ icons }) => {
-  const [skipRender, setSkipRender] = useState(true);
   const [bodyHeight, setBodyHeight] = useState("200px");
-  const [notesState, setNotesState] = useState([]);
+  const [notesState, setNotesState] = useState(JSON.parse(localStorage.getItem("notes") || "[]"));
   const titleInput = useRef();
   const bodyInput = useRef();
 
@@ -80,20 +79,11 @@ const Notes = ({ icons }) => {
   }
 
   useEffect(() => {
-    if (skipRender) setSkipRender(false);
-    if (!skipRender) {
-      localStorage.setItem("notes", JSON.stringify(notesState));
-      titleInput.current.value = "";
-      bodyInput.current.value = "";
-      console.log("clear inputs and set to local storage");
-    }
-  }, [notesState, skipRender]);
-
-  useEffect(() => {
-    const savedNotes = JSON.parse(localStorage.getItem("notes") || "[]");
-    setNotesState(savedNotes);
-    console.log("saved to local storage");
-  }, []);
+    localStorage.setItem("notes", JSON.stringify(notesState));
+    titleInput.current.value = "";
+    bodyInput.current.value = "";
+    console.log("clear inputs and set to local storage");
+  }, [notesState]);
 
   console.log("Notes render");
 
@@ -155,8 +145,7 @@ const Notes = ({ icons }) => {
                 <button
                   className="common-button"
                   onClick={deleteNote}
-                  id={note.id}
-                >
+                  id={note.id}>
                   <icons.AiOutlineDelete size={22} />
                 </button>
                 <h2>{note.title}</h2>
