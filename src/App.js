@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import "./main.css";
 import icons from "./icons";
 import Header from "./components/Header/Header";
@@ -10,11 +10,6 @@ import DataContext from "./contexts/DataContext";
 function App() {
   const [sidebarToggle, setSidebarToggle] = useState(true);
   const [showpageToggle, setShowpageToggle] = useState(true);
-  
-const functions = {
-    toggleSidebar,
-    toggleShowpage,
-  };
 
   function toggleSidebar() {
     setSidebarToggle((prev) => (prev = !prev));
@@ -25,6 +20,11 @@ const functions = {
     setShowpageToggle((prev) => (prev = !prev));
     console.log("showpage toggled, state:", !showpageToggle);
   }
+
+  const functions = {
+    toggleSidebar,
+    toggleShowpage,
+  };
 
   console.log("App render");
 
