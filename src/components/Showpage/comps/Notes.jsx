@@ -98,78 +98,80 @@ const Notes = ({ icons }) => {
   console.log("Notes render");
 
   return (
-    <div className="notes">
-      <div className="note-header">
-        <h1>Add a Note</h1>
-        <icons.FaRegStickyNote />
-      </div>
-      <form onSubmit={saveNote}>
-        <input
-          ref={titleInput}
-          placeholder="Title"
-          className="common-input"
-        ></input>
+    <div className="notes-wrapper">
+      <div className="notes">
+        <div className="note-header">
+          <h1>Add a Note</h1>
+          <icons.FaRegStickyNote />
+        </div>
+        <form onSubmit={saveNote}>
+          <input
+            ref={titleInput}
+            placeholder="Title"
+            className="common-input"
+          ></input>
 
-        <div className="toggles-wrapper">
-          {buttons.map((button) => (
-            <button
-              key={button.id}
-              value={button.value}
-              className="common-button"
-              onClick={changeHeight}
-            >
-              {button.icon}
+          <div className="toggles-wrapper">
+            {buttons.map((button) => (
+              <button
+                key={button.id}
+                value={button.value}
+                className="common-button"
+                onClick={changeHeight}
+              >
+                {button.icon}
+              </button>
+            ))}
+
+            <button className="common-button" onClick={clearInputs}>
+              <icons.BsEraserFill size={18} />
             </button>
-          ))}
+            <button className="common-button" onClick={clearNotes}>
+              <icons.AiOutlineClear size={18} />
+            </button>
+          </div>
 
-          <button className="common-button" onClick={clearInputs}>
-            <icons.BsEraserFill size={18} />
+          <textarea
+            ref={bodyInput}
+            placeholder="Body"
+            className={`common-input textarea-body`}
+            style={heightClass}
+          />
+
+          <button className="common-button" type="submit">
+            Save
           </button>
-          <button className="common-button" onClick={clearNotes}>
-            <icons.AiOutlineClear size={18} />
-          </button>
+        </form>
+
+        <div className="saved-notes-header">
+          <h1>Saved notes:</h1>
+          <icons.MdOutlineSave />
         </div>
 
-        <textarea
-          ref={bodyInput}
-          placeholder="Body"
-          className={`common-input textarea-body`}
-          style={heightClass}
-        />
-
-        <button className="common-button" type="submit">
-          Save
-        </button>
-      </form>
-
-      <div className="saved-notes-header">
-        <h1>Saved notes:</h1>
-        <icons.MdOutlineSave />
-      </div>
-
-      <div className="notes-wrapper">
-        {notesState.map((note) => (
-          <div key={note.id} className="note">
-            <div className="note-body">
-              <button
-                className="common-button"
-                onClick={deleteNote}
-                id={note.id}
-              >
-                <icons.AiOutlineDelete size={22} />
-              </button>
-              <h2>{note.title}</h2>
-              <p>{note.body}</p>
-            </div>
-            <div className="note-footer">
-              <WordCounter icons={icons} toCount={note.body} />
-              <div className="date-footer">
-                {note.date}
-                <icons.MdDateRange />
+        <div className="notes-holder">
+          {notesState.map((note) => (
+            <div key={note.id} className="note">
+              <div className="note-body">
+                <button
+                  className="common-button"
+                  onClick={deleteNote}
+                  id={note.id}
+                >
+                  <icons.AiOutlineDelete size={22} />
+                </button>
+                <h2>{note.title}</h2>
+                <p>{note.body}</p>
+              </div>
+              <div className="note-footer">
+                <WordCounter icons={icons} toCount={note.body} />
+                <div className="date-footer">
+                  {note.date}
+                  <icons.MdDateRange />
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </div>
   );
