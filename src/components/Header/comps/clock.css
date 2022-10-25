@@ -1,0 +1,22 @@
+.clock-wrapper {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--secondary);
+    border-radius: 6px;
+    padding: 0 .4rem;
+}
+
+.clock-date,
+.clock-time {
+    position: relative;
+    padding: .3rem;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.clock-date svg,
+.clock-time svg {
+    height: 100%;
+    margin-left: .3rem;
+}
