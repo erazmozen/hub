@@ -22,6 +22,7 @@ const Clock = ({ icons }) => {
             });
         }
 
+        getTimeData();
         setInterval(() => {
             getTimeData();
         }, 60000);
