@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 import WordCounter from "../../common/WordCounter";
+import useLocalStorage from '../../common/hooks/useLocalStorage'
 import "./notes.css";
 
 const Notes = ({ icons }) => {
   const [bodyHeight, setBodyHeight] = useState("200px");
-  const [notesState, setNotesState] = useState(JSON.parse(localStorage.getItem("notes") || "[]"));
+  const [notesState, setNotesState] = useLocalStorage('notes-data', [])
   const titleInput = useRef();
   const bodyInput = useRef();
 
@@ -79,10 +80,9 @@ const Notes = ({ icons }) => {
   }
 
   useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notesState));
     titleInput.current.value = "";
     bodyInput.current.value = "";
-    console.log("clear inputs and set to local storage");
+    console.log("clear inputs");
   }, [notesState]);
 
   console.log("Notes render");
