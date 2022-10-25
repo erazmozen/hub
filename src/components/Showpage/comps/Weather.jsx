@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React from "react";
 import "./weather.css";
 import useApi from "../../common/hooks/useApi";
 import WeatherContainer from "./WeatherContainer";
@@ -14,9 +14,9 @@ const Weather = ({ icons }) => {
     )
   }
 
-  console.log("Weather render", data);
+  console.log("Weather render");
 
-  return <WeatherContainer icons={icons} data={data} />;
+  return !loading && <WeatherContainer icons={icons} data={data} />;
 };
 
 export default Weather;
