@@ -12,3 +12,21 @@
 .wather-body {
   margin-top: 0.5rem;
 }
+
+.forcast {
+  display: flex;
+  justify-content: center;
+  background-color: var(--secondary);
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+.temp,
+.time {
+  margin: .2rem .4rem;
+}
+
+.pair {
+  margin: 1rem;
+  text-align: center;
+}
