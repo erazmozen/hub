@@ -16,10 +16,10 @@
 .sidebar-top {
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
-.sidebar-top > div {
+.sidebar-top>div {
   padding: 0.4rem;
 }
 
