@@ -3,7 +3,7 @@
 .header-wrapper {
   background-color: var(--primary);
   justify-content: space-between;
-  padding: 1rem 1.5rem;
+  padding: .8rem 1rem;
   color: white;
   position: relative;
 }
@@ -21,15 +21,16 @@
   margin-left: 0.3rem;
 }
 
-.icons-wrapper > * {
+.icons-wrapper>* {
   margin-left: 1rem;
+
 }
 
 .header-wrapper,
 .logo-wrapper,
 .icons-wrapper {
   display: flex;
-  align-items: baseline;
+  align-items: center;
 }
 
 .header-settigns {
