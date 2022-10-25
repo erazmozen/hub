@@ -26,7 +26,7 @@ const useApi = (url) => {
   useEffect(() => {
     console.log("useApi useEffect[]");
     fetchApi();
-  }, []);
+  }, [useApi]);
 
   return { loading, data };
 };
