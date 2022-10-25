@@ -34,6 +34,18 @@ import { TiWeatherNight } from "react-icons/ti";
 import { TiWeatherSunny } from "react-icons/ti";
 import { CgCalendarDates } from "react-icons/cg"
 import { CgTimer } from "react-icons/cg"
+import { WiDaySunny } from "react-icons/wi";
+import { WiDaySunnyOvercast } from "react-icons/wi";
+import { WiFog } from "react-icons/wi";
+import { WiDayRainMix } from "react-icons/wi";
+import { WiDaySnowWind } from "react-icons/wi";
+import { WiRain } from "react-icons/wi";
+import { WiSprinkle } from "react-icons/wi";
+import { WiNightSnowWind } from "react-icons/wi";
+import { WiStormShowers } from "react-icons/wi";
+
+
+
 
 
 const icons = {
@@ -72,7 +84,16 @@ const icons = {
   TiWeatherNight,
   TiWeatherSunny,
   CgCalendarDates,
-  CgTimer
+  CgTimer,
+  WiDaySunny,
+  WiDaySunnyOvercast,
+  WiFog,
+  WiDayRainMix,
+  WiDaySnowWind,
+  WiRain,
+  WiSprinkle,
+  WiNightSnowWind,
+  WiStormShowers,
 };
 
 export default icons;
