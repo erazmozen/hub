@@ -5,7 +5,6 @@ const Clock = ({ icons }) => {
     const [clockState, setClockState] = useState({ loading: true });
 
     useEffect(() => {
-
         const getTimeData = async () => {
             const date = new Date();
             const [month, day, year] = [date.getMonth(), date.getDate(), date.getFullYear()];
@@ -28,8 +27,6 @@ const Clock = ({ icons }) => {
         }, 60000);
     }, []);
 
-    if (setClockState == {}) console.log('nula!')
-
     return (
         <div>
             {
@@ -44,7 +41,6 @@ const Clock = ({ icons }) => {
                         <p>{clockState.month}.{clockState.day}.{clockState.year}.</p>
                         <icons.CgCalendarDates />
                     </div>
-
                 </div>
             }
         </div>
