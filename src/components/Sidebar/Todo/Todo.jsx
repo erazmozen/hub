@@ -1,9 +1,9 @@
 import "./todo.css";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import useLocalStorage from "../../common/hooks/useLocalStorage";
 
 const Todo = ({ icons, searchInput }) => {
-  const [skipRender, setSkipRender] = useState(true);
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useLocalStorage('todos-data', [])
   const [quarry, setquarry] = useState("");
 
   function addRandomTodo() {
@@ -30,18 +30,6 @@ const Todo = ({ icons, searchInput }) => {
   function filterTodos() {
     setquarry(searchInput.current.value.toLowerCase());
   }
-
-  useEffect(() => {
-    const savedTodos = JSON.parse(localStorage.getItem("todos") || "[]");
-    setTodos(savedTodos);
-  }, []);
-
-  useEffect(() => {
-    if (skipRender) setSkipRender(false);
-    if (!skipRender) {
-      localStorage.setItem("todos", JSON.stringify(todos));
-    }
-  }, [todos]);
 
   console.log("Todo render");
 
