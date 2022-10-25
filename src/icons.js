@@ -32,6 +32,9 @@ import { MdOutlineNavigateBefore } from "react-icons/md";
 import { TbCurrentLocation } from "react-icons/tb";
 import { TiWeatherNight } from "react-icons/ti";
 import { TiWeatherSunny } from "react-icons/ti";
+import { CgCalendarDates } from "react-icons/cg"
+import { CgTimer } from "react-icons/cg"
+
 
 const icons = {
   FiGithub,
@@ -68,6 +71,8 @@ const icons = {
   TbCurrentLocation,
   TiWeatherNight,
   TiWeatherSunny,
+  CgCalendarDates,
+  CgTimer
 };
 
 export default icons;
