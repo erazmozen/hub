@@ -1,12 +1,12 @@
 const WeatherContainer = ({ data, icons }) => {
 
-    console.log("inside comp", data)
-
     const weatherDataObject = {
         city: `Mladenovac, Koracica`,
         cords: `${data.latitude} ${data.longitude}`,
         currTemp: `Currently: ${data.current_weather.temperature}℃`,
     };
+
+    console.log("Render WeatherContainer")
 
     return (
         <div className="card weather-wrapper">
