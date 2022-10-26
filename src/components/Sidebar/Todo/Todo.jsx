@@ -1,28 +1,29 @@
 import "./todo.css";
 import { useState } from "react";
+import uppercaseFirst from "../../common/functions/uppercaseFirst";
 import useLocalStorage from "../../common/hooks/useLocalStorage";
 
 const Todo = ({ icons, searchInput }) => {
   const [todos, setTodos] = useLocalStorage('todos-data', [])
   const [quarry, setquarry] = useState("");
 
-  function addRandomTodo() {
+  function addTodo() {
     const todoTitle = searchInput.current.value;
-    if (todoTitle === "") return console.log("you must type the name!");
+    if (todoTitle === "") return console.log("you must type a name!");
     setTodos((prev) => [
       ...prev,
-      { id: todos.length, title: todoTitle, done: false },
+      { id: todos.length, title: uppercaseFirst(todoTitle), done: false },
     ]);
     console.log("added new todo, title:", todoTitle);
   }
 
   const deleteTodo = (index) => {
-    const todosFiltered = [...todos].filter((todo) => todo.id !== index);
+    const todosFiltered = todos.filter((todo) => todo.id !== index);
     console.log("deleted todo, left: ", todosFiltered);
     setTodos(todosFiltered);
   };
 
-  function clearTodo() {
+  function clearTodos() {
     setTodos([]);
     console.log("cleared all todos");
   }
@@ -36,9 +37,9 @@ const Todo = ({ icons, searchInput }) => {
   return (
     <div className="todo">
       <div className="todo-icons">
-        <icons.FiPlusSquare onClick={addRandomTodo} />
+        <icons.FiPlusSquare onClick={addTodo} />
         <icons.FiFilter onClick={filterTodos} />
-        <icons.AiOutlineClear onClick={clearTodo} />
+        <icons.AiOutlineClear onClick={clearTodos} />
       </div>
       <ul>
         {todos

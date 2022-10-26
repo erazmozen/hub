@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import WordCounter from "../../common/WordCounter";
 import useLocalStorage from '../../common/hooks/useLocalStorage'
+import uppercaseFirst from "../../common/functions/uppercaseFirst";
 import "./notes.css";
 
 const Notes = ({ icons }) => {
@@ -50,11 +51,9 @@ const Notes = ({ icons }) => {
       {
         id: Math.floor(Math.random() * 100000),
         title:
-          titleInput.current.value.charAt(0).toUpperCase() +
-          titleInput.current.value.slice(1),
+          uppercaseFirst(titleInput.current.value),
         body:
-          bodyInput.current.value.charAt(0).toUpperCase() +
-          bodyInput.current.value.slice(1),
+          uppercaseFirst(bodyInput.current.value),
         date: `${new Date().getDate()}. ${new Date().getDay()}. ${new Date().getFullYear()}.`,
       },
     ]);
@@ -97,7 +96,7 @@ const Notes = ({ icons }) => {
         <form onSubmit={saveNote}>
           <input
             ref={titleInput}
-            placeholder="Title"
+            placeholder="📔 Title here.."
             className="common-input"
           ></input>
 
@@ -123,7 +122,7 @@ const Notes = ({ icons }) => {
 
           <textarea
             ref={bodyInput}
-            placeholder="Body"
+            placeholder="Your notes are saved to localStorage, so if you clear browser cache they WILL be lost!&#10;..&#10;... 📑 Write your note here.&#10;..&#10;... 🪗 📆 You can also use emoji! 🫐 🧺 &#10;.."
             className={`common-input textarea-body`}
             style={heightClass}
           />
