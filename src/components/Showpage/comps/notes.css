@@ -68,6 +68,20 @@
   float: right;
 }
 
+.search-filter-wrapper > input {
+  margin: 0 .6rem;
+}
+
+.search-filter-wrapper {
+  display: flex;
+  align-items: center;
+  padding: .3rem;
+}
+
+.search-filter-wrapper button {
+  margin: 0 .2rem;
+}
+
 .note {
   background-color: white;
   color: black;

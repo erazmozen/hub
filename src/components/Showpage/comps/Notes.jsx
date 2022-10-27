@@ -1,12 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 import WordCounter from "../../common/WordCounter";
-import useLocalStorage from '../../common/hooks/useLocalStorage'
+import useLocalStorage from "../../common/hooks/useLocalStorage";
 import uppercaseFirst from "../../common/functions/uppercaseFirst";
 import "./notes.css";
 
 const Notes = ({ icons }) => {
   const [bodyHeight, setBodyHeight] = useState("200px");
-  const [notesState, setNotesState] = useLocalStorage('notes-data', [])
+  const [notesState, setNotesState] = useLocalStorage("notes-data", []);
+  const [notesFilterdState, setNotesFilterdState] = useState([]);
+  const [search, setSearch] = useState("");
+  const [searchToggles, setSearchToggles] = useState({
+    title: true,
+    body: false,
+  });
   const titleInput = useRef();
   const bodyInput = useRef();
 
@@ -50,10 +56,8 @@ const Notes = ({ icons }) => {
       ...prev,
       {
         id: Math.floor(Math.random() * 100000),
-        title:
-          uppercaseFirst(titleInput.current.value),
-        body:
-          uppercaseFirst(bodyInput.current.value),
+        title: uppercaseFirst(titleInput.current.value),
+        body: uppercaseFirst(bodyInput.current.value),
         date: `${new Date().getDate()}. ${new Date().getDay()}. ${new Date().getFullYear()}.`,
       },
     ]);
@@ -81,8 +85,21 @@ const Notes = ({ icons }) => {
   useEffect(() => {
     titleInput.current.value = "";
     bodyInput.current.value = "";
+    setNotesFilterdState(notesState);
     console.log("clear inputs");
   }, [notesState]);
+
+  useEffect(() => {
+    const filteredNotes = notesState.filter(
+      (note) =>
+        (searchToggles.title && note.title.toLowerCase().includes(search)) ||
+        (searchToggles.body && note.body.toLowerCase().includes(search))
+    );
+    setNotesFilterdState(filteredNotes);
+
+    if (!searchToggles.title && !searchToggles.body)
+      setNotesFilterdState(notesState);
+  }, [search, searchToggles]);
 
   console.log("Notes render");
 
@@ -137,28 +154,73 @@ const Notes = ({ icons }) => {
           <icons.MdOutlineSave />
         </div>
 
+        <div className="search-filter-wrapper">
+          <button
+            className="common-button"
+            style={
+              searchToggles.title
+                ? { background: "var(--secondary)" }
+                : { background: "var(--primary)" }
+            }
+            onClick={() =>
+              setSearchToggles((prev) => ({
+                ...prev,
+                title: !prev.title,
+              }))
+            }
+          >
+            <icons.MdTitle size={22} />
+          </button>
+          <button
+            className="common-button"
+            style={
+              searchToggles.body
+                ? { background: "var(--secondary)" }
+                : { background: "var(--primary)" }
+            }
+            onClick={() =>
+              setSearchToggles((prev) => ({ ...prev, body: !prev.body }))
+            }
+          >
+            <icons.MdOutlineSubtitles size={22} />
+          </button>
+
+          <input
+            className="common-input"
+            placeholder="Search..."
+            onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          />
+        </div>
+
         <div className="notes-holder">
-          {notesState.map((note) => (
-            <div key={note.id} className="note">
-              <div className="note-body">
-                <button
-                  className="common-button"
-                  onClick={deleteNote}
-                  id={note.id}>
-                  <icons.AiOutlineDelete size={22} />
-                </button>
-                <h2>{note.title}</h2>
-                <p>{note.body}</p>
-              </div>
-              <div className="note-footer">
-                <WordCounter icons={icons} toCount={note.body} />
-                <div className="date-footer">
-                  {note.date}
-                  <icons.MdDateRange />
+          {notesFilterdState.length > 0 ? (
+            notesFilterdState.map((note) => (
+              <div key={note.id} className="note">
+                <div className="note-body">
+                  <button
+                    className="common-button"
+                    onClick={deleteNote}
+                    id={note.id}
+                  >
+                    <icons.AiOutlineDelete size={22} />
+                  </button>
+                  <h2>{note.title}</h2>
+                  <p>{note.body}</p>
+                </div>
+                <div className="note-footer">
+                  <WordCounter icons={icons} toCount={note.body} />
+                  <div className="date-footer">
+                    {note.date}
+                    <icons.MdDateRange />
+                  </div>
                 </div>
               </div>
+            ))
+          ) : (
+            <div>
+              <h2>Nothing found..</h2>
             </div>
-          ))}
+          )}
         </div>
       </div>
     </div>
