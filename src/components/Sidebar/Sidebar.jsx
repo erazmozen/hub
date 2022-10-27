@@ -1,7 +1,7 @@
 import "./sidebar.css";
 import Button from "../common/Button";
 import Todo from "./Todo/Todo";
-import { useContext, useRef } from "react";
+import { useRef } from "react";
 import SidebarTaskbar from "./SidebarTaskbar";
 import DataContext from "../../contexts/DataContext";
 

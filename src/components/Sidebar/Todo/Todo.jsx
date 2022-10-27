@@ -4,7 +4,7 @@ import uppercaseFirst from "../../common/functions/uppercaseFirst";
 import useLocalStorage from "../../common/hooks/useLocalStorage";
 
 const Todo = ({ icons, searchInput }) => {
-  const [todos, setTodos] = useLocalStorage('todos-data', [])
+  const [todos, setTodos] = useLocalStorage("todos-data", []);
   const [quarry, setquarry] = useState("");
 
   function addTodo() {

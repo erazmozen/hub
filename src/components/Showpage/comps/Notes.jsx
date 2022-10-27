@@ -99,7 +99,7 @@ const Notes = ({ icons }) => {
 
     if (!searchToggles.title && !searchToggles.body)
       setNotesFilterdState(notesState);
-  }, [search, searchToggles]);
+  }, [search, searchToggles, notesState]);
 
   console.log("Notes render");
 

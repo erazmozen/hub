@@ -9,9 +9,7 @@ const Weather = ({ icons }) => {
   );
 
   if (data == null) {
-    return (
-      <div>Data is unavaliable!</div>
-    )
+    return <div>Data is unavaliable!</div>;
   }
 
   console.log("Weather render");

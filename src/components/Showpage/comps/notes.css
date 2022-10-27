@@ -14,12 +14,12 @@
   max-width: 100%;
 }
 
-.notes>form {
+.notes > form {
   display: flex;
   flex-direction: column;
 }
 
-.notes>form>input {
+.notes > form > input {
   font-size: 1.3em;
 }
 
@@ -69,17 +69,17 @@
 }
 
 .search-filter-wrapper > input {
-  margin: 0 .6rem;
+  margin: 0 0.6rem;
 }
 
 .search-filter-wrapper {
   display: flex;
   align-items: center;
-  padding: .3rem;
+  padding: 0.3rem;
 }
 
 .search-filter-wrapper button {
-  margin: 0 .2rem;
+  margin: 0 0.2rem;
 }
 
 .note {

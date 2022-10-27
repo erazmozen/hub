@@ -1,15 +1,15 @@
 import "./header.css";
-import { useState } from "react";
-import Popup from "./comps/Popup";
+// import { useState } from "react";
+// import Popup from "./comps/Popup";
 import Clock from "./comps/Clock";
 import DataContext from "../../contexts/DataContext";
 
 const Header = ({ icons }) => {
-  const [togglePopup, setTogglePopup] = useState(false);
+  // const [togglePopup, setTogglePopup] = useState(false);
 
-  function togglePopupFunction() {
-    setTogglePopup((prev) => (prev = !prev));
-  }
+  // function togglePopupFunction() {
+  //   setTogglePopup((prev) => (prev = !prev));
+  // }
 
   console.log("Header render");
 
