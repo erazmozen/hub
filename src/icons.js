@@ -32,8 +32,8 @@ import { MdOutlineNavigateBefore } from "react-icons/md";
 import { TbCurrentLocation } from "react-icons/tb";
 import { TiWeatherNight } from "react-icons/ti";
 import { TiWeatherSunny } from "react-icons/ti";
-import { CgCalendarDates } from "react-icons/cg"
-import { CgTimer } from "react-icons/cg"
+import { CgCalendarDates } from "react-icons/cg";
+import { CgTimer } from "react-icons/cg";
 import { WiDaySunny } from "react-icons/wi";
 import { WiDaySunnyOvercast } from "react-icons/wi";
 import { WiFog } from "react-icons/wi";
@@ -43,10 +43,8 @@ import { WiRain } from "react-icons/wi";
 import { WiSprinkle } from "react-icons/wi";
 import { WiNightSnowWind } from "react-icons/wi";
 import { WiStormShowers } from "react-icons/wi";
-
-
-
-
+import { MdOutlineSubtitles } from "react-icons/md";
+import { MdTitle } from "react-icons/md";
 
 const icons = {
   FiGithub,
@@ -94,6 +92,8 @@ const icons = {
   WiSprinkle,
   WiNightSnowWind,
   WiStormShowers,
+  MdOutlineSubtitles,
+  MdTitle,
 };
 
 export default icons;
