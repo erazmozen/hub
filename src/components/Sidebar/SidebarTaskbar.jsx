@@ -1,22 +1,10 @@
 import "./sidebartaskbar.css";
-import { useState } from "react";
 import DataContext from "../../contexts/DataContext";
 
 const SidebarTaskbar = ({ icons }) => {
-  const [toggleSidebarTaskbar, setToggleSidebarTaskbar] = useState(false);
-  function toggleTaskbar() {
-    setToggleSidebarTaskbar((prev) => !prev);
-  }
   console.log("SidebarTaskbar render");
   return (
-    <div
-      className={
-        toggleSidebarTaskbar
-          ? "sidebar-taskbar sidebar-taskbar-vertical"
-          : "sidebar-taskbar"
-      }
-    >
-      <icons.BsReverseLayoutSidebarInsetReverse onClick={toggleTaskbar} />
+    <div className="sidebar-taskbar">
       <DataContext.Consumer>
         {(functions) => {
           return (
