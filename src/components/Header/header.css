@@ -2,10 +2,33 @@
 
 .header-wrapper {
   background-color: var(--primary);
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: .8rem 1rem;
+  padding: 0.8rem 1rem;
   color: white;
   position: relative;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-wrapper {
+    margin: 0rem;
+    text-align: center;
+  }
+
+  /* .header-wrapper > div:first-child {
+    margin-bottom: 1rem;
+  } */
+}
+
+@media only screen and (max-width: 330px) {
+  .header-wrapper > div {
+    width: 100%;
+  }
+  .logo-wrapper {
+    justify-content: center;
+    margin-bottom: 0.6rem;
+  }
 }
 
 .header-wrapper button {
@@ -21,9 +44,8 @@
   margin-left: 0.3rem;
 }
 
-.icons-wrapper>* {
+.icons-wrapper > * {
   margin-left: 1rem;
-
 }
 
 .header-wrapper,

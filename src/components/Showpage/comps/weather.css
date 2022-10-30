@@ -13,9 +13,14 @@
   margin-top: 0.5rem;
 }
 
+.wather-body h2 {
+  text-align: end;
+}
+
 .forcast {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   background-color: var(--secondary);
   margin-top: 1rem;
   border-radius: 12px;

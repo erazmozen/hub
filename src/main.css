@@ -2,10 +2,20 @@
 
 body {
   background-color: var(--secondary);
-  font-size: 0.9rem;
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 0.8rem;
+  }
 }
 
 /* ------ Common Classes */
+
+.main {
+  min-width: 300px;
+}
 
 .background-rounded {
   background-color: var(--secondary);
@@ -59,6 +69,12 @@ body {
 
 .content-wrapper {
   display: flex;
+}
+
+@media only screen and (max-width: 770px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
 }
 
 .showpage {

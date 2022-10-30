@@ -68,14 +68,16 @@
   float: right;
 }
 
-.search-filter-wrapper > input {
-  margin: 0 0.6rem;
-}
-
 .search-filter-wrapper {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   padding: 0.3rem;
+}
+
+.search-filter-wrapper > input {
+  margin: 0.6rem;
+  width: 100%;
 }
 
 .search-filter-wrapper button {
@@ -127,6 +129,7 @@
 
 .toggles-wrapper {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 0.8rem;
 }
 

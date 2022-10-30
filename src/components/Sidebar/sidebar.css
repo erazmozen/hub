@@ -12,6 +12,13 @@
   margin: 0;
 }
 
+@media only screen and (max-width: 770px) {
+  .sidebar-wrapper {
+    position: relative;
+    width: 100%;
+  }
+}
+
 .sidebar-top {
   display: flex;
   flex-direction: column;

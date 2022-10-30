@@ -32,10 +32,11 @@
 .projects-slider {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .projects-slider img {
-  height: 300px;
+  height: 200px;
   margin: 0.3rem;
   object-fit: cover;
 }
