@@ -58,7 +58,7 @@ const Notes = ({ icons }) => {
         id: Math.floor(Math.random() * 100000),
         title: uppercaseFirst(titleInput.current.value),
         body: uppercaseFirst(bodyInput.current.value),
-        date: `${new Date().getDate()}. ${new Date().getDay()}. ${new Date().getFullYear()}.`,
+        date: `${new Date().getDate()}. ${new Date().getMonth()}. ${new Date().getFullYear()}.`,
       },
     ]);
   }
