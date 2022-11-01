@@ -1,5 +1,5 @@
 import "./sidebar.css";
-import Button from "../common/Button";
+import { Link } from "react-router-dom";
 import Todo from "./Todo/Todo";
 import { useRef } from "react";
 import SidebarTaskbar from "./SidebarTaskbar";
@@ -32,8 +32,8 @@ const Sidebar = ({ icons }) => {
           </DataContext.Consumer>
         </div>
         <Todo icons={icons} searchInput={searchInput} />
-        <Button title="Projects" />
-        <Button title="Contact" />
+        <Link to="/hub">Portfolio</Link>
+        <Link to="/applets">Applets</Link>
       </div>
       <div className="sidebar-bottom">
         <div>+38154443123</div>
