@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import WordCounter from "../../common/WordCounter";
-import useLocalStorage from "../../common/hooks/useLocalStorage";
-import uppercaseFirst from "../../common/functions/uppercaseFirst";
+import WordCounter from "../../../common/WordCounter";
+import useLocalStorage from "../../../common/hooks/useLocalStorage";
+import uppercaseFirst from "../../../common/functions/uppercaseFirst";
 import "./notes.css";
 
 const Notes = ({ icons }) => {
