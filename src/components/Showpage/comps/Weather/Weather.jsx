@@ -1,6 +1,6 @@
 import React from "react";
 import "./weather.css";
-import useApi from "../../common/hooks/useApi";
+import useApi from "../../../common/hooks/useApi";
 import WeatherContainer from "./WeatherContainer";
 
 const Weather = ({ icons }) => {
