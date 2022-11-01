@@ -1,23 +1,7 @@
 import data from "../../../../data/portfolioData.json";
 import Projects from "./Projects/Projects";
 import "./portfolio.css";
-
-const ContentBox = ({ title, body }) => {
-  const splitBody = body.split("/n");
-
-  return (
-    <div className="background-rounded section">
-      <h2>{title}</h2>
-      <div className="section-body">
-        <div>
-          {splitBody.map((line) => (
-            <p key={Math.floor(Math.random() * 1000)}>{line}</p>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-};
+import ContentBox from "./ContentBox";
 
 const Portfolio = ({ icons }) => {
   const dataArray = [];
