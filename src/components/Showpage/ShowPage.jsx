@@ -1,10 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import Portfolio from "./comps/Portfolio/Portfolio";
-import Notes from "./comps/Notes";
-// import Poll from "./comps/Poll";
-import ShowpageHeader from "./comps/ShowpageHeader";
+import Notes from "./comps/Notes/Notes";
+import ShowpageHeader from "./comps/Showpage Header/ShowpageHeader";
+import Weather from "./comps/Weather/Weather";
 import "./showpage.css";
-import Weather from "./comps/Weather";
 
 const ShowPage = ({ icons }) => {
   console.log("ShowPage render");
@@ -12,9 +11,7 @@ const ShowPage = ({ icons }) => {
     <div className="background-rounded showpage">
       <ShowpageHeader icons={icons} />
       <Routes>
-        <Route path="/hub" element={<Portfolio icons={icons} />}>
-          {/* <Poll /> */}
-        </Route>
+        <Route path="/hub" element={<Portfolio icons={icons} />}></Route>
 
         <Route
           path="/applets"
