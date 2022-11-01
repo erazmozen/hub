@@ -30,13 +30,15 @@
   border-radius: 8px;
 }
 .projects-slider {
+  font-size: 0.8em;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   position: relative;
 }
 
 .projects-slider img {
-  height: 200px;
+  height: 300px;
   margin: 0.3rem;
   object-fit: cover;
 }

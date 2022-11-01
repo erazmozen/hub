@@ -70,7 +70,6 @@ const Projects = ({ icons }) => {
             linkIndex={linkIndex}
             changeSlide={changeSlide}
             title={link.title}
-            body={link.body}
           />
         ))}
 

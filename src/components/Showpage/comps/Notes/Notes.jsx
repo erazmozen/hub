@@ -16,11 +16,6 @@ const Notes = ({ icons }) => {
   const titleInput = useRef();
   const bodyInput = useRef();
 
-  const heightClass = {
-    transition: "height 0.3s ease",
-    height: `${bodyHeight}`,
-  };
-
   const buttons = [
     {
       id: 1,
@@ -38,6 +33,11 @@ const Notes = ({ icons }) => {
       icon: <icons.FiMaximize size={18} />,
     },
   ];
+
+  const heightClass = {
+    transition: "height 0.3s ease",
+    height: `${bodyHeight}`,
+  };
 
   function changeHeight(e) {
     e.preventDefault();
@@ -73,6 +73,7 @@ const Notes = ({ icons }) => {
   function clearNotes(e) {
     e.preventDefault();
     setNotesState([]);
+    console.log("clear notes");
   }
 
   function deleteNote(e) {
@@ -110,6 +111,7 @@ const Notes = ({ icons }) => {
           <h1>Add a Note</h1>
           <icons.FaRegStickyNote />
         </div>
+
         <form onSubmit={saveNote}>
           <input
             ref={titleInput}
@@ -128,7 +130,6 @@ const Notes = ({ icons }) => {
                 {button.icon}
               </button>
             ))}
-
             <button className="common-button" onClick={clearInputs}>
               <icons.BsEraserFill size={18} />
             </button>
