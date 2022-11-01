@@ -34,6 +34,8 @@ const Portfolio = ({ icons }) => {
         <icons.BsInfo />
       </div>
 
+      <Projects icons={icons} />
+
       {dataArray.map((section) => (
         <ContentBox
           key={section.id}
@@ -42,7 +44,6 @@ const Portfolio = ({ icons }) => {
           body={section.body}
         />
       ))}
-      <Projects icons={icons} />
     </div>
   );
 };
