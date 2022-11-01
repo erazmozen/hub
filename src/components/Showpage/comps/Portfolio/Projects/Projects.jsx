@@ -10,27 +10,35 @@ const Projects = ({ icons }) => {
   const projectLinks = [
     {
       title: "Fitnes-App",
+      description: "MERN STACK Fitnes Tracking App",
     },
     {
       title: "React-Signin",
+      description: "Simple React Signin App",
     },
     {
       title: "Portfolio-Template",
+      description: "Artist's Portfolio Webpage",
     },
     {
       title: "React-Calculator",
+      description: "Simple React Calculator App",
     },
     {
       title: "Meme-Generator",
+      description: "Meme Generator made with React",
     },
     {
       title: "React-ImageSlider",
+      description: "Simple image slider in React",
     },
     {
       title: "Tenzies-Game",
+      description: "React Tenzies Game",
     },
     {
       title: "Password-Generator",
+      description: "Password-Generator made with JavaScript",
     },
   ];
 
@@ -62,6 +70,7 @@ const Projects = ({ icons }) => {
             linkIndex={linkIndex}
             changeSlide={changeSlide}
             title={link.title}
+            body={link.body}
           />
         ))}
 
@@ -76,7 +85,11 @@ const Projects = ({ icons }) => {
           </div>
         </div>
       </div>
-      <ProjectPreview index={index} prevImages={prevImages} />
+      <ProjectPreview
+        index={index}
+        projectLinks={projectLinks}
+        prevImages={prevImages}
+      />
     </div>
   );
 };

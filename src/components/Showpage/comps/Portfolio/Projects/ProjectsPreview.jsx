@@ -1,6 +1,6 @@
 import "./projectspreview.css";
 
-const ProjectPreview = ({ prevImages, index }) => {
+const ProjectPreview = ({ prevImages, projectLinks, index }) => {
   console.log("ProjectPreview render");
 
   return (
@@ -15,6 +15,7 @@ const ProjectPreview = ({ prevImages, index }) => {
       </div>
       <div className="projects-contact"></div>
       <div className="projects-slider">
+        <h2>{projectLinks[index].description}</h2>
         <img key={prevImages.index} src={prevImages[index]} alt="" />
       </div>
     </div>
