@@ -10,21 +10,34 @@ const NotesForm = ({
 }) => {
   const [bodyHeight, setBodyHeight] = useState("200px");
 
-  const buttons = [
+  const toggleButtons = [
     {
       id: 1,
       value: "200px",
       icon: <icons.TbArrowsDiagonalMinimize size={18} />,
+      onClick: changeHeight,
     },
     {
       id: 2,
       value: "400px",
       icon: <icons.TbArrowsDiagonal2 size={18} />,
+      onClick: changeHeight,
     },
     {
       id: 3,
       value: "700px",
       icon: <icons.FiMaximize size={18} />,
+      onClick: changeHeight,
+    },
+    {
+      id: 4,
+      icon: <icons.BsEraserFill size={18} />,
+      onClick: clearInputs,
+    },
+    {
+      id: 5,
+      icon: <icons.AiOutlineClear size={18} />,
+      onClick: clearNotes,
     },
   ];
 
@@ -52,22 +65,16 @@ const NotesForm = ({
       ></input>
 
       <div className="toggles-wrapper">
-        {buttons.map((button) => (
+        {toggleButtons.map((button) => (
           <button
             key={button.id}
             value={button.value}
             className="common-button"
-            onClick={changeHeight}
+            onClick={button.onClick}
           >
             {button.icon}
           </button>
         ))}
-        <button className="common-button" onClick={clearInputs}>
-          <icons.BsEraserFill size={18} />
-        </button>
-        <button className="common-button" onClick={clearNotes}>
-          <icons.AiOutlineClear size={18} />
-        </button>
       </div>
 
       <textarea
