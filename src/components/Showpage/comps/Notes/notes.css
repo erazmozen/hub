@@ -137,6 +137,43 @@
   margin-right: 0.4rem;
 }
 
+.color-notes {
+  position: relative;
+}
+
+.color-bar {
+  width: 10%;
+  height: 8px;
+  border-radius: 20px;
+  background-color: brown;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  margin: 0 0.1rem;
+}
+
+.color-bar-toggle {
+  padding: 0rem;
+  margin-top: 0.5rem;
+  width: 16px;
+  height: 16px;
+}
+
+.button-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.color-picker {
+  position: absolute;
+  bottom: 20px;
+  left: 10px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  background-color: aqua;
+}
+
 .counter,
 .date-footer {
   display: flex;
