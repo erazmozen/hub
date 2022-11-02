@@ -50,6 +50,7 @@
 .notes-holder svg {
   pointer-events: none;
   margin: 0;
+  padding: 0.2em;
 }
 
 .notes-holder {
@@ -61,8 +62,10 @@
 }
 
 .notes-holder .common-button {
+  width: 35px;
+  height: 35px;
   background: none;
-  color: black;
+  color: white;
   margin-left: 2rem;
   padding: 0rem;
   float: right;
@@ -138,11 +141,16 @@
 }
 
 .color-notes {
+  width: 100%;
+  margin-top: 0.6rem;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .color-bar {
-  width: 10%;
+  width: 20px;
   height: 8px;
   border-radius: 20px;
   background-color: brown;
@@ -150,6 +158,7 @@
   outline: none;
   cursor: pointer;
   margin: 0 0.1rem;
+  justify-self: flex-end;
 }
 
 .color-bar-toggle {
@@ -188,6 +197,7 @@
 }
 
 .note-footer svg {
+  font-size: 1rem;
   margin-right: 0.3rem;
   margin-left: 0.1rem;
 }
