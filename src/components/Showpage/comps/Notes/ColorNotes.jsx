@@ -11,9 +11,9 @@ const ColorNotes = ({ note, changeNoteColor }) => {
     "#50fa7b",
     "#ffb86c",
     "#ff79c6",
+    "#f1fa8c",
     "#bd93f9",
     "#ff5555",
-    "#f1fa8c",
   ];
 
   const style = {
