@@ -17,7 +17,12 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
   return (
     <div key={note.id} className="note">
       <div className="note-body">
-        <button className="common-button" onClick={deleteNote} id={note.id}>
+        <button
+          className="common-button"
+          style={{ background: note.color }}
+          onClick={deleteNote}
+          id={note.id}
+        >
           <icons.AiOutlineDelete size={22} />
         </button>
         <h2>{note.title}</h2>
@@ -26,16 +31,16 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
       <div className="note-footer">
         <WordCounter icons={icons} toCount={note.body} />
         <div className="date-footer">
-          {note.date}
-          <icons.MdDateRange />
+          <p>{note.date}</p>
+          <icons.MdDateRange size={28} />
         </div>
+        <ColorNotes
+          note={note}
+          color={note.color || "black"}
+          id={note.id}
+          changeNoteColor={changeNoteColor}
+        />
       </div>
-      <ColorNotes
-        note={note}
-        color={note.color || "black"}
-        id={note.id}
-        changeNoteColor={changeNoteColor}
-      />
     </div>
   );
 };
