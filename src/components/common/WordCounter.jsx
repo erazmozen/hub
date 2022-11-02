@@ -4,10 +4,10 @@ function WordCounter({ toCount, icons }) {
 
   return (
     <div className="counter">
-      {splitByWord ? splitByWord.length : 0}
-      <icons.FaRegFileWord size={14} />
-      {splitByChar}
-      <icons.CgGhostCharacter />
+      <p>{splitByWord ? splitByWord.length : 0}</p>
+      <icons.VscSymbolKeyword size={24} />
+      <p>{splitByChar}</p>
+      <icons.CgGhostCharacter size={24} />
     </div>
   );
 }
