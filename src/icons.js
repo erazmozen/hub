@@ -22,7 +22,7 @@ import { FiMaximize } from "react-icons/fi";
 import { BsEraserFill } from "react-icons/bs";
 import { AiOutlineDelete } from "react-icons/ai";
 import { CgGhostCharacter } from "react-icons/cg";
-import { FaRegFileWord } from "react-icons/fa";
+import { VscSymbolKeyword } from "react-icons/vsc";
 import { MdDateRange } from "react-icons/md";
 import { BsInfo } from "react-icons/bs";
 import { FaRegStickyNote } from "react-icons/fa";
@@ -71,7 +71,7 @@ const icons = {
   BsEraserFill,
   AiOutlineDelete,
   CgGhostCharacter,
-  FaRegFileWord,
+  VscSymbolKeyword,
   MdDateRange,
   BsInfo,
   FaRegStickyNote,
