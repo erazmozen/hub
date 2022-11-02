@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 import useLocalStorage from "../../../common/hooks/useLocalStorage";
 import uppercaseFirst from "../../../common/functions/uppercaseFirst";
