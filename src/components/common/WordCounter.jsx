@@ -1,14 +1,12 @@
-import React from "react";
-
 function WordCounter({ toCount, icons }) {
-  const splitByWord = toCount.split(" ");
-  const splitByChar = toCount.split("");
+  const splitByWord = toCount.match(/[\w\d\’\'-]+/gi);
+  const splitByChar = toCount.trim().length;
 
   return (
     <div className="counter">
-      {splitByWord.length}
+      {splitByWord ? splitByWord.length : 0}
       <icons.FaRegFileWord size={14} />
-      {splitByChar.length}
+      {splitByChar}
       <icons.CgGhostCharacter />
     </div>
   );
