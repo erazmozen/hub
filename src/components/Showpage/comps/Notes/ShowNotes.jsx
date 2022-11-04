@@ -1,14 +1,7 @@
 import { useEffect, useState } from "react";
 import Note from "./Note";
 
-const ShowNotes = ({
-  icons,
-  deleteNote,
-  notesState,
-  titleInput,
-  bodyInput,
-  setNotesState,
-}) => {
+const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
   const [notesFilterdState, setNotesFilterdState] = useState([]);
   const [search, setSearch] = useState("");
   const [searchToggles, setSearchToggles] = useState({
@@ -31,6 +24,8 @@ const ShowNotes = ({
     if (!searchToggles.title && !searchToggles.body)
       setNotesFilterdState(notesState);
   }, [search, searchToggles, notesState]);
+
+  console.log(" ---  Show Notes render");
 
   return (
     <div>
@@ -81,6 +76,7 @@ const ShowNotes = ({
         {notesFilterdState.length > 0 ? (
           notesFilterdState.map((note) => (
             <Note
+              key={note.id}
               icons={icons}
               note={note}
               deleteNote={deleteNote}
