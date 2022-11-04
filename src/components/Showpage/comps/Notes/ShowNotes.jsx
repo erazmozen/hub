@@ -10,10 +10,6 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
   });
 
   useEffect(() => {
-    setNotesFilterdState(notesState);
-  }, [notesState]);
-
-  useEffect(() => {
     const filteredNotes = notesState.filter(
       (note) =>
         (searchToggles.title && note.title.toLowerCase().includes(search)) ||
@@ -25,7 +21,7 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
       setNotesFilterdState(notesState);
   }, [search, searchToggles, notesState]);
 
-  console.log(" ---  Show Notes render");
+  console.log("Show Notes render");
 
   return (
     <div>
