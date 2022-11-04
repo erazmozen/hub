@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const ColorNotes = ({ note, changeNoteColor }) => {
-  const [noteColor, setNoteColor] = useState(note.color);
+const ColorNotes = ({ colorOfNote, changeNoteColor }) => {
+  const [noteColor, setNoteColor] = useState(colorOfNote);
 
   const colorArray = [
     "#282a36",
@@ -22,7 +22,7 @@ const ColorNotes = ({ note, changeNoteColor }) => {
 
   function changeColor(e) {
     setNoteColor(e.target.name);
-    changeNoteColor(note.id, e.target.name);
+    changeNoteColor(e.target.name);
   }
 
   console.log("Color Notes render");
