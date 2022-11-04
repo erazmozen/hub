@@ -32,6 +32,7 @@ const ColorNotes = ({ note, changeNoteColor }) => {
       <div className="button-wrapper">
         {colorArray.map((color) => (
           <button
+            key={color}
             name={color}
             onClick={changeColor}
             className="color-bar color-bar-toggle"
