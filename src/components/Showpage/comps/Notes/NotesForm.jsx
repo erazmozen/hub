@@ -56,6 +56,8 @@ const NotesForm = ({
     console.log("Value is not the same, setting state to ", e.target.value);
   }
 
+  console.log("Notes Form render");
+
   return (
     <form onSubmit={saveNote}>
       <input
