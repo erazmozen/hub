@@ -3,9 +3,8 @@ import { useRef } from "react";
 import useLocalStorage from "../../../common/hooks/useLocalStorage";
 import uppercaseFirst from "../../../common/functions/uppercaseFirst";
 import NotesForm from "./NotesForm";
-
-import "./notes.css";
 import ShowNotes from "./ShowNotes";
+import "./notes.css";
 
 const Notes = ({ icons }) => {
   const [notesState, setNotesState] = useLocalStorage("notes-data", []);
@@ -22,7 +21,7 @@ const Notes = ({ icons }) => {
         title: uppercaseFirst(titleInput.current.value),
         body: uppercaseFirst(bodyInput.current.value),
         date: `${new Date().getDate()}. ${new Date().getMonth()}. ${new Date().getFullYear()}.`,
-        color: "gray",
+        color: "black",
       },
     ]);
     setTimeout(() => {
