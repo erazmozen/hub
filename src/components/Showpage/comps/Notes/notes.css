@@ -62,13 +62,14 @@
 }
 
 .notes-holder .common-button {
+  position: relative;
   width: 35px;
   height: 35px;
-  background: none;
   color: white;
-  margin-left: 2rem;
   padding: 0rem;
-  float: right;
+  display: flex;
+  z-index: 1000;
+  margin: 0.2rem;
 }
 
 .search-filter-wrapper {
@@ -87,7 +88,24 @@
   margin: 0 0.2rem;
 }
 
+.notes-header {
+  display: flex;
+  justify-content: center;
+}
+
+.notes-body-buttons {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 0.4rem;
+  justify-content: flex-end;
+}
+
+.notes-body-buttons button {
+  transition: none;
+}
+
 .note {
+  position: relative;
   background-color: white;
   color: black;
   margin: 0.3rem;
@@ -96,7 +114,6 @@
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   padding: 1rem;
   border-radius: 12px;
   word-break: break-all;
@@ -114,11 +131,22 @@
   margin-top: 0.4rem;
 }
 
-.note-header,
+.note-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .saved-notes-header {
   margin: 1rem;
   display: flex;
   justify-content: space-between;
+}
+
+.note-header {
+  display: flex;
+  margin: 0;
 }
 
 .saved-notes-header {
@@ -200,6 +228,71 @@
   font-size: 1rem;
   margin-right: 0.3rem;
   margin-left: 0.1rem;
+}
+
+.note-top {
+  width: 100%;
+}
+
+.fullscreen {
+  position: relative;
+
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  border-radius: 11px;
+  color: white;
+  z-index: 100;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+.topbar button {
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  width: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+
+.topbar button:hover {
+  background-color: white;
+}
+
+.topbar button svg {
+  margin: 0;
+  padding: 0;
+}
+
+.fullscreen input,
+.fullscreen textarea {
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: background 0.3s ease-out;
+}
+
+.fullscreen input {
+  max-width: 70%;
+}
+
+.fullscreen input:focus,
+.fullscreen textarea:focus {
+  background: white;
+  transition: background 0.3s ease-in;
+}
+
+.fullscreen textarea {
+  font-size: 0.8em;
+  padding: 0.4rem 1rem;
 }
 
 /* ------ Notes */
