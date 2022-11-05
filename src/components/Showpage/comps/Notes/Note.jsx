@@ -70,10 +70,10 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
           </div>
           {editNotes && (
             <EditNote
-              icons={icons}
-              note={note}
               editInputTitle={editInputTitle}
               editInputBody={editInputBody}
+              icons={icons}
+              note={note}
               editNote={editNote}
             />
           )}
