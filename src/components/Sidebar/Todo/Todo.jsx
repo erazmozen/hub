@@ -2,6 +2,7 @@ import "./todo.css";
 import { useState } from "react";
 import uppercaseFirst from "../../common/functions/uppercaseFirst";
 import useLocalStorage from "../../common/hooks/useLocalStorage";
+import SingleTodo from "./SingleTodo";
 
 const Todo = ({ icons, searchInput }) => {
   const [todos, setTodos] = useLocalStorage("todos-data", []);
@@ -23,6 +24,13 @@ const Todo = ({ icons, searchInput }) => {
     setTodos(todosFiltered);
   };
 
+  function checkTodo(index) {
+    const editTodo = todos.map((todo) =>
+      todo.id === index ? { ...todo, done: !todo.done } : { ...todo }
+    );
+    setTodos(editTodo);
+  }
+
   function clearTodos() {
     setTodos([]);
     console.log("cleared all todos");
@@ -42,16 +50,35 @@ const Todo = ({ icons, searchInput }) => {
         <icons.AiOutlineClear onClick={clearTodos} />
       </div>
       <ul>
+        <h4>Todos:</h4>
         {todos
           .filter((todo) => todo.title.toLowerCase().includes(quarry))
-          .map((todo) => (
-            <li key={todo.id}>
-              <button onClick={() => deleteTodo(todo.id)}>
-                <icons.FiMinusSquare className="minus-icon" />
-              </button>
-              <h4 className="todo-title">{todo.title}</h4>
-            </li>
-          ))}
+          .map(
+            (todo) =>
+              !todo.done && (
+                <SingleTodo
+                  icons={icons}
+                  todo={todo}
+                  deleteTodo={deleteTodo}
+                  checkTodo={checkTodo}
+                />
+              )
+          )}
+      </ul>
+
+      <ul className="done-todos">
+        <h4>Done todos:</h4>
+        {todos.map(
+          (todo) =>
+            todo.done && (
+              <SingleTodo
+                icons={icons}
+                todo={todo}
+                deleteTodo={deleteTodo}
+                checkTodo={checkTodo}
+              />
+            )
+        )}
       </ul>
     </div>
   );
