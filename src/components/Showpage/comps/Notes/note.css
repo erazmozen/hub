@@ -1,0 +1,80 @@
+.note {
+  position: relative;
+  background-color: white;
+  color: black;
+  margin: 0.3rem;
+  min-width: 200px;
+  max-width: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  border-radius: 12px;
+  word-break: break-all;
+}
+
+.note p {
+  white-space: pre-wrap;
+  margin-left: 0.3rem;
+  font-size: 1.1em;
+  max-width: 600px;
+}
+
+.note h2 {
+  margin-bottom: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+.note-body {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.note-top {
+  width: 100%;
+}
+
+.note-header {
+  display: flex;
+  margin: 0;
+}
+
+.note-header svg {
+  font-size: 1.8rem;
+}
+
+.note-body-buttons {
+  display: flex;
+  flex-grow: 1;
+  margin-bottom: 0.4rem;
+  justify-content: flex-end;
+}
+
+.note-body-buttons button {
+  transition: none;
+}
+
+.note-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 1rem;
+}
+
+.note-footer svg {
+  font-size: 1rem;
+  margin-right: 0.3rem;
+  margin-left: 0.1rem;
+}
+
+.date-footer {
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  display: flex;
+  align-items: center;
+}

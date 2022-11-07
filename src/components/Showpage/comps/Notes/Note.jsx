@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { useRef } from "react";
+import { memo } from "react";
 import WordCounter from "../../../common/WordCounter";
 import ColorNotes from "./ColorNotes";
 import EditNote from "./EditNote";
+import "./note.css";
 
 const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
   const [editNotes, setEditNotes] = useState(false);
@@ -11,18 +13,18 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
 
   function changeNoteColor(noteColor) {
     const externalId = parseInt(note.id);
-    const seledtedNote = [...notesState].map((noteToChange) =>
+    const editedNotes = [...notesState].map((noteToChange) =>
       noteToChange.id === externalId
         ? { ...noteToChange, color: noteColor }
         : { ...noteToChange }
     );
-    setNotesState(seledtedNote);
+    setNotesState(editedNotes);
     console.log("Change Note Color to", noteColor);
   }
 
   function editNote() {
     const externalId = parseInt(note.id);
-    const seledtedNote = [...notesState].map((noteToChange) =>
+    const editedNotes = [...notesState].map((noteToChange) =>
       noteToChange.id === externalId
         ? {
             ...noteToChange,
@@ -31,12 +33,12 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
           }
         : { ...noteToChange }
     );
-    setNotesState(seledtedNote);
+    setNotesState(editedNotes);
     setEditNotes(!editNotes);
-    console.log("Save edited note");
+    console.log(" +++ Save edited note");
   }
 
-  console.log("Note render");
+  console.log(" ------ Note render");
 
   return (
     <div key={note.id} className="note">
@@ -44,7 +46,7 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
         <div className="note-top">
           <div className="note-header">
             {editNotes && <h2>Editing mode</h2>}
-            <div className="notes-body-buttons">
+            <div className="note-body-buttons">
               <button
                 onClick={() => {
                   setEditNotes(!editNotes);
@@ -96,4 +98,4 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
     </div>
   );
 };
-export default Note;
+export default memo(Note);
