@@ -1,0 +1,58 @@
+.edit-notes {
+  position: relative;
+  padding: 1rem;
+  border-radius: 11px;
+  color: white;
+  z-index: 100;
+}
+
+.edit-notes input,
+.edit-notes textarea {
+  width: 100%;
+  padding: 0.4rem 0.7rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  transition: background 0.3s ease-out;
+}
+
+.edit-notes textarea {
+  font-size: 0.8em;
+  padding: 0.4rem 1rem;
+  max-width: 98vh;
+}
+
+.edit-notes input {
+  max-width: 70%;
+}
+
+.edit-notes input:focus,
+.edit-notes textarea:focus {
+  background: white;
+  transition: background 0.3s ease-in;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.3rem;
+}
+
+.topbar button {
+  background-color: rgba(255, 255, 255, 0.75);
+  font-size: 1.2rem;
+  width: 35px;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease-out;
+}
+
+.topbar button:hover {
+  background-color: white;
+}
+
+.topbar button svg {
+  margin: 0;
+  padding: 0;
+}

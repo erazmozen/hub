@@ -1,4 +1,5 @@
 import React from "react";
+import "./editnotes.css";
 
 const EditNote = ({ icons, note, editInputTitle, editInputBody, editNote }) => {
   console.log("EditNote render");
@@ -8,7 +9,7 @@ const EditNote = ({ icons, note, editInputTitle, editInputBody, editNote }) => {
       style={{
         background: note.color,
       }}
-      className="fullscreen transition-bg"
+      className="edit-notes"
     >
       <div className="topbar">
         <input
