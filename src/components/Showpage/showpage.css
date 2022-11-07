@@ -2,12 +2,11 @@
 
 .showpage {
   position: relative;
+  background-color: var(--secondary);
+  border-radius: 12px;
   width: 100%;
   margin: 0;
-}
-
-.showpage > * {
-  margin: 1rem;
+  color: white;
 }
 
 @media only screen and (max-width: 600px) {

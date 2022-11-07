@@ -8,7 +8,7 @@ import "./showpage.css";
 const ShowPage = ({ icons }) => {
   console.log("ShowPage render");
   return (
-    <div className="background-rounded showpage">
+    <div className="showpage">
       <ShowpageHeader icons={icons} />
       <Routes>
         <Route path="/hub" element={<Portfolio icons={icons} />}></Route>
