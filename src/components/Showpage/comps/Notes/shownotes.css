@@ -1,0 +1,48 @@
+.saved-notes-header {
+  margin: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.search-filter-wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0.3rem;
+}
+
+.search-filter-wrapper > input {
+  margin: 1rem;
+  width: 100%;
+}
+
+.search-filter-wrapper .common-icons-wrapper button {
+  margin-left: 0.3rem;
+  padding: 0.3rem;
+}
+
+.notes-holder {
+  position: relative;
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.notes-holder .common-button {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  color: white;
+  padding: 0rem;
+  display: flex;
+  z-index: 1000;
+  margin: 0.2rem;
+}
+
+.notes-holder svg {
+  pointer-events: none;
+  margin: 0;
+  padding: 0.2em;
+}

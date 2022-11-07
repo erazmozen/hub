@@ -1,8 +1,11 @@
+import { memo } from "react";
 import { useEffect, useState } from "react";
 import Note from "./Note";
+import "./shownotes.css";
 
 const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
-  const [notesFilterdState, setNotesFilterdState] = useState([]);
+  console.log(" -------- Show Notes render");
+  const [notesFilterdState, setNotesFilterdState] = useState(notesState);
   const [search, setSearch] = useState("");
   const [searchToggles, setSearchToggles] = useState({
     title: true,
@@ -10,18 +13,19 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
   });
 
   useEffect(() => {
-    const filteredNotes = notesState.filter(
-      (note) =>
-        (searchToggles.title && note.title.toLowerCase().includes(search)) ||
-        (searchToggles.body && note.body.toLowerCase().includes(search))
-    );
-    setNotesFilterdState(filteredNotes);
-
-    if (!searchToggles.title && !searchToggles.body)
+    if (!searchToggles.title && !searchToggles.body) {
       setNotesFilterdState(notesState);
-  }, [search, searchToggles, notesState]);
+    } else {
+      const filteredNotes = [...notesState].filter(
+        (note) =>
+          (searchToggles.title && note.title.toLowerCase().includes(search)) ||
+          (searchToggles.body && note.body.toLowerCase().includes(search))
+      );
+      setNotesFilterdState(filteredNotes);
+    }
 
-  console.log("Show Notes render");
+    console.log("useEffect [search, searchToggles, notesState] ");
+  }, [search, searchToggles, notesState]);
 
   return (
     <div>
@@ -31,35 +35,37 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
       </div>
 
       <div className="search-filter-wrapper">
-        <button
-          className="common-button"
-          style={
-            searchToggles.title
-              ? { background: "var(--secondary)" }
-              : { background: "var(--primary)" }
-          }
-          onClick={() =>
-            setSearchToggles((prev) => ({
-              ...prev,
-              title: !prev.title,
-            }))
-          }
-        >
-          <icons.MdTitle size={22} />
-        </button>
-        <button
-          className="common-button"
-          style={
-            searchToggles.body
-              ? { background: "var(--secondary)" }
-              : { background: "var(--primary)" }
-          }
-          onClick={() =>
-            setSearchToggles((prev) => ({ ...prev, body: !prev.body }))
-          }
-        >
-          <icons.MdOutlineSubtitles size={22} />
-        </button>
+        <div className="common-icons-wrapper">
+          <button
+            className="common-button"
+            style={
+              searchToggles.title
+                ? { background: "var(--secondary)" }
+                : { background: "var(--primary)" }
+            }
+            onClick={() =>
+              setSearchToggles((prev) => ({
+                ...prev,
+                title: !prev.title,
+              }))
+            }
+          >
+            <icons.MdTitle size={22} />
+          </button>
+          <button
+            className="common-button"
+            style={
+              searchToggles.body
+                ? { background: "var(--secondary)" }
+                : { background: "var(--primary)" }
+            }
+            onClick={() =>
+              setSearchToggles((prev) => ({ ...prev, body: !prev.body }))
+            }
+          >
+            <icons.MdOutlineSubtitles size={22} />
+          </button>
+        </div>
 
         <input
           className="common-input"
@@ -90,4 +96,4 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
   );
 };
 
-export default ShowNotes;
+export default memo(ShowNotes);
