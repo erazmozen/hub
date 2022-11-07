@@ -6,14 +6,9 @@
   margin: 1rem 0;
 }
 
-.todo-icons {
-  padding: 0.4rem;
+.todo .common-icons-wrapper svg {
   font-size: 1.4rem;
-}
-
-.todo-icons svg {
-  cursor: pointer;
-  margin-right: 0.2rem;
+  margin: 0.2rem;
 }
 
 .todo-title {
@@ -37,10 +32,12 @@
   background: none;
   border: none;
   color: white;
+  padding: 0.3rem;
 }
 
 .minus-icon {
   font-size: 20px;
+  margin-right: 0.4rem;
   opacity: 0.2;
   cursor: pointer;
   transition: opacity 0.4s ease;

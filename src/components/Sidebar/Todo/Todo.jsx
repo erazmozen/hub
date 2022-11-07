@@ -36,7 +36,7 @@ const Todo = ({ icons, searchInput }) => {
 
   return (
     <div className="todo">
-      <div className="todo-icons">
+      <div className="common-icons-wrapper">
         <icons.FiPlusSquare onClick={addTodo} />
         <icons.FiFilter onClick={filterTodos} />
         <icons.AiOutlineClear onClick={clearTodos} />
