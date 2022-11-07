@@ -17,13 +17,10 @@ const Header = ({ icons }) => {
         <button onClick={toggleShowpage}>
           <icons.BsReverseLayoutTextSidebarReverse />
         </button>
-        <a href="#">
-          <icons.FiBookOpen />
-        </a>
-        <a href="#">
+        <a href="www.linkedin.com/in/erazmozen">
           <icons.GrLinkedinOption />
         </a>
-        <a href="#">
+        <a href="https://github.com/erazmozen">
           <icons.FiGithub />
         </a>
       </div>
