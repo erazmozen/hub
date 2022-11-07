@@ -4,9 +4,8 @@ const Footer = () => {
   console.log("Footer render");
   return (
     <div className="footer-wrapper background-rounded">
-      <p>Contact phone: +38163444335</p>
-      <p>Email: erazmo@erazmo.com</p>
-      <p>Copyright by: ErazmoZen</p>
+      <p>Contact phone: +381641199057</p>
+      <p>Email: erazmozen@protonmail.com</p>
     </div>
   );
 };

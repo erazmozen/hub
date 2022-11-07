@@ -35,7 +35,8 @@ const Sidebar = ({ icons }) => {
         </div>
       </div>
       <div className="sidebar-bottom">
-        <div>+38154443123</div>
+        <small>+381641199057</small>
+        <small>erazmozen@protonmail.com</small>
       </div>
     </div>
   );

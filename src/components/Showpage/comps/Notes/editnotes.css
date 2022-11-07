@@ -16,8 +16,9 @@
 
 .edit-notes textarea {
   font-size: 0.8em;
-  padding: 0.4rem 1rem;
-  max-width: 98vh;
+  padding: 0.8rem 1rem;
+  max-width: 680px;
+  min-height: 180px;
 }
 
 .edit-notes input {
