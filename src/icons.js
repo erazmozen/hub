@@ -45,6 +45,7 @@ import { WiNightSnowWind } from "react-icons/wi";
 import { WiStormShowers } from "react-icons/wi";
 import { MdOutlineSubtitles } from "react-icons/md";
 import { MdTitle } from "react-icons/md";
+import { RiCheckDoubleFill } from "react-icons/ri";
 
 const icons = {
   FiGithub,
@@ -94,6 +95,7 @@ const icons = {
   WiStormShowers,
   MdOutlineSubtitles,
   MdTitle,
+  RiCheckDoubleFill,
 };
 
 export default icons;
