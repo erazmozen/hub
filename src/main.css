@@ -86,6 +86,7 @@ body {
   margin: 0.4rem;
   font-size: 1.1em;
   cursor: pointer;
+  pointer-events: none;
 }
 
 .content-wrapper {
