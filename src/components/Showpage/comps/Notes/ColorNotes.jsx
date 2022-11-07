@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./colornotes.css";
 
 const ColorNotes = ({ colorOfNote, changeNoteColor }) => {
   const [noteColor, setNoteColor] = useState(colorOfNote);
@@ -25,7 +26,7 @@ const ColorNotes = ({ colorOfNote, changeNoteColor }) => {
     changeNoteColor(e.target.name);
   }
 
-  console.log("Color Notes render");
+  console.log(" ---- Color Notes render");
   return (
     <div className="color-notes">
       <button className="color-bar" style={style}></button>
