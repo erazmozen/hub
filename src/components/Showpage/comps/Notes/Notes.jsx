@@ -55,7 +55,7 @@ const Notes = ({ icons }) => {
   return (
     <div className="notes-wrapper">
       <div className="notes">
-        <div className="note-header">
+        <div className="notes-header">
           <h1>Add a Note</h1>
           <icons.FaRegStickyNote />
         </div>
