@@ -1,33 +1,29 @@
 /* ------ Navbar */
 
 .header-wrapper {
-  background-color: var(--primary);
   display: flex;
+  background-color: var(--primary);
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 0.8rem 1rem;
   color: white;
   position: relative;
+  z-index: 10000000;
 }
 
 @media only screen and (max-width: 600px) {
   .header-wrapper {
-    margin: 0rem;
-    text-align: center;
+    margin: 0.2rem;
   }
-
-  /* .header-wrapper > div:first-child {
-    margin-bottom: 1rem;
-  } */
 }
 
-@media only screen and (max-width: 330px) {
+@media only screen and (max-width: 430px) {
   .header-wrapper > div {
     width: 100%;
-  }
-  .logo-wrapper {
     justify-content: center;
-    margin-bottom: 0.6rem;
+  }
+  .header-wrapper .common-icons-wrapper {
+    margin-bottom: 0.3rem;
   }
 }
 
@@ -42,26 +38,6 @@
 
 .header-wrapper h3 {
   margin-left: 0.3rem;
-}
-
-.icons-wrapper > * {
-  margin-left: 1rem;
-}
-
-.header-wrapper,
-.logo-wrapper,
-.icons-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.header-settigns {
-  display: flex;
-  cursor: pointer;
-}
-
-.header-settigns p {
-  margin-right: 0.4rem;
 }
 
 /* Navbar ------ */
