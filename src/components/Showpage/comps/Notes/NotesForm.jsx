@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./notesform.css";
 
 const NotesForm = ({
   icons,
@@ -59,14 +60,14 @@ const NotesForm = ({
   console.log("Notes Form render");
 
   return (
-    <form onSubmit={saveNote}>
+    <form className="form-wrapper" onSubmit={saveNote}>
       <input
         ref={titleInput}
         placeholder="📔 Title here.."
         className="common-input"
       ></input>
 
-      <div className="toggles-wrapper">
+      <div className="common-icons-wrapper">
         {toggleButtons.map((button) => (
           <button
             key={button.id}
@@ -82,7 +83,7 @@ const NotesForm = ({
       <textarea
         ref={bodyInput}
         placeholder="Your notes are saved to localStorage, so if you clear browser cache they WILL be lost!&#10;..&#10;... 📑 Write your note here.&#10;..&#10;... 🪗 📆 You can also use emoji! 🫐 🧺 &#10;.."
-        className={`common-input textarea-body`}
+        className={`common-input`}
         style={heightClass}
       />
 

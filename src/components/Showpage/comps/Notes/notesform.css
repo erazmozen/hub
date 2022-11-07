@@ -1,0 +1,25 @@
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper input {
+  font-size: 1.3em;
+}
+
+.form-wrapper textarea {
+  resize: none;
+  width: 100%;
+  height: 200px;
+  letter-spacing: 0.015rem;
+  font-size: 1.1em;
+}
+
+.form-wrapper .common-button {
+  background-color: var(--secondary);
+  padding: 0.5rem;
+}
+
+.form-wrapper .common-icons-wrapper > * {
+  margin: 0.3rem;
+}
