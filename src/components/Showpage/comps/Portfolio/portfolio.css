@@ -11,9 +11,8 @@
 .portfolio-header {
   display: flex;
   width: 100%;
-  align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 0.6rem;
+  margin: 1rem 3rem;
 }
 
 .portfolio-header svg {
