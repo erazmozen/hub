@@ -6,6 +6,10 @@
   margin: 1rem 0;
 }
 
+.todo .common-icons-wrapper {
+  padding: 0.4rem 0.6rem;
+}
+
 .todo .common-icons-wrapper svg {
   font-size: 1.4rem;
   margin: 0.2rem;
@@ -23,7 +27,7 @@
 
 .todo li {
   display: flex;
-  padding: 0.4rem;
+  padding: 1rem;
   opacity: 0.8;
   transition: opacity 0.4s ease;
 }
