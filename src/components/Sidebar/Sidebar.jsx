@@ -29,7 +29,7 @@ const Sidebar = ({ icons }) => {
           <Link className="common-button" to="/hub">
             Portfolio
           </Link>
-          <Link className="common-button" to="/applets">
+          <Link className="common-button" to="/hub/applets">
             Applets
           </Link>
         </div>

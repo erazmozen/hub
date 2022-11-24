@@ -14,7 +14,7 @@ const ShowPage = ({ icons }) => {
         <Route path="/hub" element={<Portfolio icons={icons} />}></Route>
 
         <Route
-          path="/applets"
+          path="/hub/applets"
           element={
             <div>
               <Weather icons={icons} /> <Notes icons={icons} />

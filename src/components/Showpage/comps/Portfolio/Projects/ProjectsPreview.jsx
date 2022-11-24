@@ -8,12 +8,9 @@ const ProjectPreview = ({ prevImages, projectLinks, index }) => {
       <div>
         <h2>My Projects</h2>
         <p>
-          Here are some of the projects that i have done just to showcase what i
-          am capeable of doing. Feel free to contact me in case of a biz offer,
-          or any other thing that may pop up.
+        Here is a presentation of all the projects i have been working on for the past few months.
         </p>
       </div>
-      <div className="projects-contact"></div>
       <div className="projects-slider">
         <h2>{projectLinks[index].description}</h2>
         <img key={prevImages.index} src={prevImages[index]} alt="" />

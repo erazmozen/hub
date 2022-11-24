@@ -14,7 +14,7 @@ const Projects = ({ icons }) => {
     },
     {
       title: "React-Signin",
-      description: "Simple React Signin App",
+      description: "Simple React Login Page",
     },
     {
       title: "Portfolio-Template",
@@ -22,15 +22,15 @@ const Projects = ({ icons }) => {
     },
     {
       title: "React-Calculator",
-      description: "Simple React Calculator App",
+      description: "React Calculator App",
     },
     {
       title: "Meme-Generator",
-      description: "Meme Generator made with React",
+      description: "React Meme Generator",
     },
     {
       title: "React-ImageSlider",
-      description: "Simple image slider in React",
+      description: "Simple Image Slider in React",
     },
     {
       title: "Tenzies-Game",
@@ -38,7 +38,7 @@ const Projects = ({ icons }) => {
     },
     {
       title: "Password-Generator",
-      description: "Password-Generator made with JavaScript",
+      description: "Password Generator made with JavaScript",
     },
   ];
 
