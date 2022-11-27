@@ -1,7 +1,7 @@
-import { useEffect, useState} from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 
-const useApi = (url) => {
+const useApi = (url, trigger) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
 
@@ -26,8 +26,7 @@ const useApi = (url) => {
   useEffect(() => {
     console.log("useApi useEffect[]");
     fetchApi();
-  }, [] 
-);
+  }, [trigger]);
 
   return { loading, data };
 };

@@ -14,9 +14,7 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
   function changeNoteColor(noteColor) {
     const externalId = parseInt(note.id);
     const editedNotes = [...notesState].map((noteToChange) =>
-      noteToChange.id === externalId
-        ? { ...noteToChange, color: noteColor }
-        : { ...noteToChange }
+      noteToChange.id === externalId ? { ...noteToChange, color: noteColor } : { ...noteToChange }
     );
     setNotesState(editedNotes);
     console.log("Change Note Color to", noteColor);

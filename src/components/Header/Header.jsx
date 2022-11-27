@@ -14,6 +14,7 @@ const Header = ({ icons }) => {
         <button onClick={toggleSidebar}>
           <icons.BsToggles />
         </button>
+
         <button onClick={toggleShowpage}>
           <icons.BsReverseLayoutTextSidebarReverse />
         </button>

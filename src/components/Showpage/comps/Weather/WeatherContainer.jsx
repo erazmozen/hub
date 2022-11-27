@@ -1,9 +1,9 @@
-const WeatherContainer = ({ data, icons }) => {
+const WeatherContainer = ({ data, icons, city }) => {
   const now = new Date().getHours();
 
   const weatherDataObject = {
-    city: `Mladenovac, Koracica`,
-    cords: `${data.latitude} ${data.longitude}`,
+    city: `${city.Country}, ${city.Capital}`,
+    cords: `${data.latitude.toFixed(2)} : ${data.longitude.toFixed(2)}`,
     currTemp: `Currently: ${data.current_weather.temperature}℃`,
     hourly: {
       tempHour: data.hourly.temperature_2m.slice(now, now + 12),
