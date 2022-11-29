@@ -1,13 +1,12 @@
-import "./header.css";
-import Clock from "./comps/Clock";
 import { useContext } from "react";
+import Clock from "./comps/Clock";
 import DataContext from "../../contexts/DataContext";
+import "./header.css";
 
 const Header = ({ icons }) => {
   const { toggleSidebar, toggleShowpage } = useContext(DataContext);
 
   console.log("Header render");
-
   return (
     <div className="header-wrapper card">
       <div className="common-icons-wrapper">
