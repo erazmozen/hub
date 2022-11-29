@@ -54,9 +54,10 @@ const Todo = ({ icons, searchInput }) => {
         {todos
           .filter((todo) => todo.title.toLowerCase().includes(quarry))
           .map(
-            (todo) =>
+            (todo, index) =>
               !todo.done && (
                 <SingleTodo
+                  key={index}
                   icons={icons}
                   todo={todo}
                   deleteTodo={deleteTodo}
@@ -69,9 +70,10 @@ const Todo = ({ icons, searchInput }) => {
       <ul className="done-todos">
         <h4>Done todos:</h4>
         {todos.map(
-          (todo) =>
+          (todo, index) =>
             todo.done && (
               <SingleTodo
+                key={index}
                 icons={icons}
                 todo={todo}
                 deleteTodo={deleteTodo}
