@@ -1,7 +1,7 @@
 import data from "../../../../data/portfolioData.json";
 import Projects from "./Projects/Projects";
-import "./portfolio.css";
 import ContentBox from "./ContentBox";
+import "./portfolio.css";
 
 const Portfolio = ({ icons }) => {
   const dataArray = [];
@@ -21,12 +21,7 @@ const Portfolio = ({ icons }) => {
       <Projects icons={icons} />
 
       {dataArray.map((section) => (
-        <ContentBox
-          key={section.id}
-          id={section.id}
-          title={section.title}
-          body={section.body}
-        />
+        <ContentBox key={section.id} id={section.id} title={section.title} body={section.body} />
       ))}
     </div>
   );
