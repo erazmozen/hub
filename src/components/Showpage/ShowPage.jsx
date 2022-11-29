@@ -1,8 +1,8 @@
 import { Route, Routes } from "react-router-dom";
-import Portfolio from "./comps/Portfolio/Portfolio";
-import Notes from "./comps/Notes/Notes";
 import ShowpageHeader from "./comps/Showpage Header/ShowpageHeader";
+import Portfolio from "./comps/Portfolio/Portfolio";
 import Weather from "./comps/Weather/Weather";
+import Notes from "./comps/Notes/Notes";
 import "./showpage.css";
 
 const ShowPage = ({ icons }) => {
@@ -12,13 +12,12 @@ const ShowPage = ({ icons }) => {
       <ShowpageHeader icons={icons} />
       <Routes>
         <Route path="/hub" element={<Portfolio icons={icons} />}></Route>
-
         <Route
           path="/hub/applets"
           element={
-            <div>
+            <>
               <Weather icons={icons} /> <Notes icons={icons} />
-            </div>
+            </>
           }
         ></Route>
       </Routes>
