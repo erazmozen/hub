@@ -41,10 +41,10 @@ const Note = ({
     );
     setNotesState(editedNotes);
     setEditNotes(!editNotes);
-    console.log(" +++ Save edited note");
+    console.log("Save edited note");
   }
 
-  console.log(" ------ Note render");
+  console.log("Note render");
 
   return (
     <div key={note.id} className="note">

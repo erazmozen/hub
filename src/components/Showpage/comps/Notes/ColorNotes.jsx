@@ -26,7 +26,7 @@ const ColorNotes = ({ colorOfNote, changeNoteColor }) => {
     changeNoteColor(e.target.name);
   }
 
-  console.log(" ---- Color Notes render");
+  console.log("Color Notes render");
   return (
     <div className="color-notes">
       <button className="color-bar" style={style}></button>
