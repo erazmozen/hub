@@ -1,6 +1,9 @@
 import "./footer.css";
+// import { useContext } from "react";
+// import { TogglesContext } from "../../contexts/TogglesContext";
 
 const Footer = () => {
+  // const value = useContext(TogglesContext);
   console.log("Footer render");
   return (
     <div className="footer-wrapper background-rounded">
