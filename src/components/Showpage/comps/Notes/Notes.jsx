@@ -1,13 +1,14 @@
 import { useRef } from "react";
-
 import useLocalStorage from "../../../common/hooks/useLocalStorage";
 import uppercaseFirst from "../../../common/functions/uppercaseFirst";
+import { exampleNotes } from "../../../../data/exampleData";
 import NotesForm from "./NotesForm";
 import ShowNotes from "./ShowNotes";
 import "./notes.css";
 
 const Notes = ({ icons }) => {
-  const [notesState, setNotesState] = useLocalStorage("notes-data", []);
+  console.log("example notes,", exampleNotes);
+  const [notesState, setNotesState] = useLocalStorage("notes-data", exampleNotes);
   const titleInput = useRef();
   const bodyInput = useRef();
 

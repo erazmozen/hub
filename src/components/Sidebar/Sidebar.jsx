@@ -1,12 +1,12 @@
 import { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
-import DataContext from "../../contexts/DataContext";
+import { TogglesContext } from "../../contexts/TogglesContext";
 import Todo from "./Todo/Todo";
 import "./sidebar.css";
 
 const Sidebar = ({ icons }) => {
   const searchInput = useRef("");
-  const { toggleSidebar } = useContext(DataContext);
+  const value = useContext(TogglesContext);
 
   console.log("Sidebar render");
   return (
@@ -14,7 +14,7 @@ const Sidebar = ({ icons }) => {
       <div className="sidebar-top">
         <div className="search-wrapper">
           <input className="common-input" ref={searchInput} placeholder="Search" />
-          <button className="common-button" onClick={toggleSidebar}>
+          <button className="common-button" onClick={value.toggleSidebar}>
             <icons.IoMdClose />
           </button>
         </div>
