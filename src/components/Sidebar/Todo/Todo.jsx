@@ -2,10 +2,12 @@ import "./todo.css";
 import { useState } from "react";
 import uppercaseFirst from "../../common/functions/uppercaseFirst";
 import useLocalStorage from "../../common/hooks/useLocalStorage";
+import { exampleTodos } from "../../../data/exampleData.js";
 import SingleTodo from "./SingleTodo";
 
 const Todo = ({ icons, searchInput }) => {
-  const [todos, setTodos] = useLocalStorage("todos-data", []);
+  console.log(exampleTodos);
+  const [todos, setTodos] = useLocalStorage("todos-data", exampleTodos);
   const [quarry, setquarry] = useState("");
 
   function addTodo() {
