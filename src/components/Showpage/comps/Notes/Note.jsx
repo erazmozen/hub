@@ -1,6 +1,4 @@
-import { useState } from "react";
-import { useRef } from "react";
-import { memo } from "react";
+import { useState, useRef, memo } from "react";
 import WordCounter from "../../../common/WordCounter";
 import ColorNotes from "./ColorNotes";
 import EditNote from "./EditNote";
@@ -60,7 +58,7 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
                 onClick={deleteNote}
                 id={note.id}
               >
-                <icons.AiOutlineDelete size={22} />
+                <icons.AiOutlineDelete size={30} />
               </button>
             </div>
           </div>
