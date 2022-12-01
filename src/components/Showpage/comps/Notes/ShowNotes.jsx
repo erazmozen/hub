@@ -1,42 +1,34 @@
-import { memo } from "react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Note from "./Note";
 import "./shownotes.css";
 
 const ShowNotes = ({
   icons,
-  deleteNote,
   notesState,
   setNotesState,
 }) => {
-  console.log(" -------- Show Notes render");
-  const [notesFilterdState, setNotesFilterdState] =
-    useState(notesState);
   const [search, setSearch] = useState("");
   const [searchToggles, setSearchToggles] = useState({
     title: true,
     body: false,
   });
 
-  useEffect(() => {
-    if (!searchToggles.title && !searchToggles.body) {
-      setNotesFilterdState(notesState);
-    } else {
-      const filteredNotes = [...notesState].filter(
-        (note) =>
-          (searchToggles.title &&
-            note.title.toLowerCase().includes(search)) ||
-          (searchToggles.body &&
-            note.body.toLowerCase().includes(search))
-      );
-      setNotesFilterdState(filteredNotes);
-    }
-
-    console.log(
-      "useEffect [search, searchToggles, notesState] "
+  function deleteNote(e) {
+    const externalId = parseInt(e.target.id);
+    const filteredNotes = notesState.filter(
+      (note) => note.id !== externalId
     );
-  }, [search, searchToggles, notesState]);
+    setNotesState(filteredNotes);
+    console.log("deleting: ", e.target.id);
+  }
 
+  function determineStyle(target) {
+    return target
+      ? { background: "var(--secondary)" }
+      : { background: "var(--primary)" };
+  }
+
+  console.log("Show Notes render");
   return (
     <div>
       <div className="saved-notes-header">
@@ -48,11 +40,7 @@ const ShowNotes = ({
         <div className="common-icons-wrapper">
           <button
             className="common-button"
-            style={
-              searchToggles.title
-                ? { background: "var(--secondary)" }
-                : { background: "var(--primary)" }
-            }
+            style={determineStyle(searchToggles.title)}
             onClick={() =>
               setSearchToggles((prev) => ({
                 ...prev,
@@ -64,11 +52,7 @@ const ShowNotes = ({
           </button>
           <button
             className="common-button"
-            style={
-              searchToggles.body
-                ? { background: "var(--secondary)" }
-                : { background: "var(--primary)" }
-            }
+            style={determineStyle(searchToggles.body)}
             onClick={() =>
               setSearchToggles((prev) => ({
                 ...prev,
@@ -90,25 +74,43 @@ const ShowNotes = ({
       </div>
 
       <div className="notes-holder">
-        {notesFilterdState.length > 0 ? (
-          notesFilterdState.map((note) => (
-            <Note
-              key={note.id}
-              icons={icons}
-              note={note}
-              deleteNote={deleteNote}
-              notesState={notesState}
-              setNotesState={setNotesState}
-            />
-          ))
-        ) : (
-          <div>
-            <h2>Nothing found..</h2>
-          </div>
-        )}
+        {searchToggles.title === false &&
+        searchToggles.body === false
+          ? notesState.map((note) => (
+              <Note
+                key={note.id}
+                icons={icons}
+                note={note}
+                deleteNote={deleteNote}
+                notesState={notesState}
+                setNotesState={setNotesState}
+              />
+            ))
+          : notesState
+              .filter(
+                (note) =>
+                  (searchToggles.title &&
+                    note.title
+                      .toLowerCase()
+                      .includes(search)) ||
+                  (searchToggles.body &&
+                    note.body
+                      .toLowerCase()
+                      .includes(search))
+              )
+              .map((note) => (
+                <Note
+                  key={note.id}
+                  icons={icons}
+                  note={note}
+                  deleteNote={deleteNote}
+                  notesState={notesState}
+                  setNotesState={setNotesState}
+                />
+              ))}
       </div>
     </div>
   );
 };
 
-export default memo(ShowNotes);
+export default ShowNotes;
