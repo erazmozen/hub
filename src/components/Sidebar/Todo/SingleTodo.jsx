@@ -1,6 +1,11 @@
 import React from "react";
 
-const SingleTodo = ({ icons, todo, checkTodo, deleteTodo }) => {
+const SingleTodo = ({
+  icons,
+  todo,
+  checkTodo,
+  deleteTodo,
+}) => {
   console.log("SingleTodo render");
   return (
     <li key={todo.id}>

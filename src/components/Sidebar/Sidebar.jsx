@@ -13,8 +13,15 @@ const Sidebar = ({ icons }) => {
     <div className="sidebar-wrapper card">
       <div className="sidebar-top">
         <div className="search-wrapper">
-          <input className="common-input" ref={searchInput} placeholder="Search" />
-          <button className="common-button" onClick={value.toggleSidebar}>
+          <input
+            className="common-input"
+            ref={searchInput}
+            placeholder="Search"
+          />
+          <button
+            className="common-button"
+            onClick={value.toggleSidebar}
+          >
             <icons.IoMdClose />
           </button>
         </div>

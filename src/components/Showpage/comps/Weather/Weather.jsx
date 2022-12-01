@@ -25,8 +25,18 @@ const Weather = ({ icons }) => {
 
   return (
     <div className="weather-parent-wrapper">
-      <CityPicker icons={icons} changeCity={changeCity} weatherCityData={weatherCityData} />
-      {!loading && <WeatherContainer icons={icons} data={data} city={city} />}
+      <CityPicker
+        icons={icons}
+        changeCity={changeCity}
+        weatherCityData={weatherCityData}
+      />
+      {!loading && (
+        <WeatherContainer
+          icons={icons}
+          data={data}
+          city={city}
+        />
+      )}
     </div>
   );
 };

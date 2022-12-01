@@ -1,7 +1,13 @@
 import React from "react";
 import "./editnotes.css";
 
-const EditNote = ({ icons, note, editInputTitle, editInputBody, editNote }) => {
+const EditNote = ({
+  icons,
+  note,
+  editInputTitle,
+  editInputBody,
+  editNote,
+}) => {
   console.log("EditNote render");
 
   return (

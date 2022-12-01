@@ -7,7 +7,9 @@ const ContentBox = ({ title, body }) => {
       <div className="section-body">
         <div>
           {splitBody.map((line) => (
-            <p key={Math.floor(Math.random() * 1000)}>{line}</p>
+            <p key={Math.floor(Math.random() * 1000)}>
+              {line}
+            </p>
           ))}
         </div>
       </div>

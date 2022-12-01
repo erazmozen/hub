@@ -40,16 +40,25 @@ const Projects = ({ icons }) => {
 
         <div>
           <div className="button-holder">
-            <button className="navigate-button" onClick={prevSlide}>
+            <button
+              className="navigate-button"
+              onClick={prevSlide}
+            >
               <icons.MdOutlineNavigateBefore />
             </button>
-            <button className="navigate-button" onClick={nextSlide}>
+            <button
+              className="navigate-button"
+              onClick={nextSlide}
+            >
               <icons.MdOutlineNavigateNext />
             </button>
           </div>
         </div>
       </div>
-      <ProjectPreview index={index} imagePreview={imagePreview} />
+      <ProjectPreview
+        index={index}
+        imagePreview={imagePreview}
+      />
     </div>
   );
 };

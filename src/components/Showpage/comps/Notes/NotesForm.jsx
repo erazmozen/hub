@@ -54,7 +54,10 @@ const NotesForm = ({
       return;
     }
     setBodyHeight(() => e.target.value);
-    console.log("Value is not the same, setting state to ", e.target.value);
+    console.log(
+      "Value is not the same, setting state to ",
+      e.target.value
+    );
   }
 
   console.log("Notes Form render");

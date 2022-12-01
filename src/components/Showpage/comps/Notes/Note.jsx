@@ -4,15 +4,24 @@ import ColorNotes from "./ColorNotes";
 import EditNote from "./EditNote";
 import "./note.css";
 
-const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
+const Note = ({
+  icons,
+  note,
+  deleteNote,
+  setNotesState,
+  notesState,
+}) => {
   const [editNotes, setEditNotes] = useState(false);
   const editInputTitle = useRef();
   const editInputBody = useRef();
 
   function changeNoteColor(noteColor) {
     const externalId = parseInt(note.id);
-    const editedNotes = [...notesState].map((noteToChange) =>
-      noteToChange.id === externalId ? { ...noteToChange, color: noteColor } : { ...noteToChange }
+    const editedNotes = [...notesState].map(
+      (noteToChange) =>
+        noteToChange.id === externalId
+          ? { ...noteToChange, color: noteColor }
+          : { ...noteToChange }
     );
     setNotesState(editedNotes);
     console.log("Change Note Color to", noteColor);
@@ -20,14 +29,15 @@ const Note = ({ icons, note, deleteNote, setNotesState, notesState }) => {
 
   function editNote() {
     const externalId = parseInt(note.id);
-    const editedNotes = [...notesState].map((noteToChange) =>
-      noteToChange.id === externalId
-        ? {
-            ...noteToChange,
-            title: editInputTitle.current.value,
-            body: editInputBody.current.value,
-          }
-        : { ...noteToChange }
+    const editedNotes = [...notesState].map(
+      (noteToChange) =>
+        noteToChange.id === externalId
+          ? {
+              ...noteToChange,
+              title: editInputTitle.current.value,
+              body: editInputBody.current.value,
+            }
+          : { ...noteToChange }
     );
     setNotesState(editedNotes);
     setEditNotes(!editNotes);

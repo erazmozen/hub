@@ -4,7 +4,8 @@ const TogglesContext = createContext(null);
 
 const TogglesContextProvider = ({ children }) => {
   const [sidebarToggle, setSidebarToggle] = useState(true);
-  const [showpageToggle, setShowpageToggle] = useState(true);
+  const [showpageToggle, setShowpageToggle] =
+    useState(true);
   console.log("Context");
 
   function toggleSidebar() {
@@ -14,7 +15,10 @@ const TogglesContextProvider = ({ children }) => {
 
   function toggleShowpage() {
     setShowpageToggle((prev) => (prev = !prev));
-    console.log("showpage toggled, state:", !showpageToggle);
+    console.log(
+      "showpage toggled, state:",
+      !showpageToggle
+    );
   }
 
   const value = {
@@ -24,7 +28,11 @@ const TogglesContextProvider = ({ children }) => {
     showpageToggle,
   };
 
-  return <TogglesContext.Provider value={value}>{children}</TogglesContext.Provider>;
+  return (
+    <TogglesContext.Provider value={value}>
+      {children}
+    </TogglesContext.Provider>
+  );
 };
 
 export { TogglesContext, TogglesContextProvider };

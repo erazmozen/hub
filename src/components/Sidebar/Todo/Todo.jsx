@@ -7,28 +7,40 @@ import SingleTodo from "./SingleTodo";
 
 const Todo = ({ icons, searchInput }) => {
   console.log(exampleTodos);
-  const [todos, setTodos] = useLocalStorage("todos-data", exampleTodos);
+  const [todos, setTodos] = useLocalStorage(
+    "todos-data",
+    exampleTodos
+  );
   const [quarry, setquarry] = useState("");
 
   function addTodo() {
     const todoTitle = searchInput.current.value;
-    if (todoTitle === "") return console.log("you must type a name!");
+    if (todoTitle === "")
+      return console.log("you must type a name!");
     setTodos((prev) => [
       ...prev,
-      { id: todos.length, title: uppercaseFirst(todoTitle), done: false },
+      {
+        id: todos.length,
+        title: uppercaseFirst(todoTitle),
+        done: false,
+      },
     ]);
     console.log("added new todo, title:", todoTitle);
   }
 
   const deleteTodo = (index) => {
-    const todosFiltered = todos.filter((todo) => todo.id !== index);
+    const todosFiltered = todos.filter(
+      (todo) => todo.id !== index
+    );
     console.log("deleted todo, left: ", todosFiltered);
     setTodos(todosFiltered);
   };
 
   function checkTodo(index) {
     const editTodo = todos.map((todo) =>
-      todo.id === index ? { ...todo, done: !todo.done } : { ...todo }
+      todo.id === index
+        ? { ...todo, done: !todo.done }
+        : { ...todo }
     );
     setTodos(editTodo);
   }
@@ -54,7 +66,9 @@ const Todo = ({ icons, searchInput }) => {
       <ul>
         <h4>Todos:</h4>
         {todos
-          .filter((todo) => todo.title.toLowerCase().includes(quarry))
+          .filter((todo) =>
+            todo.title.toLowerCase().includes(quarry)
+          )
           .map(
             (todo, index) =>
               !todo.done && (

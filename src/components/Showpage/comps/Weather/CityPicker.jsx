@@ -22,7 +22,11 @@ const CityPicker = ({ changeCity, weatherCityData }) => {
       />
       <div className="city-wrapper">
         {filterCity.map((city, index) => (
-          <div className="city-picker" key={index} onClick={() => changeCity(index, filterCity)}>
+          <div
+            className="city-picker"
+            key={index}
+            onClick={() => changeCity(index, filterCity)}
+          >
             {/* {city.Capital ? <p>{city.Capital}</p> : <p>asd</p>} */}
             {/* {city.Country ? <p>{city.Country}</p> : <p>asd</p>} */}
             <p>{city.Capital}</p>

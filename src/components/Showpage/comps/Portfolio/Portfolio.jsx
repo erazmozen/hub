@@ -21,7 +21,12 @@ const Portfolio = ({ icons }) => {
       <Projects icons={icons} />
 
       {dataArray.map((section) => (
-        <ContentBox key={section.id} id={section.id} title={section.title} body={section.body} />
+        <ContentBox
+          key={section.id}
+          id={section.id}
+          title={section.title}
+          body={section.body}
+        />
       ))}
     </div>
   );

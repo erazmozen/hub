@@ -11,12 +11,16 @@ const ShowPage = ({ icons }) => {
     <div className="showpage">
       <ShowpageHeader icons={icons} />
       <Routes>
-        <Route path="/hub" element={<Portfolio icons={icons} />}></Route>
+        <Route
+          path="/hub"
+          element={<Portfolio icons={icons} />}
+        ></Route>
         <Route
           path="/hub/applets"
           element={
             <>
-              <Weather icons={icons} /> <Notes icons={icons} />
+              <Weather icons={icons} />{" "}
+              <Notes icons={icons} />
             </>
           }
         ></Route>

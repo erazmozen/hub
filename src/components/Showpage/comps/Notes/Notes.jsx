@@ -8,7 +8,10 @@ import "./notes.css";
 
 const Notes = ({ icons }) => {
   console.log("example notes,", exampleNotes);
-  const [notesState, setNotesState] = useLocalStorage("notes-data", exampleNotes);
+  const [notesState, setNotesState] = useLocalStorage(
+    "notes-data",
+    exampleNotes
+  );
   const titleInput = useRef();
   const bodyInput = useRef();
 
@@ -33,7 +36,9 @@ const Notes = ({ icons }) => {
 
   function deleteNote(e) {
     const externalId = parseInt(e.target.id);
-    const filteredNotes = notesState.filter((note) => note.id !== externalId);
+    const filteredNotes = notesState.filter(
+      (note) => note.id !== externalId
+    );
     setNotesState(filteredNotes);
     console.log("deleting: ", e.target.id);
   }

@@ -4,7 +4,8 @@ import Sidebar from "../Sidebar/Sidebar";
 import ShowPage from "../Showpage/ShowPage";
 
 const Content = ({ icons }) => {
-  const { sidebarToggle, showpageToggle } = useContext(TogglesContext);
+  const { sidebarToggle, showpageToggle } =
+    useContext(TogglesContext);
   console.log("Content Render");
   return (
     <div className="content-wrapper">

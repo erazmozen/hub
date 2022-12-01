@@ -3,9 +3,15 @@ import { useEffect, useState } from "react";
 import Note from "./Note";
 import "./shownotes.css";
 
-const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
+const ShowNotes = ({
+  icons,
+  deleteNote,
+  notesState,
+  setNotesState,
+}) => {
   console.log(" -------- Show Notes render");
-  const [notesFilterdState, setNotesFilterdState] = useState(notesState);
+  const [notesFilterdState, setNotesFilterdState] =
+    useState(notesState);
   const [search, setSearch] = useState("");
   const [searchToggles, setSearchToggles] = useState({
     title: true,
@@ -18,13 +24,17 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
     } else {
       const filteredNotes = [...notesState].filter(
         (note) =>
-          (searchToggles.title && note.title.toLowerCase().includes(search)) ||
-          (searchToggles.body && note.body.toLowerCase().includes(search))
+          (searchToggles.title &&
+            note.title.toLowerCase().includes(search)) ||
+          (searchToggles.body &&
+            note.body.toLowerCase().includes(search))
       );
       setNotesFilterdState(filteredNotes);
     }
 
-    console.log("useEffect [search, searchToggles, notesState] ");
+    console.log(
+      "useEffect [search, searchToggles, notesState] "
+    );
   }, [search, searchToggles, notesState]);
 
   return (
@@ -59,7 +69,12 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
                 ? { background: "var(--secondary)" }
                 : { background: "var(--primary)" }
             }
-            onClick={() => setSearchToggles((prev) => ({ ...prev, body: !prev.body }))}
+            onClick={() =>
+              setSearchToggles((prev) => ({
+                ...prev,
+                body: !prev.body,
+              }))
+            }
           >
             <icons.MdOutlineSubtitles size={22} />
           </button>
@@ -68,7 +83,9 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
         <input
           className="common-input"
           placeholder="Search..."
-          onChange={(e) => setSearch(e.target.value.toLowerCase())}
+          onChange={(e) =>
+            setSearch(e.target.value.toLowerCase())
+          }
         />
       </div>
 
