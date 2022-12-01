@@ -29,18 +29,8 @@ const Notes = ({ icons }) => {
       },
     ]);
     setTimeout(() => {
-      titleInput.current.value = "";
-      bodyInput.current.value = "";
+      clearInputs(e);
     }, 100);
-  }
-
-  function deleteNote(e) {
-    const externalId = parseInt(e.target.id);
-    const filteredNotes = notesState.filter(
-      (note) => note.id !== externalId
-    );
-    setNotesState(filteredNotes);
-    console.log("deleting: ", e.target.id);
   }
 
   function clearNotes(e) {
@@ -77,7 +67,6 @@ const Notes = ({ icons }) => {
 
         <ShowNotes
           icons={icons}
-          deleteNote={deleteNote}
           notesState={notesState}
           titleInput={titleInput}
           bodyInput={bodyInput}
