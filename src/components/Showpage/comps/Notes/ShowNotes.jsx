@@ -31,7 +31,7 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
     <div>
       <div className="saved-notes-header">
         <h1>Saved notes:</h1>
-        <icons.MdOutlineSave />
+        <icons.MdOutlineSave size={36} />
       </div>
 
       <div className="search-filter-wrapper">
@@ -59,9 +59,7 @@ const ShowNotes = ({ icons, deleteNote, notesState, setNotesState }) => {
                 ? { background: "var(--secondary)" }
                 : { background: "var(--primary)" }
             }
-            onClick={() =>
-              setSearchToggles((prev) => ({ ...prev, body: !prev.body }))
-            }
+            onClick={() => setSearchToggles((prev) => ({ ...prev, body: !prev.body }))}
           >
             <icons.MdOutlineSubtitles size={22} />
           </button>
