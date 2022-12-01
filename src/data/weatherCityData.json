@@ -294,7 +294,7 @@
     "Longitude": "14.22"
   },
   {
-    "Country": "Democratic Republic of the Congo",
+    "Country": "D. R. of Congo",
     "Capital": "Kinshasa",
     "Latitude": "-4.2",
     "Longitude": "15.15"
@@ -498,11 +498,6 @@
     "Longitude": "-72.2"
   },
   {
-    "Country": "Heard Island and McDonald Islands",
-    "Capital": "-53",
-    "Latitude": "74"
-  },
-  {
     "Country": "Honduras",
     "Capital": "Tegucigalpa",
     "Latitude": "14.05",
@@ -533,7 +528,7 @@
     "Longitude": "106.49"
   },
   {
-    "Country": "Iran (Islamic Republic of)",
+    "Country": "Iran",
     "Capital": "Tehran",
     "Latitude": "35.44",
     "Longitude": "51.3"
@@ -605,7 +600,7 @@
     "Longitude": "74.46"
   },
   {
-    "Country": "Lao People's Democratic Republic",
+    "Country": "Lao People's D. R.",
     "Capital": "Vientiane",
     "Latitude": "17.58",
     "Longitude": "102.36"
@@ -635,7 +630,7 @@
     "Longitude": "-10.47"
   },
   {
-    "Country": "Libyan Arab Jamahiriya",
+    "Country": "Jamahiriya",
     "Capital": "Tripoli",
     "Latitude": "32.49",
     "Longitude": "13.07"
@@ -1133,7 +1128,7 @@
     "Longitude": "-0.05"
   },
   {
-    "Country": "United Republic of Tanzania",
+    "Country": "U. R. of Tanzania",
     "Capital": "Dodoma",
     "Latitude": "-6.08",
     "Longitude": "35.45"
@@ -1145,7 +1140,7 @@
     "Longitude": "-77.02"
   },
   {
-    "Country": "United States of Virgin Islands",
+    "Country": "U. S. of Virgin Islands",
     "Capital": "Charlotte Amalie",
     "Latitude": "18.21",
     "Longitude": "-64.56"
@@ -1181,7 +1176,7 @@
     "Longitude": "105.55"
   },
   {
-    "Country": "Yugoslavia",
+    "Country": "Serbia",
     "Capital": "Belgrade",
     "Latitude": "44.5",
     "Longitude": "20.37"
