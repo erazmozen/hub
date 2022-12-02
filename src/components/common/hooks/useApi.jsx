@@ -1,25 +1,26 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
+import { useEffect, useReducer } from "react";
+import {
+  INITIAL_STATE,
+  postReducer,
+} from "../../common/functions/fetchReducer";
 
 const useApi = (url, trigger) => {
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(true);
+  const [state, dispatch] = useReducer(
+    postReducer,
+    INITIAL_STATE
+  );
 
-  const fetchApi = async () => {
-    const options = {
-      method: "GET",
-      url: url,
-    };
-
-    await axios
-      .request(options)
-      .then(function (response) {
-        console.log("axios", response.data);
-        setData(response.data);
-        setLoading(false);
+  const fetchApi = () => {
+    dispatch({ type: "FETCH_START" });
+    fetch(url)
+      .then((res) => {
+        return res.json();
       })
-      .catch(function (error) {
-        console.error("axios error", error);
+      .then((data) => {
+        dispatch({ type: "FETCH_SUCCESS", payload: data });
+      })
+      .catch((err) => {
+        dispatch({ type: "FETCH_ERROR" });
       });
   };
 
@@ -28,7 +29,7 @@ const useApi = (url, trigger) => {
     fetchApi();
   }, [trigger]);
 
-  return { loading, data };
+  return { state };
 };
 
 export default useApi;
