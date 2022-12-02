@@ -8,7 +8,7 @@ import CityPicker from "./CityPicker";
 const Weather = ({ icons }) => {
   const [city, setCity] = useState(weatherCityData[0]);
 
-  const { loading, data } = useApi(
+  const { state } = useApi(
     `https://api.open-meteo.com/v1/forecast?latitude=${city.Latitude}&longitude=${city.Longitude}&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,rain,showers,snowfall,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset&current_weather=true&timezone=auto`,
     city
   );
@@ -19,10 +19,6 @@ const Weather = ({ icons }) => {
 
   console.log("Weather render");
 
-  if (data == null) {
-    return <div>Data is unavaliable!</div>;
-  }
-
   return (
     <div className="weather-parent-wrapper">
       <CityPicker
@@ -30,13 +26,16 @@ const Weather = ({ icons }) => {
         changeCity={changeCity}
         weatherCityData={weatherCityData}
       />
-      {!loading && (
-        <WeatherContainer
-          icons={icons}
-          data={data}
-          city={city}
-        />
-      )}
+
+      <div className="card resize">
+        {!state.loading && (
+          <WeatherContainer
+            icons={icons}
+            data={state.data}
+            city={city}
+          />
+        )}
+      </div>
     </div>
   );
 };

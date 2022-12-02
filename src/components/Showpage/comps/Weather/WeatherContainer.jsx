@@ -2,7 +2,9 @@ import { returnWeatherIcon } from "../../../common/functions/returnWeatherIcon";
 
 const WeatherContainer = ({ data, icons, city }) => {
   const now = new Date().getHours();
-
+  if (data == null) {
+    return <div>Data is unavaliable!</div>;
+  }
   const weatherDataObject = {
     city: `${city.Country}, ${city.Capital}`,
     cords: `${data.latitude.toFixed(
@@ -29,7 +31,7 @@ const WeatherContainer = ({ data, icons, city }) => {
   console.log("Render WeatherContainer");
 
   return (
-    <div className="card weather-wrapper">
+    <div className="weather-wrapper">
       <div className="weather-header">
         <div className="weather-title">
           {weatherDataObject.intervalIcon}
