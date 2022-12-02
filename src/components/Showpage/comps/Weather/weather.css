@@ -1,6 +1,14 @@
 .weather-parent-wrapper {
   position: relative;
   display: flex;
+  flex-wrap: wrap;
+}
+
+.weather-wrapper {
+}
+
+.resize {
+  width: 400px;
 }
 
 .weather-title {
@@ -24,6 +32,7 @@
 
 .forcast {
   display: flex;
+  width: 100%;
   justify-content: center;
   flex-wrap: wrap;
   background-color: var(--secondary);
@@ -42,6 +51,9 @@
 }
 
 .city-picker-wrapper {
+  height: 600px;
+  width: 400px;
+  flex-shrink: 0;
   text-align: center;
   padding: 1rem 0.6rem;
 }
@@ -57,14 +69,13 @@
 }
 
 .city-wrapper {
-  max-height: 390px;
+  max-height: 420px;
   margin-top: 1rem;
   overflow: scroll;
 }
 
 .city-picker {
   display: flex;
-  min-width: 300px;
   align-items: center;
   justify-content: space-between;
   padding: 0.1rem 1rem;
