@@ -7,7 +7,6 @@ import ShowNotes from "./ShowNotes";
 import "./notes.css";
 
 const Notes = ({ icons }) => {
-  console.log("example notes,", exampleNotes);
   const [notesState, setNotesState] = useLocalStorage(
     "notes-data",
     exampleNotes

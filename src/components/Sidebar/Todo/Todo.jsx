@@ -6,7 +6,6 @@ import { exampleTodos } from "../../../data/exampleData.js";
 import SingleTodo from "./SingleTodo";
 
 const Todo = ({ icons, searchInput }) => {
-  console.log(exampleTodos);
   const [todos, setTodos] = useLocalStorage(
     "todos-data",
     exampleTodos

@@ -19,7 +19,7 @@ const ShowPage = ({ icons }) => {
           path="/hub/applets"
           element={
             <>
-              <Weather icons={icons} />{" "}
+              <Weather icons={icons} />
               <Notes icons={icons} />
             </>
           }
