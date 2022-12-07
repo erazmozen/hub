@@ -39,17 +39,15 @@ const Projects = ({ icons }) => {
           />
         ))}
 
-        <div>
-          <div className="button-holder">
-            <Button
-              onClick={prevSlide}
-              icon={<icons.MdOutlineNavigateBefore />}
-            />
-            <Button
-              onClick={nextSlide}
-              icon={<icons.MdOutlineNavigateNext />}
-            />
-          </div>
+        <div className="button-holder">
+          <Button
+            onClick={prevSlide}
+            icon={<icons.MdOutlineNavigateBefore />}
+          />
+          <Button
+            onClick={nextSlide}
+            icon={<icons.MdOutlineNavigateNext />}
+          />
         </div>
       </div>
       <ProjectPreview
