@@ -1,11 +1,16 @@
+import { useContext } from "react";
+import { IconsContext } from "../../../../contexts/IconsContext";
 import { returnWeatherIcon } from "../../../common/functions/returnWeatherIcon";
 import "./weathercontainer.css";
 
-const WeatherContainer = ({ data, icons, city }) => {
+const WeatherContainer = ({ data, city }) => {
+  const { TbCurrentLocation } = useContext(IconsContext);
+
   const now = new Date().getHours();
   if (data == null) {
     return <div>Data is unavaliable!</div>;
   }
+
   const weatherDataObject = {
     city: `${city.Country}, ${city.Capital}`,
     cords: `${data.latitude.toFixed(
@@ -42,7 +47,7 @@ const WeatherContainer = ({ data, icons, city }) => {
           {weatherDataObject.city}
         </h3>
         <h4 className="weather-cords">
-          <icons.TbCurrentLocation size={13} />
+          <TbCurrentLocation size={13} />
           {weatherDataObject.cords}
         </h4>
       </div>

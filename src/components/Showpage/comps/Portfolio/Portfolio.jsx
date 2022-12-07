@@ -1,9 +1,12 @@
+import { useContext } from "react";
+import { IconsContext } from "../../../../contexts/IconsContext";
 import data from "../../../../data/portfolioData.json";
 import Projects from "./Projects/Projects";
 import ContentBox from "./ContentBox";
 import "./portfolio.css";
 
-const Portfolio = ({ icons }) => {
+const Portfolio = () => {
+  const { BsInfo } = useContext(IconsContext);
   const dataArray = [];
 
   Object.keys(data).forEach(function (key) {
@@ -15,10 +18,10 @@ const Portfolio = ({ icons }) => {
     <div className="portfolio">
       <div className="portfolio-header">
         <h1>Portfolio</h1>
-        <icons.BsInfo />
+        <BsInfo />
       </div>
 
-      <Projects icons={icons} />
+      <Projects />
 
       {dataArray.map((section) => (
         <ContentBox

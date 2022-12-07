@@ -1,11 +1,14 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import imagePreview from "../../../../../data/prevData";
+import { IconsContext } from "../../../../../contexts/IconsContext";
 import ProjectLink from "./ProjectLink";
 import ProjectPreview from "./ProjectsPreview";
-import "./projects.css";
 import Button from "../../../../common/Button";
+import "./projects.css";
 
-const Projects = ({ icons }) => {
+const Projects = () => {
+  const { MdOutlineNavigateBefore, MdOutlineNavigateNext } =
+    useContext(IconsContext);
   const [index, setIndex] = useState(0);
 
   function changeSlide(linkIndex) {
@@ -31,7 +34,6 @@ const Projects = ({ icons }) => {
         {imagePreview.map((link, linkIndex) => (
           <ProjectLink
             key={linkIndex}
-            icons={icons}
             index={index}
             linkIndex={linkIndex}
             changeSlide={changeSlide}
@@ -42,11 +44,11 @@ const Projects = ({ icons }) => {
         <div className="button-holder">
           <Button
             onClick={prevSlide}
-            icon={<icons.MdOutlineNavigateBefore />}
+            icon={<MdOutlineNavigateBefore />}
           />
           <Button
             onClick={nextSlide}
-            icon={<icons.MdOutlineNavigateNext />}
+            icon={<MdOutlineNavigateNext />}
           />
         </div>
       </div>

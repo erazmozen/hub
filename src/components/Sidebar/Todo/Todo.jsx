@@ -1,11 +1,14 @@
-import "./todo.css";
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { exampleTodos } from "../../../data/exampleData.js";
+import { IconsContext } from "../../../contexts/IconsContext";
+import SingleTodo from "./SingleTodo";
 import uppercaseFirst from "../../common/functions/uppercaseFirst";
 import useLocalStorage from "../../common/hooks/useLocalStorage";
-import { exampleTodos } from "../../../data/exampleData.js";
-import SingleTodo from "./SingleTodo";
+import "./todo.css";
 
-const Todo = ({ icons, searchInput }) => {
+const Todo = ({ searchInput }) => {
+  const { FiPlusSquare, FiFilter, AiOutlineClear } =
+    useContext(IconsContext);
   const [todos, setTodos] = useLocalStorage(
     "todos-data",
     exampleTodos
@@ -58,9 +61,9 @@ const Todo = ({ icons, searchInput }) => {
   return (
     <div className="todo">
       <div className="common-icons-wrapper">
-        <icons.FiPlusSquare onClick={addTodo} />
-        <icons.FiFilter onClick={filterTodos} />
-        <icons.AiOutlineClear onClick={clearTodos} />
+        <FiPlusSquare onClick={addTodo} />
+        <FiFilter onClick={filterTodos} />
+        <AiOutlineClear onClick={clearTodos} />
       </div>
       <ul>
         <h4>Todos:</h4>
@@ -73,7 +76,6 @@ const Todo = ({ icons, searchInput }) => {
               !todo.done && (
                 <SingleTodo
                   key={index}
-                  icons={icons}
                   todo={todo}
                   deleteTodo={deleteTodo}
                   checkTodo={checkTodo}
@@ -89,7 +91,6 @@ const Todo = ({ icons, searchInput }) => {
             todo.done && (
               <SingleTodo
                 key={index}
-                icons={icons}
                 todo={todo}
                 deleteTodo={deleteTodo}
                 checkTodo={checkTodo}

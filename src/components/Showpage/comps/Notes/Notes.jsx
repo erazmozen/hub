@@ -1,12 +1,14 @@
-import { useRef } from "react";
+import { useContext, useRef } from "react";
+import { IconsContext } from "../../../../contexts/IconsContext";
+import { exampleNotes } from "../../../../data/exampleData";
 import useLocalStorage from "../../../common/hooks/useLocalStorage";
 import uppercaseFirst from "../../../common/functions/uppercaseFirst";
-import { exampleNotes } from "../../../../data/exampleData";
 import NotesForm from "./NotesForm";
 import ShowNotes from "./ShowNotes";
 import "./notes.css";
 
-const Notes = ({ icons }) => {
+const Notes = () => {
+  const { FaRegStickyNote } = useContext(IconsContext);
   const [notesState, setNotesState] = useLocalStorage(
     "notes-data",
     exampleNotes
@@ -52,20 +54,18 @@ const Notes = ({ icons }) => {
       <div className="notes">
         <div className="notes-header">
           <h1>Add a Note</h1>
-          <icons.FaRegStickyNote />
+          <FaRegStickyNote />
         </div>
 
         <NotesForm
           saveNote={saveNote}
           titleInput={titleInput}
           clearInputs={clearInputs}
-          icons={icons}
           clearNotes={clearNotes}
           bodyInput={bodyInput}
         />
 
         <ShowNotes
-          icons={icons}
           notesState={notesState}
           titleInput={titleInput}
           bodyInput={bodyInput}

@@ -1,44 +1,52 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { IconsContext } from "../../../../contexts/IconsContext";
 import Button from "../../../common/Button";
 import "./notesform.css";
 
 const NotesForm = ({
-  icons,
   titleInput,
   bodyInput,
   clearInputs,
   clearNotes,
   saveNote,
 }) => {
+  const {
+    TbArrowsDiagonalMinimize,
+    TbArrowsDiagonal2,
+    FiMaximize,
+    BsEraserFill,
+    AiOutlineClear,
+  } = useContext(IconsContext);
+
   const [bodyHeight, setBodyHeight] = useState("200px");
 
   const toggleButtons = [
     {
       id: 1,
       value: "200px",
-      icon: <icons.TbArrowsDiagonalMinimize size={18} />,
+      icon: <TbArrowsDiagonalMinimize size={18} />,
       onClick: changeHeight,
     },
     {
       id: 2,
       value: "400px",
-      icon: <icons.TbArrowsDiagonal2 size={18} />,
+      icon: <TbArrowsDiagonal2 size={18} />,
       onClick: changeHeight,
     },
     {
       id: 3,
       value: "700px",
-      icon: <icons.FiMaximize size={18} />,
+      icon: <FiMaximize size={18} />,
       onClick: changeHeight,
     },
     {
       id: 4,
-      icon: <icons.BsEraserFill size={18} />,
+      icon: <BsEraserFill size={18} />,
       onClick: clearInputs,
     },
     {
       id: 5,
-      icon: <icons.AiOutlineClear size={18} />,
+      icon: <AiOutlineClear size={18} />,
       onClick: clearNotes,
     },
   ];

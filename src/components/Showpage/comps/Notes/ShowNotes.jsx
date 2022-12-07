@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { IconsContext } from "../../../../contexts/IconsContext";
 import Button from "../../../common/Button";
 import Note from "./Note";
 import "./shownotes.css";
 
-const ShowNotes = ({
-  icons,
-  notesState,
-  setNotesState,
-}) => {
+const ShowNotes = ({ notesState, setNotesState }) => {
+  const { MdOutlineSave, MdTitle, MdOutlineSubtitles } =
+    useContext(IconsContext);
+
   const [search, setSearch] = useState("");
+
   const [searchToggles, setSearchToggles] = useState({
     title: true,
     body: false,
@@ -34,13 +35,13 @@ const ShowNotes = ({
     <div>
       <div className="saved-notes-header">
         <h1>Saved notes:</h1>
-        <icons.MdOutlineSave size={36} />
+        <MdOutlineSave size={36} />
       </div>
 
       <div className="search-filter-wrapper">
         <div className="common-icons-wrapper">
           <Button
-            icon={<icons.MdTitle size={22} />}
+            icon={<MdTitle size={22} />}
             style={determineStyle(searchToggles.title)}
             onClick={() =>
               setSearchToggles((prev) => ({
@@ -50,7 +51,7 @@ const ShowNotes = ({
             }
           />
           <Button
-            icon={<icons.MdOutlineSubtitles size={22} />}
+            icon={<MdOutlineSubtitles size={22} />}
             style={determineStyle(searchToggles.body)}
             onClick={() =>
               setSearchToggles((prev) => ({
@@ -76,7 +77,6 @@ const ShowNotes = ({
           ? notesState.map((note) => (
               <Note
                 key={note.id}
-                icons={icons}
                 note={note}
                 deleteNote={deleteNote}
                 notesState={notesState}
@@ -98,7 +98,6 @@ const ShowNotes = ({
               .map((note) => (
                 <Note
                   key={note.id}
-                  icons={icons}
                   note={note}
                   deleteNote={deleteNote}
                   notesState={notesState}

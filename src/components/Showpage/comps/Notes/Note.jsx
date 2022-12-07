@@ -1,16 +1,19 @@
-import { useState, useRef, memo } from "react";
+import { useState, useRef, memo, useContext } from "react";
+import { IconsContext } from "../../../../contexts/IconsContext";
 import WordCounter from "../../../common/WordCounter";
 import ColorNotes from "./ColorNotes";
 import EditNote from "./EditNote";
 import "./note.css";
 
 const Note = ({
-  icons,
   note,
   deleteNote,
   setNotesState,
   notesState,
 }) => {
+  const { AiOutlineDelete, MdDateRange } =
+    useContext(IconsContext);
+
   const [editNotes, setEditNotes] = useState(false);
   const editInputTitle = useRef();
   const editInputBody = useRef();
@@ -68,7 +71,7 @@ const Note = ({
                 onClick={deleteNote}
                 id={note.id}
               >
-                <icons.AiOutlineDelete size={30} />
+                <AiOutlineDelete size={30} />
               </button>
             </div>
           </div>
@@ -80,17 +83,16 @@ const Note = ({
             <EditNote
               editInputTitle={editInputTitle}
               editInputBody={editInputBody}
-              icons={icons}
               note={note}
               editNote={editNote}
             />
           )}
         </div>
         <div className="note-footer">
-          <WordCounter icons={icons} toCount={note.body} />
+          <WordCounter toCount={note.body} />
           <div className="date-footer">
             <p>{note.date}</p>
-            <icons.MdDateRange size={28} />
+            <MdDateRange size={28} />
           </div>
 
           <ColorNotes

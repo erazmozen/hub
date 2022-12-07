@@ -1,11 +1,13 @@
 import { useRef, useContext } from "react";
 import { Link } from "react-router-dom";
 import { TogglesContext } from "../../contexts/TogglesContext";
+import { IconsContext } from "../../contexts/IconsContext";
 import Todo from "./Todo/Todo";
-import "./sidebar.css";
 import Button from "../common/Button";
+import "./sidebar.css";
 
-const Sidebar = ({ icons }) => {
+const Sidebar = () => {
+  const { IoMdClose } = useContext(IconsContext);
   const searchInput = useRef("");
   const value = useContext(TogglesContext);
 
@@ -21,10 +23,10 @@ const Sidebar = ({ icons }) => {
           />
           <Button
             onClick={value.toggleSidebar}
-            icon={<icons.IoMdClose />}
+            icon={<IoMdClose />}
           />
         </div>
-        <Todo icons={icons} searchInput={searchInput} />
+        <Todo searchInput={searchInput} />
         <div className="router-links">
           <Link className="common-button" to="/hub">
             Portfolio

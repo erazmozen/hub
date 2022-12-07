@@ -3,14 +3,14 @@ import { TogglesContext } from "../../contexts/TogglesContext";
 import Sidebar from "../Sidebar/Sidebar";
 import ShowPage from "../Showpage/ShowPage";
 
-const Content = ({ icons }) => {
+const Content = () => {
   const { sidebarToggle, showpageToggle } =
     useContext(TogglesContext);
   console.log("Content Render");
   return (
     <div className="content-wrapper">
-      {sidebarToggle && <Sidebar icons={icons} />}
-      {showpageToggle && <ShowPage icons={icons} />}
+      {sidebarToggle && <Sidebar />}
+      {showpageToggle && <ShowPage />}
     </div>
   );
 };

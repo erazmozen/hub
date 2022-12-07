@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import "./weather.css";
+import { useState } from "react";
+import weatherCityData from "../../../../data/weatherCityData.json";
 import useApi from "../../../common/hooks/useApi";
 import WeatherContainer from "./WeatherContainer";
-import weatherCityData from "../../../../data/weatherCityData.json";
 import CityPicker from "./CityPicker";
+import "./weather.css";
 
-const Weather = ({ icons }) => {
+const Weather = () => {
   const [city, setCity] = useState(weatherCityData[0]);
 
   const { state } = useApi(
@@ -22,18 +22,13 @@ const Weather = ({ icons }) => {
   return (
     <div className="weather-wrapper">
       <CityPicker
-        icons={icons}
         changeCity={changeCity}
         weatherCityData={weatherCityData}
       />
 
       <div className="card resize">
         {!state.loading && (
-          <WeatherContainer
-            icons={icons}
-            data={state.data}
-            city={city}
-          />
+          <WeatherContainer data={state.data} city={city} />
         )}
       </div>
     </div>

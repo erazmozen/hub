@@ -1,13 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { IconsContext } from "../../../../contexts/IconsContext";
 import "./editnotes.css";
 
 const EditNote = ({
-  icons,
   note,
   editInputTitle,
   editInputBody,
   editNote,
 }) => {
+  const { MdOutlineSave } = useContext(IconsContext);
   console.log("EditNote render");
 
   return (
@@ -25,7 +26,7 @@ const EditNote = ({
           defaultValue={note.title}
         />
         <button className="common-input" onClick={editNote}>
-          <icons.MdOutlineSave />
+          <MdOutlineSave />
         </button>
       </div>
       <textarea
