@@ -1,0 +1,39 @@
+.weather-container-wrapper {
+  padding: 1rem;
+}
+
+.weather-title {
+  margin-bottom: 1rem;
+}
+
+.weather-title svg,
+.weather-cords svg {
+  margin-right: 0.5rem;
+}
+
+.wather-body {
+  margin-top: 0.5rem;
+}
+
+.wather-body h2 {
+  text-align: end;
+}
+
+.forcast {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: var(--secondary);
+  margin-top: 1rem;
+  border-radius: 12px;
+}
+
+.temp,
+.time {
+  margin: 0.2rem 0.4rem;
+}
+
+.pair {
+  margin: 1rem;
+  text-align: center;
+}

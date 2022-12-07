@@ -1,4 +1,5 @@
 import { returnWeatherIcon } from "../../../common/functions/returnWeatherIcon";
+import "./weathercontainer.css";
 
 const WeatherContainer = ({ data, icons, city }) => {
   const now = new Date().getHours();
@@ -31,7 +32,7 @@ const WeatherContainer = ({ data, icons, city }) => {
   console.log("Render WeatherContainer");
 
   return (
-    <div className="weather-wrapper">
+    <div className="weather-container-wrapper">
       <div className="weather-header">
         <div className="weather-title">
           {weatherDataObject.intervalIcon}
