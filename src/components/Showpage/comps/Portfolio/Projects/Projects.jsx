@@ -3,6 +3,7 @@ import imagePreview from "../../../../../data/prevData";
 import ProjectLink from "./ProjectLink";
 import ProjectPreview from "./ProjectsPreview";
 import "./projects.css";
+import Button from "../../../../common/Button";
 
 const Projects = ({ icons }) => {
   const [index, setIndex] = useState(0);
@@ -40,18 +41,14 @@ const Projects = ({ icons }) => {
 
         <div>
           <div className="button-holder">
-            <button
-              className="navigate-button"
+            <Button
               onClick={prevSlide}
-            >
-              <icons.MdOutlineNavigateBefore />
-            </button>
-            <button
-              className="navigate-button"
+              icon={<icons.MdOutlineNavigateBefore />}
+            />
+            <Button
               onClick={nextSlide}
-            >
-              <icons.MdOutlineNavigateNext />
-            </button>
+              icon={<icons.MdOutlineNavigateNext />}
+            />
           </div>
         </div>
       </div>

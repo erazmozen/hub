@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../../common/Button";
 import Note from "./Note";
 import "./shownotes.css";
 
@@ -38,8 +39,8 @@ const ShowNotes = ({
 
       <div className="search-filter-wrapper">
         <div className="common-icons-wrapper">
-          <button
-            className="common-button"
+          <Button
+            icon={<icons.MdTitle size={22} />}
             style={determineStyle(searchToggles.title)}
             onClick={() =>
               setSearchToggles((prev) => ({
@@ -47,11 +48,9 @@ const ShowNotes = ({
                 title: !prev.title,
               }))
             }
-          >
-            <icons.MdTitle size={22} />
-          </button>
-          <button
-            className="common-button"
+          />
+          <Button
+            icon={<icons.MdOutlineSubtitles size={22} />}
             style={determineStyle(searchToggles.body)}
             onClick={() =>
               setSearchToggles((prev) => ({
@@ -59,9 +58,7 @@ const ShowNotes = ({
                 body: !prev.body,
               }))
             }
-          >
-            <icons.MdOutlineSubtitles size={22} />
-          </button>
+          />
         </div>
 
         <input

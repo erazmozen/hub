@@ -1,3 +1,4 @@
+import Button from "../../../../common/Button";
 import "./projectlink.css";
 
 const ProjectLink = ({
@@ -23,20 +24,16 @@ const ProjectLink = ({
       }
     >
       <div className="redirect">
-        <a
+        <Button
           href={`${gitIo}${title}`}
           target="_blank"
-          rel="noreferrer"
-        >
-          {<icons.GoPlay size={22} />}
-        </a>
-        <a
+          icon={<icons.GoPlay size={22} />}
+        />
+        <Button
           href={`${git}${title}`}
           target="_blank"
-          rel="noreferrer"
-        >
-          {<icons.FiGithub />}
-        </a>
+          icon={<icons.FiGithub size={20} />}
+        />
       </div>
       <h3>{`${title}`}</h3>
     </div>

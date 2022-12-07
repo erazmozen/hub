@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { TogglesContext } from "../../contexts/TogglesContext";
+import Button from "../common/Button";
 import Clock from "./comps/Clock";
 import "./header.css";
 
@@ -9,19 +10,22 @@ const Header = ({ icons }) => {
   return (
     <div className="header-wrapper card">
       <div className="common-icons-wrapper">
-        <button onClick={value.toggleSidebar}>
-          <icons.BsToggles />
-        </button>
-
-        <button onClick={value.toggleShowpage}>
-          <icons.BsReverseLayoutTextSidebarReverse />
-        </button>
-        <a href="www.linkedin.com/in/erazmozen">
-          <icons.GrLinkedinOption />
-        </a>
-        <a href="https://github.com/erazmozen">
-          <icons.FiGithub />
-        </a>
+        <Button
+          icon={<icons.BsToggles />}
+          onClick={value.toggleSidebar}
+        />
+        <Button
+          icon={<icons.BsReverseLayoutTextSidebarReverse />}
+          onClick={value.toggleShowpage}
+        />
+        <Button
+          icon={<icons.GrLinkedinOption />}
+          href="www.linkedin.com/in/erazmozen"
+        />
+        <Button
+          icon={<icons.FiGithub />}
+          href="https://github.com/erazmozen"
+        />
       </div>
       <Clock icons={icons} />
     </div>

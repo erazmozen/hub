@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { TogglesContext } from "../../contexts/TogglesContext";
 import Todo from "./Todo/Todo";
 import "./sidebar.css";
+import Button from "../common/Button";
 
 const Sidebar = ({ icons }) => {
   const searchInput = useRef("");
@@ -18,12 +19,10 @@ const Sidebar = ({ icons }) => {
             ref={searchInput}
             placeholder="Search"
           />
-          <button
-            className="common-button"
+          <Button
             onClick={value.toggleSidebar}
-          >
-            <icons.IoMdClose />
-          </button>
+            icon={<icons.IoMdClose />}
+          />
         </div>
         <Todo icons={icons} searchInput={searchInput} />
         <div className="router-links">
@@ -34,10 +33,6 @@ const Sidebar = ({ icons }) => {
             Applets
           </Link>
         </div>
-      </div>
-      <div className="sidebar-bottom">
-        <small>+381641199057</small>
-        <small>erazmozen@protonmail.com</small>
       </div>
     </div>
   );

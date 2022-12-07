@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "../../../common/Button";
 import "./notesform.css";
 
 const NotesForm = ({
@@ -72,14 +73,12 @@ const NotesForm = ({
 
       <div className="common-icons-wrapper">
         {toggleButtons.map((button) => (
-          <button
+          <Button
+            icon={button.icon}
+            onClick={button.onClick}
             key={button.id}
             value={button.value}
-            className="common-button"
-            onClick={button.onClick}
-          >
-            {button.icon}
-          </button>
+          />
         ))}
       </div>
 
@@ -90,9 +89,7 @@ const NotesForm = ({
         style={heightClass}
       />
 
-      <button className="common-button" type="submit">
-        Save
-      </button>
+      <Button type="submit" title="Save" />
     </form>
   );
 };
