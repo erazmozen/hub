@@ -6,10 +6,8 @@ const ContentBox = ({ title, body }) => {
       <h2>{title}</h2>
       <div className="section-body">
         <div>
-          {splitBody.map((line) => (
-            <p key={Math.floor(Math.random() * 1000)}>
-              {line}
-            </p>
+          {splitBody.map((line, index) => (
+            <p key={index}>{line}</p>
           ))}
         </div>
       </div>
