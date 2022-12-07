@@ -1,33 +1,42 @@
 import { useContext } from "react";
+import { IconsContext } from "../../contexts/IconsContext";
 import { TogglesContext } from "../../contexts/TogglesContext";
 import Button from "../common/Button";
 import Clock from "./comps/Clock";
 import "./header.css";
 
-const Header = ({ icons }) => {
+const Header = () => {
+  const {
+    GrLinkedinOption,
+    FiGithub,
+    BsToggles,
+    BsReverseLayoutTextSidebarReverse,
+  } = useContext(IconsContext);
+
   const value = useContext(TogglesContext);
+
   console.log("Header render");
   return (
     <div className="card header-wrapper">
       <div className="common-icons-wrapper">
         <Button
-          icon={<icons.BsToggles />}
+          icon={<BsToggles />}
           onClick={value.toggleSidebar}
         />
         <Button
-          icon={<icons.BsReverseLayoutTextSidebarReverse />}
+          icon={<BsReverseLayoutTextSidebarReverse />}
           onClick={value.toggleShowpage}
         />
         <Button
-          icon={<icons.GrLinkedinOption />}
+          icon={<GrLinkedinOption />}
           href="www.linkedin.com/in/erazmozen"
         />
         <Button
-          icon={<icons.FiGithub />}
+          icon={<FiGithub />}
           href="https://github.com/erazmozen"
         />
       </div>
-      <Clock icons={icons} />
+      <Clock />
     </div>
   );
 };

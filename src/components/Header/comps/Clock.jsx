@@ -1,7 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import { IconsContext } from "../../../contexts/IconsContext";
 import "./clock.css";
 
-const Clock = ({ icons }) => {
+const Clock = () => {
+  const { CgTimer, CgCalendarDates } =
+    useContext(IconsContext);
   const [clockState, setClockState] = useState({
     loading: true,
   });
@@ -45,14 +48,14 @@ const Clock = ({ icons }) => {
             <p>
               {clockState.hour}:{clockState.minutes}
             </p>
-            <icons.CgTimer />
+            <CgTimer />
           </div>
           <div className="clock-date">
             <p>
               {clockState.month}.{clockState.day}.
               {clockState.year}.
             </p>
-            <icons.CgCalendarDates />
+            <CgCalendarDates />
           </div>
         </div>
       )}
