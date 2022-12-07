@@ -1,5 +1,7 @@
-function WordCounter({ toCount, icons }) {
-  const splitByWord = toCount.match(/[\w\d\’\'-]+/gi);
+import icons from "../../icons";
+
+function WordCounter({ toCount }) {
+  const splitByWord = toCount.match(/[\w\d-]+/gi);
   const splitByChar = toCount.trim().length;
 
   return (
