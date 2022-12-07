@@ -28,12 +28,9 @@
   margin-top: 1rem;
 }
 
-.navigate-button {
+.button-holder > .common-button {
   font-size: 2rem;
-  display: flex;
   width: 70px;
-  justify-content: center;
-  border-radius: 10px;
   background-color: var(--primary);
   border: none;
   outline: none;
@@ -42,9 +39,10 @@
   transition: background 0.2s ease;
 }
 
-.navigate-button svg {
+.button-holder > .common-button svg {
   transform: rotate(90deg);
+  margin: 0;
 }
-.navigate-button:hover {
+.button-holder > .common-button:hover {
   background-color: var(--secondary-pale);
 }

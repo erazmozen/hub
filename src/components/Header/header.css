@@ -30,6 +30,7 @@
 .header-wrapper button {
   font-size: 1rem;
   background: none;
+  padding: 0;
   color: white;
   border: none;
   cursor: pointer;
