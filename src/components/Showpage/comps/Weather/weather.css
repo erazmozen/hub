@@ -4,16 +4,11 @@
   flex-wrap: wrap;
 }
 
-.weather-wrapper {
-}
-
 .resize {
   width: 400px;
 }
 
 .weather-title {
-  display: flex;
-  align-items: center;
   margin-bottom: 1rem;
 }
 
@@ -32,7 +27,6 @@
 
 .forcast {
   display: flex;
-  width: 100%;
   justify-content: center;
   flex-wrap: wrap;
   background-color: var(--secondary);

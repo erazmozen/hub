@@ -1,7 +1,5 @@
 .projects-preview {
   background: var(--primary);
-  display: flex;
-  flex-direction: column;
   max-width: 500px;
   min-width: 300px;
   padding: 2rem;
@@ -14,27 +12,17 @@
 .projects-preview h3,
 .projects-preview small {
   margin-bottom: 1rem;
-  color: white;
 }
 
-.projects-contact {
-  display: flex;
-  flex-direction: column;
-}
-
-.projects-preview small {
-  margin-top: 0.3rem;
-  margin-bottom: 0;
-}
 .projects-preview img {
   border-radius: 8px;
 }
+
 .projects-slider {
   font-size: 0.8em;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
 }
 
 .projects-slider img {

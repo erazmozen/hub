@@ -35,10 +35,7 @@
   transition: box-shadow 0.2s;
 }
 
-.section-body {
-  display: flex;
-  justify-content: space-between;
-}
+/* .section-body {} */
 
 .section-body p {
   margin-top: 0.8rem;
