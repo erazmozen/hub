@@ -24,5 +24,12 @@
 .notes-header svg {
   font-size: 1.8rem;
 }
-
+@media only screen and (max-width: 600px) {
+  .notes {
+    padding: 0.3rem;
+  }
+  .notes-header {
+    padding: 1rem;
+  }
+}
 /* ------ Notes */
