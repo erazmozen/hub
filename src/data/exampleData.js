@@ -28,7 +28,7 @@ export const exampleTodos = [
 
 export const exampleNotes = [
   {
-    id: Math.floor(Math.random() * 100000),
+    id: "randomID6",
     title: "You can add and delete notes!",
     body: `Use the form above to add new notes.
 Delete button is inside the note!`,
@@ -36,7 +36,7 @@ Delete button is inside the note!`,
     color: "black",
   },
   {
-    id: Math.floor(Math.random() * 100000),
+    id: "randomID7",
     title: "Notes form buttons:",
     body: `You can resize the body input field!
 Clear inputs with the eraser icon!
@@ -45,7 +45,7 @@ Clear all notes at once!`,
     color: "red",
   },
   {
-    id: Math.floor(Math.random() * 100000),
+    id: "randomID8",
     title: "You can also filter your notes!",
     body: `To filter a note, just type in the input bellow Saved Notes.
 You can also filter for name and body of the note!`,
@@ -53,7 +53,7 @@ You can also filter for name and body of the note!`,
     color: "green",
   },
   {
-    id: Math.floor(Math.random() * 100000),
+    id: "randomID9",
     title: "Changing colors!",
     body: `Change the color of the note by clicking on
     the colored circle at the bottom of the note!`,
@@ -61,7 +61,7 @@ You can also filter for name and body of the note!`,
     color: "blue",
   },
   {
-    id: Math.floor(Math.random() * 100000),
+    id: "randomID10",
     title: "Forgot something?",
     body: `Edit the note by clicking the edit button in the top right corner.
 Don't forget to click the SAVE button when you are done!`,
