@@ -20,7 +20,7 @@ const Weather = ({ icons }) => {
   console.log("Weather render");
 
   return (
-    <div className="weather-parent-wrapper">
+    <div className="weather-wrapper">
       <CityPicker
         icons={icons}
         changeCity={changeCity}
