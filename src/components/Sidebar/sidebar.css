@@ -2,9 +2,9 @@
 
 .sidebar-wrapper {
   background: var(--secondary);
-  margin: 1rem 0rem;
+  margin: 0rem;
+  padding: 1rem;
   position: sticky;
-  max-height: 70vh;
   top: 20px;
   left: 0;
 }
