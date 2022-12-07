@@ -8,7 +8,7 @@ const Header = ({ icons }) => {
   const value = useContext(TogglesContext);
   console.log("Header render");
   return (
-    <div className="header-wrapper card">
+    <div className="card header-wrapper">
       <div className="common-icons-wrapper">
         <Button
           icon={<icons.BsToggles />}
