@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./citypicker.css";
 
 const CityPicker = ({ changeCity, weatherCityData }) => {
   const [searchInput, setSearchInput] = useState("");
