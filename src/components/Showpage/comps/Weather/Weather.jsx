@@ -6,7 +6,7 @@ import CityPicker from "./CityPicker";
 import "./weather.css";
 
 const Weather = () => {
-  const [city, setCity] = useState(weatherCityData[0]);
+  const [city, setCity] = useState(weatherCityData[196]);
 
   const { state } = useApi(
     `https://api.open-meteo.com/v1/forecast?latitude=${city.Latitude}&longitude=${city.Longitude}&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,rain,showers,snowfall,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset&current_weather=true&timezone=auto`,
