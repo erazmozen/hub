@@ -1,8 +1,11 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { NotesContext } from "../../../../contexts/NotesContext";
+import { ACTIONS } from "../../../common/functions/notesReducer";
 import "./colornotes.css";
 
-const ColorNotes = ({ colorOfNote, changeNoteColor }) => {
-  const [noteColor, setNoteColor] = useState(colorOfNote);
+const ColorNotes = ({ note }) => {
+  const { dispatch } = useContext(NotesContext);
+  const [noteColor, setNoteColor] = useState(note.color);
 
   const colorArray = [
     "#282a36",
@@ -17,19 +20,21 @@ const ColorNotes = ({ colorOfNote, changeNoteColor }) => {
     "#ff5555",
   ];
 
-  const style = {
-    background: noteColor,
-  };
-
   function changeColor(e) {
     setNoteColor(e.target.name);
-    changeNoteColor(e.target.name);
+    dispatch({
+      type: ACTIONS.CHANGE_COLOR,
+      payload: { color: e.target.name, id: note.id },
+    });
   }
 
   console.log("Color Notes render");
   return (
     <div className="color-notes">
-      <button className="color-bar" style={style}></button>
+      <button
+        className="color-bar"
+        style={{ background: noteColor }}
+      ></button>
       <div className="button-wrapper">
         {colorArray.map((color) => (
           <button

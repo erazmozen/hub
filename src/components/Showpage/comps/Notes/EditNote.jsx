@@ -1,14 +1,29 @@
 import React, { useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
+import { NotesContext } from "../../../../contexts/NotesContext";
+import { ACTIONS } from "../../../common/functions/notesReducer";
 import "./editnotes.css";
 
 const EditNote = ({
   note,
   editInputTitle,
   editInputBody,
-  editNote,
 }) => {
   const { MdOutlineSave } = useContext(IconsContext);
+
+  const { dispatch } = useContext(NotesContext);
+
+  function editNote() {
+    dispatch({
+      type: ACTIONS.EDIT_NOTE,
+      payload: {
+        id: note.id,
+        title: editInputTitle.current.value,
+        body: editInputBody.current.value,
+      },
+    });
+  }
+
   console.log("EditNote render");
 
   return (

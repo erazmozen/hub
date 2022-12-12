@@ -1,50 +1,29 @@
 import { useState, useRef, memo, useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
+import { NotesContext } from "../../../../contexts/NotesContext";
+import { ACTIONS } from "../../../common/functions/notesReducer";
 import WordCounter from "../../../common/WordCounter";
 import ColorNotes from "./ColorNotes";
 import EditNote from "./EditNote";
 import "./note.css";
 
-const Note = ({
-  note,
-  deleteNote,
-  setNotesState,
-  notesState,
-}) => {
+const Note = ({ note }) => {
   const { AiOutlineDelete, MdDateRange } =
     useContext(IconsContext);
 
+  const { dispatch } = useContext(NotesContext);
+
   const [editNotes, setEditNotes] = useState(false);
+
   const editInputTitle = useRef();
   const editInputBody = useRef();
 
-  function changeNoteColor(noteColor) {
-    const externalId = parseInt(note.id);
-    const editedNotes = [...notesState].map(
-      (noteToChange) =>
-        noteToChange.id === externalId
-          ? { ...noteToChange, color: noteColor }
-          : { ...noteToChange }
-    );
-    setNotesState(editedNotes);
-    console.log("Change Note Color to", noteColor);
-  }
-
-  function editNote() {
-    const externalId = parseInt(note.id);
-    const editedNotes = [...notesState].map(
-      (noteToChange) =>
-        noteToChange.id === externalId
-          ? {
-              ...noteToChange,
-              title: editInputTitle.current.value,
-              body: editInputBody.current.value,
-            }
-          : { ...noteToChange }
-    );
-    setNotesState(editedNotes);
+  function deleteNote() {
+    dispatch({
+      type: ACTIONS.DELETE_NOTE,
+      payload: { id: note.id },
+    });
     setEditNotes(!editNotes);
-    console.log("Save edited note");
   }
 
   console.log("Note render");
@@ -69,7 +48,6 @@ const Note = ({
                 className="common-button"
                 style={{ background: note.color }}
                 onClick={deleteNote}
-                id={note.id}
               >
                 <AiOutlineDelete size={30} />
               </button>
@@ -84,7 +62,6 @@ const Note = ({
               editInputTitle={editInputTitle}
               editInputBody={editInputBody}
               note={note}
-              editNote={editNote}
             />
           )}
         </div>
@@ -95,12 +72,7 @@ const Note = ({
             <MdDateRange size={28} />
           </div>
 
-          <ColorNotes
-            note={note}
-            colorOfNote={note.color}
-            noteId={note.id}
-            changeNoteColor={changeNoteColor}
-          />
+          <ColorNotes note={note} />
         </div>
       </div>
     </div>

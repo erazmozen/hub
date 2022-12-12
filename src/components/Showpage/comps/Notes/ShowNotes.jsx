@@ -1,12 +1,15 @@
 import { useContext, useState } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
+import { NotesContext } from "../../../../contexts/NotesContext";
 import Button from "../../../common/Button";
 import Note from "./Note";
 import "./shownotes.css";
 
-const ShowNotes = ({ notesState, setNotesState }) => {
+const ShowNotes = () => {
   const { MdOutlineSave, MdTitle, MdOutlineSubtitles } =
     useContext(IconsContext);
+
+  const { notes } = useContext(NotesContext);
 
   const [search, setSearch] = useState("");
 
@@ -14,15 +17,6 @@ const ShowNotes = ({ notesState, setNotesState }) => {
     title: true,
     body: false,
   });
-
-  function deleteNote(e) {
-    const externalId = parseInt(e.target.id);
-    const filteredNotes = notesState.filter(
-      (note) => note.id !== externalId
-    );
-    setNotesState(filteredNotes);
-    console.log("deleting: ", e.target.id);
-  }
 
   function determineStyle(target) {
     return target
@@ -74,16 +68,10 @@ const ShowNotes = ({ notesState, setNotesState }) => {
       <div className="notes-holder">
         {searchToggles.title === false &&
         searchToggles.body === false
-          ? notesState.map((note) => (
-              <Note
-                key={note.id}
-                note={note}
-                deleteNote={deleteNote}
-                notesState={notesState}
-                setNotesState={setNotesState}
-              />
+          ? notes.map((note) => (
+              <Note key={note.id} note={note} />
             ))
-          : notesState
+          : notes
               .filter(
                 (note) =>
                   (searchToggles.title &&
@@ -96,13 +84,7 @@ const ShowNotes = ({ notesState, setNotesState }) => {
                       .includes(search))
               )
               .map((note) => (
-                <Note
-                  key={note.id}
-                  note={note}
-                  deleteNote={deleteNote}
-                  notesState={notesState}
-                  setNotesState={setNotesState}
-                />
+                <Note key={note.id} note={note} />
               ))}
       </div>
     </div>
