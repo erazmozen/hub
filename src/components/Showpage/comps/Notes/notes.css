@@ -2,13 +2,11 @@
 
 .notes-wrapper {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-}
-
-.notes {
   background-color: var(--primary);
   margin: 0.1rem;
-  padding: 2rem;
+  padding: 3rem;
   border-radius: 18px;
   flex-grow: 1;
   max-width: 100%;
@@ -25,11 +23,12 @@
   font-size: 1.8rem;
 }
 @media only screen and (max-width: 600px) {
-  .notes {
-    padding: 0.3rem;
+  .notes-wrapper {
+    padding: 1.6rem 1rem;
   }
   .notes-header {
     padding: 1rem;
+    padding: 0.3rem;
   }
 }
 /* ------ Notes */
