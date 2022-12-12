@@ -1,26 +1,26 @@
 export const exampleTodos = [
   {
-    id: "randomID1",
+    id: Math.floor(Math.random() * 100000),
     title: "Welcome to /hub, my portfolio webpage.",
     done: false,
   },
   {
-    id: "randomID2",
+    id: Math.floor(Math.random() * 100000),
     title: "You can add or remove todos.",
     done: false,
   },
   {
-    id: "randomID3",
+    id: Math.floor(Math.random() * 100000),
     title: "And control the UI with header icons.",
     done: false,
   },
   {
-    id: "randomID4",
+    id: Math.floor(Math.random() * 100000),
     title: "Your done todos can be found here.",
     done: true,
   },
   {
-    id: "randomID5",
+    id: Math.floor(Math.random() * 100000),
     title: "Don't forget to check the Applets section!",
     done: true,
   },
