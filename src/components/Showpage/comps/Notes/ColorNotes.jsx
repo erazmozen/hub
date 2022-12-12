@@ -35,7 +35,7 @@ const ColorNotes = ({ note }) => {
         className="color-bar"
         style={{ background: noteColor }}
       ></button>
-      <div className="button-wrapper">
+      <div className="common-icon-wrapper">
         {colorArray.map((color) => (
           <button
             key={color}
