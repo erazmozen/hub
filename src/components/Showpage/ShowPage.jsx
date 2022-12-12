@@ -4,6 +4,7 @@ import Portfolio from "./comps/Portfolio/Portfolio";
 import Weather from "./comps/Weather/Weather";
 import Notes from "./comps/Notes/Notes";
 import "./showpage.css";
+import { NotesProvider } from "../../contexts/NotesContext";
 
 const ShowPage = () => {
   console.log("ShowPage render");
@@ -17,7 +18,9 @@ const ShowPage = () => {
           element={
             <>
               <Weather />
-              <Notes />
+              <NotesProvider>
+                <Notes />
+              </NotesProvider>
             </>
           }
         ></Route>
