@@ -1,9 +1,14 @@
 import "./sidebar.css";
+<<<<<<< Updated upstream
 import Button from "../common/Button";
 import Todo from "./Todo/Todo";
 import { useContext, useRef } from "react";
 import SidebarTaskbar from "./SidebarTaskbar";
 import DataContext from "../../contexts/DataContext";
+=======
+import TodoReducer from "./TodoReducer/TodoReducer";
+import { TodoProvider } from "../../contexts/TodoContext";
+>>>>>>> Stashed changes
 
 const Sidebar = ({ icons }) => {
   const searchInput = useRef("");
@@ -35,11 +40,17 @@ const Sidebar = ({ icons }) => {
         <Button title="Projects" />
         <Button title="Contact" />
       </div>
+<<<<<<< Updated upstream
       <div className="sidebar-bottom">
         <div>+38154443123</div>
       </div>
 
       <SidebarTaskbar icons={icons} />
+=======
+      <TodoProvider>
+        <TodoReducer />
+      </TodoProvider>
+>>>>>>> Stashed changes
     </div>
   );
 };
