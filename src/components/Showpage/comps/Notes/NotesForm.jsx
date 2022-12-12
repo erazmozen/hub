@@ -6,13 +6,12 @@ import NotesToggleButtons from "./comps/NotesToggleButtons";
 import "./notesform.css";
 
 const NotesForm = () => {
-  const { dispatch, titleInput, bodyInput, clearInputs } =
+  const { dispatch, titleInput, bodyInput } =
     useContext(NotesContext);
 
   const [bodyHeight, setBodyHeight] = useState("200px");
 
   const heightClass = {
-    transition: "height 0.3s ease",
     height: `${bodyHeight}`,
   };
 
@@ -25,7 +24,9 @@ const NotesForm = () => {
         body: bodyInput.current.value,
       },
     });
-    console.log("submit");
+    titleInput.current.value = "";
+    bodyInput.current.value = "";
+    console.log("submit, clearInputs");
   }
 
   console.log("Notes Form render");
@@ -41,13 +42,12 @@ const NotesForm = () => {
       <NotesToggleButtons
         bodyHeight={bodyHeight}
         setBodyHeight={setBodyHeight}
-        clearInputs={clearInputs}
       />
 
       <textarea
         ref={bodyInput}
         placeholder="Your notes are saved to localStorage, so if you clear browser cache they WILL be lost!&#10;..&#10;... 📑 Write your note here.&#10;..&#10;... 🪗 📆 You can also use emoji! 🫐 🧺 &#10;.."
-        className={`common-input`}
+        className="common-input"
         style={heightClass}
       />
 
