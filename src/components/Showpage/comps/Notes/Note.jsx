@@ -1,4 +1,4 @@
-import { useState, useRef, memo, useContext } from "react";
+import { useState, useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
 import { NotesContext } from "../../../../contexts/NotesContext";
 import { ACTIONS } from "../../../common/functions/notesReducer";
@@ -15,15 +15,11 @@ const Note = ({ note }) => {
 
   const [editNotes, setEditNotes] = useState(false);
 
-  const editInputTitle = useRef();
-  const editInputBody = useRef();
-
   function deleteNote() {
     dispatch({
       type: ACTIONS.DELETE_NOTE,
       payload: { id: note.id },
     });
-    setEditNotes(!editNotes);
   }
 
   console.log("Note render");
@@ -57,13 +53,7 @@ const Note = ({ note }) => {
             {!editNotes && <h2>{note.title}</h2>}
             {!editNotes && <p>{note.body}</p>}
           </div>
-          {editNotes && (
-            <EditNote
-              editInputTitle={editInputTitle}
-              editInputBody={editInputBody}
-              note={note}
-            />
-          )}
+          {editNotes && <EditNote note={note} />}
         </div>
         <div className="note-footer">
           <WordCounter toCount={note.body} />
@@ -78,4 +68,4 @@ const Note = ({ note }) => {
     </div>
   );
 };
-export default memo(Note);
+export default Note;

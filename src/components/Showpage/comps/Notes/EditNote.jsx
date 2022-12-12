@@ -1,17 +1,15 @@
-import React, { useContext } from "react";
+import { useContext, useRef } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
 import { NotesContext } from "../../../../contexts/NotesContext";
 import { ACTIONS } from "../../../common/functions/notesReducer";
 import "./editnotes.css";
 
-const EditNote = ({
-  note,
-  editInputTitle,
-  editInputBody,
-}) => {
+const EditNote = ({ note }) => {
   const { MdOutlineSave } = useContext(IconsContext);
 
   const { dispatch } = useContext(NotesContext);
+  const editInputTitle = useRef();
+  const editInputBody = useRef();
 
   function editNote() {
     dispatch({
