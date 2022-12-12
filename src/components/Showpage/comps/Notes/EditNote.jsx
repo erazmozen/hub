@@ -4,10 +4,11 @@ import { NotesContext } from "../../../../contexts/NotesContext";
 import { ACTIONS } from "../../../common/functions/notesReducer";
 import "./editnotes.css";
 
-const EditNote = ({ note }) => {
+const EditNote = ({ note, setEditNotes }) => {
   const { MdOutlineSave } = useContext(IconsContext);
 
   const { dispatch } = useContext(NotesContext);
+
   const editInputTitle = useRef();
   const editInputBody = useRef();
 
@@ -20,6 +21,7 @@ const EditNote = ({ note }) => {
         body: editInputBody.current.value,
       },
     });
+    setEditNotes((prev) => !prev);
   }
 
   console.log("EditNote render");
