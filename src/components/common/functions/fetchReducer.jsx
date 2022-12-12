@@ -4,7 +4,7 @@ export const INITIAL_STATE = {
   error: false,
 };
 
-export const postReducer = (state, action) => {
+export const fetchReducer = (state, action) => {
   switch (action.type) {
     case "FETCH_START":
       return {

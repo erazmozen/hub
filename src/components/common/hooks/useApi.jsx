@@ -1,12 +1,12 @@
 import { useEffect, useReducer } from "react";
 import {
   INITIAL_STATE,
-  postReducer,
+  fetchReducer,
 } from "../../common/functions/fetchReducer";
 
 const useApi = (url, trigger) => {
   const [state, dispatch] = useReducer(
-    postReducer,
+    fetchReducer,
     INITIAL_STATE
   );
 
