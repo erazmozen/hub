@@ -7,12 +7,9 @@
   position: sticky;
   top: 20px;
   left: 0;
-}
-
-.sidebar-top {
   display: flex;
   flex-direction: column;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 
 .router-links {
@@ -28,68 +25,9 @@
   min-width: 200px;
 }
 
-.sidebar-top .common-button {
-  max-width: 300px;
-}
-
-.sidebar-top > div {
-  padding: 0.4rem;
-}
-
-.search-wrapper {
-  display: flex;
-  justify-content: space-between;
-  min-width: 250px;
-}
-
-.search-wrapper svg {
-  margin: 0;
-  width: 70%;
-  height: 70%;
-}
-
-.search-wrapper input {
-  background-color: var(--primary);
-}
-
-.search-wrapper button {
-  padding: 0;
+.sidebar-wrapper > .common-button {
   background: none;
-}
-
-.search-wrapper button,
-.search-wrapper input {
-  transition: background 0.15s ease-in-out;
-}
-
-.search-wrapper button {
-  width: 35px;
-  color: white;
-}
-
-.search-wrapper input {
-  width: 70%;
-  color: white;
-}
-
-.search-wrapper input:active {
-  color: black;
-}
-
-.search-wrapper input:focus {
-  background-color: white;
-  color: black;
-}
-
-.search-wrapper input::placeholder {
-  color: white;
-}
-
-.sidebar-bottom {
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 1rem 3rem;
 }
 
 /* Sidebar ------ */
