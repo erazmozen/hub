@@ -3,6 +3,7 @@
 .todo {
   background-color: var(--primary);
   border-radius: 8px;
+  padding: 1rem;
   margin: 1rem 0;
 }
 
@@ -67,6 +68,56 @@
 
 .todo li:hover {
   opacity: 1;
+}
+
+.search-wrapper {
+  display: flex;
+  justify-content: space-between;
+  min-width: 250px;
+}
+
+.search-wrapper svg {
+  margin: 0;
+  width: 70%;
+  height: 70%;
+}
+
+.search-wrapper input {
+  background-color: var(--primary);
+  padding: 0.6rem 1rem;
+}
+
+.search-wrapper button {
+  padding: 0;
+  background: none;
+}
+
+.search-wrapper button,
+.search-wrapper input {
+  transition: background 0.15s ease-in-out;
+}
+
+.search-wrapper button {
+  width: 35px;
+  color: white;
+}
+
+.search-wrapper input {
+  width: 70%;
+  color: white;
+}
+
+.search-wrapper input:active {
+  color: black;
+}
+
+.search-wrapper input:focus {
+  background-color: white;
+  color: black;
+}
+
+.search-wrapper input::placeholder {
+  color: white;
 }
 
 /* Todo ------ */
