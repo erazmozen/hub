@@ -1,6 +1,7 @@
 import { useState, useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
 import { NotesContext } from "../../../../contexts/NotesContext";
+import Button from "../../../common/Button";
 import { ACTIONS } from "../../../common/functions/notesReducer";
 import WordCounter from "../../../common/WordCounter";
 import ColorNotes from "./ColorNotes";
@@ -8,7 +9,7 @@ import EditNote from "./EditNote";
 import "./note.css";
 
 const Note = ({ note }) => {
-  const { AiOutlineDelete, MdDateRange } =
+  const { AiOutlineDelete, MdDateRange, FaPaintBrush } =
     useContext(IconsContext);
 
   const { dispatch } = useContext(NotesContext);
@@ -31,29 +32,30 @@ const Note = ({ note }) => {
           <div className="note-header">
             {editNotes && <h2>Editing mode</h2>}
             <div className="note-body-buttons">
-              <button
+              <Button
+                style={{ background: note.color }}
+                icon={<FaPaintBrush size={26} />}
                 onClick={() => {
                   setEditNotes(!editNotes);
                 }}
-                className="common-button"
+              />
+              <Button
                 style={{ background: note.color }}
-              >
-                E
-              </button>
-              <button
-                className="common-button"
-                style={{ background: note.color }}
+                icon={<AiOutlineDelete size={30} />}
                 onClick={deleteNote}
-              >
-                <AiOutlineDelete size={30} />
-              </button>
+              />
             </div>
           </div>
           <div className="note-content">
             {!editNotes && <h2>{note.title}</h2>}
             {!editNotes && <p>{note.body}</p>}
           </div>
-          {editNotes && <EditNote note={note} />}
+          {editNotes && (
+            <EditNote
+              note={note}
+              setEditNotes={setEditNotes}
+            />
+          )}
         </div>
         <div className="note-footer">
           <WordCounter toCount={note.body} />
