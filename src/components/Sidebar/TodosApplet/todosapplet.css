@@ -1,0 +1,31 @@
+/* ------ Todo */
+
+.todo-wrapper {
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 2rem;
+  margin: 1rem 0;
+}
+
+.todo-wrapper form {
+  margin-bottom: 0.4rem;
+}
+
+.todo-wrapper .common-icons-wrapper {
+  margin: 0.3rem 0.5rem;
+}
+
+.todo-wrapper > .common-icons-wrapper {
+  margin-bottom: 1rem;
+}
+
+.todo-wrapper .common-icons-wrapper svg {
+  font-size: 1.4rem;
+  margin: 0.2rem;
+}
+
+.todo-wrapper input {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+}
+/* Todo ------ */
