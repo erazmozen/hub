@@ -13,7 +13,7 @@ const Sidebar = () => {
 
   console.log("Sidebar render");
   return (
-    <div className="sidebar-wrapper card">
+    <div className="sidebar-wrapper card ">
       <TodoProvider>
         <TodoApplet />
       </TodoProvider>

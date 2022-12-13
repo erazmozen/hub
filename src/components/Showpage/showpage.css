@@ -1,17 +1,25 @@
 /* Showpage ------ */
 
+.content-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .showpage {
   position: relative;
   background-color: var(--secondary);
   border-radius: 12px;
   width: 100%;
+  min-width: 200px;
   margin: 0;
+  padding-top: 1rem;
   color: white;
 }
 
 @media only screen and (max-width: 800px) {
   .showpage {
     padding: 0.1rem;
+    padding-top: 1rem;
   }
   .showpage > * {
     margin: 0rem;
