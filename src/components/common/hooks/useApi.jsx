@@ -4,15 +4,15 @@ import {
   fetchReducer,
 } from "../../common/functions/fetchReducer";
 
-const useApi = (url, trigger) => {
+const useApi = (url) => {
   const [state, dispatch] = useReducer(
     fetchReducer,
     INITIAL_STATE
   );
 
-  const fetchApi = async () => {
+  const fetchApi = () => {
     dispatch({ type: "FETCH_START" });
-    await fetch(url)
+    fetch(url)
       .then((res) => {
         return res.json();
       })
@@ -27,7 +27,7 @@ const useApi = (url, trigger) => {
   useEffect(() => {
     console.log("useApi useEffect[]");
     fetchApi();
-  }, [trigger]);
+  }, [url]);
 
   return { state };
 };
