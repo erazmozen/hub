@@ -9,8 +9,12 @@ import EditNote from "./EditNote";
 import "./note.css";
 
 const Note = ({ note }) => {
-  const { AiOutlineDelete, MdDateRange, FaPaintBrush } =
-    useContext(IconsContext);
+  const {
+    AiOutlineDelete,
+    MdDateRange,
+    FaPaintBrush,
+    HiDuplicate,
+  } = useContext(IconsContext);
 
   const { dispatch } = useContext(NotesContext);
 
@@ -26,7 +30,7 @@ const Note = ({ note }) => {
   console.log("Note render");
 
   return (
-    <div key={note.id} className="note">
+    <div className="note">
       <div className="note-body">
         <div className="note-top">
           <div className="note-header">
@@ -43,6 +47,16 @@ const Note = ({ note }) => {
                 style={{ background: note.color }}
                 icon={<AiOutlineDelete size={30} />}
                 onClick={deleteNote}
+              />
+              <Button
+                style={{ background: note.color }}
+                icon={<HiDuplicate size={30} />}
+                onClick={() => {
+                  dispatch({
+                    type: ACTIONS.COPY_NOTE,
+                    payload: { note: note },
+                  });
+                }}
               />
             </div>
           </div>
