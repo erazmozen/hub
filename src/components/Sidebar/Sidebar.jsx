@@ -14,15 +14,15 @@ const Sidebar = () => {
   console.log("Sidebar render");
   return (
     <div className="sidebar-wrapper card">
+      <TodoProvider>
+        <TodoApplet />
+      </TodoProvider>
+      <SidebarLinks />
       <Button
         onClick={value.toggleSidebar}
         icon={<IoMdClose />}
         title="Close sidebar"
       />
-      <SidebarLinks />
-      <TodoProvider>
-        <TodoApplet />
-      </TodoProvider>
     </div>
   );
 };
