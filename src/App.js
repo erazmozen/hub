@@ -1,9 +1,9 @@
 import "./main.css";
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
 import { TogglesContextProvider } from "./contexts/TogglesContext";
-import Content from "./components/Showpage/Content";
 import { IconsContextProvider } from "./contexts/IconsContext";
+import Header from "./components/Header/Header";
+import Content from "./components/Showpage/Content";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   console.log("App render");
