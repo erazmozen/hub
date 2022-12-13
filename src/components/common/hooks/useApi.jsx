@@ -10,9 +10,9 @@ const useApi = (url, trigger) => {
     INITIAL_STATE
   );
 
-  const fetchApi = () => {
+  const fetchApi = async () => {
     dispatch({ type: "FETCH_START" });
-    fetch(url)
+    await fetch(url)
       .then((res) => {
         return res.json();
       })
