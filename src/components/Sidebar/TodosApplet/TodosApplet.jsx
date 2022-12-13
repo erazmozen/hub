@@ -23,9 +23,10 @@ const TodoApplet = () => {
     setTitle("");
   }
 
-  console.log(title, todos);
+  console.log("Todos Applet render");
   return (
     <div className="todo-wrapper">
+      <h2>Todos Applet</h2>
       <form onSubmit={handleSubmit}>
         <input
           className="common-input"
@@ -62,18 +63,10 @@ const TodoApplet = () => {
                 .includes(title.toLowerCase())
             )
             .map((todo) => (
-              <Todo
-                key={todo.id}
-                todo={todo}
-                dispatch={dispatch}
-              />
+              <Todo key={todo.id} todo={todo} />
             ))
         : todos.map((todo) => (
-            <Todo
-              key={todo.id}
-              todo={todo}
-              dispatch={dispatch}
-            />
+            <Todo key={todo.id} todo={todo} />
           ))}
     </div>
   );
