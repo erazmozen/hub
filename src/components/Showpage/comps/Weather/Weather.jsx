@@ -20,18 +20,17 @@ const Weather = () => {
   console.log("Weather render");
 
   return (
-    <div className="weather-wrapper">
-      <CityPicker
-        changeCity={changeCity}
-        weatherCityData={weatherCityData}
-      />
-
-      <div className="card resize">
-        {!state.loading && (
+    <>
+      {!state.loading && (
+        <div className="weather-wrapper">
           <WeatherContainer data={state.data} city={city} />
-        )}
-      </div>
-    </div>
+          <CityPicker
+            changeCity={changeCity}
+            weatherCityData={weatherCityData}
+          />
+        </div>
+      )}
+    </>
   );
 };
 
