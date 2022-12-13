@@ -21,10 +21,10 @@ const CityPicker = ({ changeCity, weatherCityData }) => {
         placeholder="search.."
         onChange={(e) => setSearchInput(e.target.value)}
       />
-      <div className="city-wrapper">
+      <div className="city-mapper">
         {filterCity.map((city, index) => (
           <div
-            className="city-picker"
+            className="city"
             key={index}
             onClick={() => changeCity(index, filterCity)}
           >

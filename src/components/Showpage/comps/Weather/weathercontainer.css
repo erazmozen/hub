@@ -1,5 +1,6 @@
 .weather-container-wrapper {
-  padding: 1rem;
+  width: 300px;
+  /* max-width: 700px; */
 }
 
 .weather-title {
@@ -25,6 +26,7 @@
   flex-wrap: wrap;
   background-color: var(--secondary);
   margin-top: 1rem;
+  padding: 0.4rem;
   border-radius: 12px;
 }
 

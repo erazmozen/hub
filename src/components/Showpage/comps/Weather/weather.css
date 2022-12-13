@@ -1,11 +1,7 @@
 .weather-wrapper {
   position: relative;
+  width: 100%;
   display: flex;
-  background: none;
   flex-wrap: wrap;
-}
-
-.resize {
-  width: 440px;
-  margin: 1rem 0;
+  flex-grow: 1;
 }

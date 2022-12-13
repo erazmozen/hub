@@ -37,7 +37,7 @@ const WeatherContainer = ({ data, city }) => {
   console.log("Render WeatherContainer");
 
   return (
-    <div className="weather-container-wrapper">
+    <div className="card weather-container-wrapper">
       <div className="weather-header">
         <div className="weather-title">
           {weatherDataObject.intervalIcon}

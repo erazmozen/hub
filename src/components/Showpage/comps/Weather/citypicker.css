@@ -1,13 +1,10 @@
 .city-picker-wrapper {
-  height: 600px;
-  width: 500px;
-  margin: 1rem;
+  width: 400px;
+  /* max-width: 700px; */
   text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
-  .city-picker-wrapper {
-  }
 }
 
 .city-picker-wrapper h3 {
@@ -16,37 +13,36 @@
 }
 
 .city-picker-wrapper input {
-  width: 92%;
   background-color: rgba(255, 255, 255, 0.9);
 }
 
-.city-wrapper {
+.city-mapper {
   max-height: 420px;
   margin-top: 1rem;
   overflow: scroll;
 }
 
-.city-picker {
+.city {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.1rem 1rem;
+  padding: 0.1rem 0.4em;
   transition: padding 0.2s ease;
 }
 
-.city-picker p {
+.city p {
   padding: 0.3rem;
   line-height: 1.4rem;
 }
 
-.city-picker p:nth-child(2) {
+.city p:nth-child(2) {
   text-align: right;
 }
-.city-picker p:nth-child(1) {
+.city p:nth-child(1) {
   text-align: left;
 }
 
-.city-picker:hover {
+.city:hover {
   cursor: pointer;
   background-color: var(--primary);
   border-radius: 8px;
