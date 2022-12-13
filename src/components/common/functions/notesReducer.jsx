@@ -11,8 +11,8 @@ const ACTIONS = {
   DELETE_NOTE: "delete_note",
   CHANGE_COLOR: "change_color_note",
   EDIT_NOTE: "edit_note",
-  // CLEAR_INPUTS: "clear_inputs_note",
-  CLEAR_ALL: "clear_all_notes",
+  COPY_NOTE: "make_copy_note",
+  CLEAR_ALL: "clear_all_note",
 };
 
 function newNote(title, body) {
@@ -32,18 +32,31 @@ function notesReducer(notes, action) {
         ...notes,
         newNote(action.payload.title, action.payload.body),
       ];
+
     case ACTIONS.CLEAR_ALL:
       return [];
+
     case ACTIONS.CHANGE_COLOR:
       return notes.map((note) =>
         note.id === action.payload.id
           ? { ...note, color: action.payload.color }
           : { ...note }
       );
+
     case ACTIONS.DELETE_NOTE:
       return notes.filter(
         (note) => note.id !== action.payload.id
       );
+
+    case ACTIONS.COPY_NOTE:
+      const focusNote = notes.filter(
+        (note) => note.id === action.payload.note.id
+      );
+      return [
+        ...notes,
+        newNote(focusNote[0].title, focusNote[0].body),
+      ];
+
     case ACTIONS.EDIT_NOTE:
       return notes.map((note) =>
         note.id === action.payload.id
@@ -54,6 +67,7 @@ function notesReducer(notes, action) {
             }
           : { ...note }
       );
+
     default:
       break;
   }
