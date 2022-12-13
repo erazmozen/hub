@@ -8,7 +8,7 @@ const Button = ({
   style,
   target,
 }) => {
-  console.log("Button render");
+  // console.log("Button render");
   return (
     <>
       {href && (
