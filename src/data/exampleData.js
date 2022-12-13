@@ -56,7 +56,7 @@ You can also filter for name and body of the note!`,
     id: Math.floor(Math.random() * 100000),
     title: "Changing colors!",
     body: `Change the color of the note by clicking on
-    the colored circle at the bottom of the note!`,
+the colored circle at the bottom of the note!`,
     date: `${new Date().getDate()}. ${new Date().getMonth()}. ${new Date().getFullYear()}.`,
     color: "blue",
   },
