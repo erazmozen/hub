@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
-import "./sidebar.css";
+import "./sidebar-links.css";
 const SidebarLinks = () => {
   return (
     <div className="router-links">
+      <Link className="common-button" to="/">
+        Home
+      </Link>
       <Link className="common-button" to="/hub">
         Portfolio
       </Link>
