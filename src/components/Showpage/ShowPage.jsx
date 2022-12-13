@@ -1,10 +1,10 @@
 import { Route, Routes } from "react-router-dom";
+import { NotesProvider } from "../../contexts/NotesContext";
 import ShowpageHeader from "./comps/Showpage Header/ShowpageHeader";
 import Portfolio from "./comps/Portfolio/Portfolio";
 import Weather from "./comps/Weather/Weather";
 import Notes from "./comps/Notes/Notes";
 import "./showpage.css";
-import { NotesProvider } from "../../contexts/NotesContext";
 
 const ShowPage = () => {
   console.log("ShowPage render");

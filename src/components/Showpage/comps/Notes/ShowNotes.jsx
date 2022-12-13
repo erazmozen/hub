@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
 import { NotesContext } from "../../../../contexts/NotesContext";
-import Button from "../../../common/Button";
 import Note from "./Note";
+import Button from "../../../common/Button";
 import "./shownotes.css";
 
 const ShowNotes = () => {

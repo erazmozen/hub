@@ -2,10 +2,9 @@ import { useContext } from "react";
 import { TodoProvider } from "../../contexts/TodosContext";
 import { TogglesContext } from "../../contexts/TogglesContext";
 import { IconsContext } from "../../contexts/IconsContext";
-import SidebarLinks from "./SidebarLinks";
+import TodoApplet from "./TodosApplet/TodosApplet";
 import Button from "../common/Button";
 import "./sidebar.css";
-import TodoApplet from "./TodosApplet/TodosApplet";
 
 const Sidebar = () => {
   const { IoMdClose } = useContext(IconsContext);

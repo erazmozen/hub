@@ -1,8 +1,8 @@
 import { useContext, useState } from "react";
 import { NotesContext } from "../../../../contexts/NotesContext";
-import Button from "../../../common/Button";
 import { ACTIONS } from "../../../common/functions/notesReducer";
 import NotesToggleButtons from "./comps/NotesToggleButtons";
+import Button from "../../../common/Button";
 import "./notesform.css";
 
 const NotesForm = () => {

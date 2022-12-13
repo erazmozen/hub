@@ -1,6 +1,6 @@
 import { useState, useContext } from "react";
-import imagePreview from "../../../../../data/prevData";
 import { IconsContext } from "../../../../../contexts/IconsContext";
+import imagePreview from "../../../../../data/prevData";
 import ProjectLink from "./ProjectLink";
 import ProjectPreview from "./ProjectsPreview";
 import Button from "../../../../common/Button";
