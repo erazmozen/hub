@@ -1,0 +1,30 @@
+.router-links {
+  font-size: 1.4em;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 2rem;
+}
+
+.router-links .common-button {
+  background: var(--primary);
+  color: rgba(255, 255, 255, 0.85);
+  flex-grow: 1;
+  margin: 0.4rem;
+  min-width: 200px;
+  max-width: 270px;
+  max-width: 100%;
+  height: 80px;
+  transition: color 0.4s ease-in;
+}
+
+.router-links .common-button:hover {
+  color: white;
+  transition: color 0.3s ease-out;
+}
+
+@media only screen and (max-width: 800px) {
+  .router-links .common-button {
+  }
+}

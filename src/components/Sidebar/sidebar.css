@@ -16,6 +16,7 @@
 }
 @media only screen and (max-width: 800px) {
   .sidebar-wrapper {
+    position: sticky;
     max-height: 80vh;
     overflow-y: scroll;
     -ms-overflow-style: none;
@@ -31,22 +32,10 @@
   margin-bottom: 1rem;
 }
 
-.router-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.router-links .common-button {
-  background: var(--primary);
-  flex-grow: 1;
-  margin: 0.5rem;
-  min-width: 200px;
-}
-
 .sidebar-wrapper > .common-button {
   background: none;
-  margin: 1rem 3rem;
+  font-size: 2em;
+  width: 20%;
 }
 
 /* Sidebar ------ */
