@@ -20,17 +20,23 @@ const Weather = () => {
   console.log("Weather render");
 
   return (
-    <>
-      {!state.loading && (
-        <div className="weather-wrapper">
-          <WeatherContainer data={state.data} city={city} />
+    <div className="weather-wrapper">
+      {state.data == null ? (
+        <h2>Loading..</h2>
+      ) : (
+        <>
+          <WeatherContainer
+            loading={state.loading}
+            data={state.data}
+            city={city}
+          />
           <CityPicker
             changeCity={changeCity}
             weatherCityData={weatherCityData}
           />
-        </div>
+        </>
       )}
-    </>
+    </div>
   );
 };
 
