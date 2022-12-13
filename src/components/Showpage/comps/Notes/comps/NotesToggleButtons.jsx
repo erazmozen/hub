@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { IconsContext } from "../../../../../contexts/IconsContext";
 import { NotesContext } from "../../../../../contexts/NotesContext";
-import Button from "../../../../common/Button";
 import { ACTIONS } from "../../../../common/functions/notesReducer";
+import Button from "../../../../common/Button";
 
 const NotesToggleButtons = ({
   bodyHeight,
