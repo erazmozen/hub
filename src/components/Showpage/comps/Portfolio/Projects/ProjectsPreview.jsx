@@ -18,7 +18,7 @@ const ProjectPreview = ({ index, imagePreview }) => {
         <img
           key={imagePreview.index}
           src={imagePreview[index].image}
-          alt=""
+          alt={imagePreview[index].title}
         />
       </div>
     </div>
