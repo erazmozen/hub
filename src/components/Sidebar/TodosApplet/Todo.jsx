@@ -1,11 +1,13 @@
 import { useContext } from "react";
 import { IconsContext } from "../../../contexts/IconsContext";
+import { TodoContext } from "../../../contexts/TodosContext";
 import { ACTIONS } from "../../common/functions/todosReducer";
 import "./todo.css";
 
-const Todo = ({ todo, dispatch }) => {
+const Todo = ({ todo }) => {
   const { RiCheckDoubleFill, FiMinusSquare } =
     useContext(IconsContext);
+  const { dispatch } = useContext(TodoContext);
   return (
     <div className="single-todo-wrapper">
       <div className="common-icons-wrapper">
