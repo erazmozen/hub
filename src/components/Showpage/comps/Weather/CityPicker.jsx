@@ -28,8 +28,7 @@ const CityPicker = ({ changeCity, weatherCityData }) => {
             key={index}
             onClick={() => changeCity(index, filterCity)}
           >
-            <p>{city.Capital}</p>
-            <p>{city.Country}</p>
+            <p>{`${city.Capital}, ${city.Country}`}</p>
           </div>
         ))}
       </div>
