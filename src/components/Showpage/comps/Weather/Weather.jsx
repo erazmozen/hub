@@ -11,30 +11,21 @@ const Weather = () => {
   const { state } = useApi(
     `https://api.open-meteo.com/v1/forecast?latitude=${city.Latitude}&longitude=${city.Longitude}&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation,rain,showers,snowfall,weathercode&daily=weathercode,temperature_2m_max,temperature_2m_min,apparent_temperature_max,apparent_temperature_min,sunrise,sunset&current_weather=true&timezone=auto`
   );
+  // let state = { data: null };
 
   function changeCity(index, filterCity) {
     setCity(filterCity[index]);
   }
 
-  console.log("Weather render");
+  console.log("Weather render", state, city);
 
   return (
     <div className="weather-wrapper">
-      {state.data == null ? (
-        <h2>Loading..</h2>
-      ) : (
-        <>
-          <WeatherContainer
-            loading={state.loading}
-            data={state.data}
-            city={city}
-          />
-          <CityPicker
-            changeCity={changeCity}
-            weatherCityData={weatherCityData}
-          />
-        </>
-      )}
+      <WeatherContainer data={state.data} city={city} />
+      <CityPicker
+        changeCity={changeCity}
+        weatherCityData={weatherCityData}
+      />
     </div>
   );
 };

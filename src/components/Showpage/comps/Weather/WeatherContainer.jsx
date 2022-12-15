@@ -3,9 +3,11 @@ import { IconsContext } from "../../../../contexts/IconsContext";
 import { returnWeatherIcon } from "../../../common/functions/returnWeatherIcon";
 import "./weathercontainer.css";
 
-const WeatherContainer = ({ data, city, loading }) => {
+const WeatherContainer = ({ data, city }) => {
   const { TbCurrentLocation } = useContext(IconsContext);
   const now = new Date().getHours();
+
+  if (data == null) return <div>loading data</div>;
 
   const weatherDataObject = {
     city: `${city.Country}, ${city.Capital}`,
@@ -34,39 +36,35 @@ const WeatherContainer = ({ data, city, loading }) => {
 
   return (
     <div className="card weather-container-wrapper">
-      {!loading && (
-        <>
-          <div className="weather-header">
-            <div className="weather-title">
-              {weatherDataObject.intervalIcon}
-              <h2>Weather Widget</h2>
-            </div>
-            <h3 className="weather-city">
-              {weatherDataObject.city}
-            </h3>
-            <h4 className="weather-cords">
-              <TbCurrentLocation size={13} />
-              {weatherDataObject.cords}
-            </h4>
-          </div>
-          <div className="wather-body">
-            <h2>{weatherDataObject.currTemp}</h2>
-            <div className="forcast">
-              {Object.entries(timeTempData).map(
-                (data, index) => (
-                  <div key={index} className="pair">
-                    {returnWeatherIcon(
-                      weatherDataObject.hourly.code[index]
-                    )}
-                    <p>{data[0].slice(-5)}</p>
-                    <p>{data[1]}</p>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
-        </>
-      )}
+      <div className="weather-header">
+        <div className="weather-title">
+          {weatherDataObject.intervalIcon}
+          <h2>Weather Widget</h2>
+        </div>
+        <h3 className="weather-city">
+          {weatherDataObject.city}
+        </h3>
+        <h4 className="weather-cords">
+          <TbCurrentLocation size={13} />
+          {weatherDataObject.cords}
+        </h4>
+      </div>
+      <div className="wather-body">
+        <h2>{weatherDataObject.currTemp}</h2>
+        <div className="forcast">
+          {Object.entries(timeTempData).map(
+            (data, index) => (
+              <div key={index} className="pair">
+                {returnWeatherIcon(
+                  weatherDataObject.hourly.code[index]
+                )}
+                <p>{data[0].slice(-5)}</p>
+                <p>{data[1]}</p>
+              </div>
+            )
+          )}
+        </div>
+      </div>
     </div>
   );
 };
