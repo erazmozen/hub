@@ -1,13 +1,14 @@
 import { useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
 import { returnWeatherIcon } from "../../../common/functions/returnWeatherIcon";
+import Loader from "../../../common/Loader";
 import "./weathercontainer.css";
 
 const WeatherContainer = ({ data, city }) => {
   const { TbCurrentLocation } = useContext(IconsContext);
   const now = new Date().getHours();
 
-  if (data == null) return <div>loading data</div>;
+  if (data == null) return <Loader />;
 
   const weatherDataObject = {
     city: `${city.Country}, ${city.Capital}`,
