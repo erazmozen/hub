@@ -16,7 +16,6 @@ const ShowpageHeader = () => {
             <p>Frontend Web Developer</p>
           </div>
         </div>
-        <FiSettings className="showpageheader-settings" />
       </div>
       <SidebarLinks />
     </>
