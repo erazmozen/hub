@@ -2,6 +2,7 @@ import { useContext, useState } from "react";
 import { IconsContext } from "../../../contexts/IconsContext";
 import { TodoContext } from "../../../contexts/TodosContext";
 import { ACTIONS } from "../../common/functions/todosReducer";
+import ValidateTitle from "../../common/ValidateTitle";
 import Todo from "./Todo";
 import "./todosapplet.css";
 
@@ -10,17 +11,22 @@ const TodoApplet = () => {
     useContext(IconsContext);
 
   const { todos, dispatch } = useContext(TodoContext);
-
+  const [validateTitle, setValidateTitle] = useState(true);
   const [title, setTitle] = useState("");
   const [searchToggle, setSearchToggle] = useState(false);
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch({
-      type: ACTIONS.ADD_TODO,
-      payload: { title: title },
-    });
-    setTitle("");
+    if (title === "") {
+      return setValidateTitle(false);
+    } else {
+      setValidateTitle(true);
+      dispatch({
+        type: ACTIONS.ADD_TODO,
+        payload: { title: title },
+      });
+      setTitle("");
+    }
   }
 
   console.log("Todos Applet render");
@@ -35,7 +41,7 @@ const TodoApplet = () => {
           onChange={(e) => setTitle(e.target.value)}
         />
       </form>
-
+      {!validateTitle && <ValidateTitle />}
       <div className="common-icons-wrapper">
         <FiPlusSquare onClick={handleSubmit} />
         <AiOutlineClear
