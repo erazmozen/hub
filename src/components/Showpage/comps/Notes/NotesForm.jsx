@@ -4,12 +4,14 @@ import { ACTIONS } from "../../../common/functions/notesReducer";
 import NotesToggleButtons from "./comps/NotesToggleButtons";
 import Button from "../../../common/Button";
 import "./notesform.css";
+import ValidateTitle from "../../../common/ValidateTitle";
 
 const NotesForm = () => {
   const { dispatch, titleInput, bodyInput } =
     useContext(NotesContext);
 
   const [bodyHeight, setBodyHeight] = useState("200px");
+  const [validateTitle, setValidateTitle] = useState(true);
 
   const heightClass = {
     height: `${bodyHeight}`,
@@ -17,16 +19,21 @@ const NotesForm = () => {
 
   function handleSubmit(e) {
     e.preventDefault();
-    dispatch({
-      type: ACTIONS.ADD_NOTE,
-      payload: {
-        title: titleInput.current.value,
-        body: bodyInput.current.value,
-      },
-    });
-    titleInput.current.value = "";
-    bodyInput.current.value = "";
-    console.log("submit, clearInputs");
+    if (titleInput.current.value === "") {
+      return setValidateTitle(false);
+    } else {
+      setValidateTitle(true);
+      dispatch({
+        type: ACTIONS.ADD_NOTE,
+        payload: {
+          title: titleInput.current.value,
+          body: bodyInput.current.value,
+        },
+      });
+      titleInput.current.value = "";
+      bodyInput.current.value = "";
+      console.log("submit, clearInputs");
+    }
   }
 
   console.log("Notes Form render");
@@ -51,6 +58,7 @@ const NotesForm = () => {
         style={heightClass}
       />
 
+      {!validateTitle && <ValidateTitle />}
       <Button type="submit" title="Save" />
     </form>
   );
