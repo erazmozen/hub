@@ -29,11 +29,13 @@ const Header = () => {
         />
         <Button
           icon={<GrLinkedinOption />}
-          href="www.linkedin.com/in/erazmozen"
+          href="https://www.linkedin.com/in/erazmozen"
+          target="_blank"
         />
         <Button
           icon={<FiGithub />}
           href="https://github.com/erazmozen"
+          target="_blank"
         />
       </div>
       <Clock />
