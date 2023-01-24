@@ -3,7 +3,7 @@ import { TodoProvider } from "../../contexts/TodosContext";
 import { TogglesContext } from "../../contexts/TogglesContext";
 import { IconsContext } from "../../contexts/IconsContext";
 import TodoApplet from "./TodosApplet/TodosApplet";
-import Button from "../common/Button";
+import Button from "../common/components/Button";
 import "./sidebar.css";
 
 const Sidebar = () => {
