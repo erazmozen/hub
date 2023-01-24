@@ -3,7 +3,7 @@ import { IconsContext } from "../../../../../contexts/IconsContext";
 import imagePreview from "../../../../../data/prevData";
 import ProjectLink from "./ProjectLink";
 import ProjectPreview from "./ProjectsPreview";
-import Button from "../../../../common/Button";
+import Button from "../../../../common/components/Button";
 import "./projects.css";
 
 const Projects = () => {
