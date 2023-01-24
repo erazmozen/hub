@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
 import { returnWeatherIcon } from "../../../common/functions/returnWeatherIcon";
-import Loader from "../../../common/Loader";
+import Loader from "../../../common/components/Loader/Loader";
 import "./weathercontainer.css";
 
 const WeatherContainer = ({ data, city }) => {
