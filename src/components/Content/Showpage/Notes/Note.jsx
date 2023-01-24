@@ -2,10 +2,10 @@ import { useState, useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
 import { NotesContext } from "../../../../contexts/NotesContext";
 import { ACTIONS } from "../../../common/functions/notesReducer";
-import WordCounter from "../../../common/WordCounter";
+import WordCounter from "../../../common/components/WordCounter";
 import ColorNotes from "./ColorNotes";
+import Button from "../../../common/components/Button";
 import EditNote from "./EditNote";
-import Button from "../../../common/Button";
 import "./note.css";
 
 const Note = ({ note }) => {

@@ -1,10 +1,10 @@
 import { useContext, useState } from "react";
 import { NotesContext } from "../../../../contexts/NotesContext";
 import { ACTIONS } from "../../../common/functions/notesReducer";
-import NotesToggleButtons from "./comps/NotesToggleButtons";
-import Button from "../../../common/Button";
+import NotesToggleButtons from "./NotesToggleButtons";
+import Button from "../../../common/components/Button";
+import ValidateTitle from "../../../common/components/ValidateTitle/ValidateTitle";
 import "./notesform.css";
-import ValidateTitle from "../../../common/ValidateTitle";
 
 const NotesForm = () => {
   const { dispatch, titleInput, bodyInput } =
