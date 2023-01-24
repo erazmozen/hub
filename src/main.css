@@ -131,12 +131,4 @@ html {
   padding: 1rem;
 }
 
-.validation-error {
-  background-color: rgba(255, 0, 0, 0.5);
-  padding: 1rem;
-  margin: 0.4rem;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-}
-
 /* Common Classes ------ */
