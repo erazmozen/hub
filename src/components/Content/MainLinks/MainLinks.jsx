@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import "./sidebar-links.css";
+import "./mainlinks.css";
 
 const SidebarLinks = () => {
   return (
