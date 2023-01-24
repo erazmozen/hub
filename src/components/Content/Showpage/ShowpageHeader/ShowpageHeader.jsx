@@ -1,11 +1,10 @@
 import { useContext } from "react";
 import { IconsContext } from "../../../../contexts/IconsContext";
-import SidebarLinks from "../../../Sidebar/SidebarLinks";
+import MainLinks from "../../MainLinks/MainLinks";
 import "./showpageheader.css";
 
 const ShowpageHeader = () => {
-  const { CgProfile, FiSettings } =
-    useContext(IconsContext);
+  const { CgProfile } = useContext(IconsContext);
   return (
     <>
       <div className="showpageheader-wrapper">
@@ -17,7 +16,7 @@ const ShowpageHeader = () => {
           </div>
         </div>
       </div>
-      <SidebarLinks />
+      <MainLinks />
     </>
   );
 };
