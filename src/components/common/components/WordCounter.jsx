@@ -1,4 +1,4 @@
-import icons from "../../icons";
+import icons from "../../../icons";
 
 function WordCounter({ toCount }) {
   const splitByWord = toCount.match(/[\w\d-]+/gi);
