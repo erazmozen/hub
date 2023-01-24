@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { TogglesContext } from "../../contexts/TogglesContext";
 import Sidebar from "../Sidebar/Sidebar";
-import ShowPage from "../Showpage/ShowPage";
+import ShowPage from "../Content/Showpage/ShowPage";
 
 const Content = () => {
   const { sidebarToggle, showpageToggle } =

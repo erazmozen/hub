@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router-dom";
-import { NotesProvider } from "../../contexts/NotesContext";
-import ShowpageHeader from "./comps/Showpage Header/ShowpageHeader";
-import Portfolio from "./comps/Portfolio/Portfolio";
-import Weather from "./comps/Weather/Weather";
-import Notes from "./comps/Notes/Notes";
+import { NotesProvider } from "../../../contexts/NotesContext";
+import ShowpageHeader from "./ShowpageHeader/ShowpageHeader";
+import Portfolio from "./Portfolio/Portfolio";
+import Weather from "./Weather/Weather";
+import Notes from "./Notes/Notes";
 import "./showpage.css";
 
 const ShowPage = () => {
