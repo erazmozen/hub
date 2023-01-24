@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { IconsContext } from "../../contexts/IconsContext";
 import { TogglesContext } from "../../contexts/TogglesContext";
-import Clock from "./comps/Clock";
-import Button from "../common/Button";
+import Clock from "./Clock/Clock";
+import Button from "../common/components/Button";
 import "./header.css";
 
 const Header = () => {
