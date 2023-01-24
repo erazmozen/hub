@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { IconsContext } from "../../../contexts/IconsContext";
 import { TodoContext } from "../../../contexts/TodosContext";
 import { ACTIONS } from "../../common/functions/todosReducer";
-import ValidateTitle from "../../common/ValidateTitle";
+import ValidateTitle from "../../common/components/ValidateTitle/ValidateTitle";
 import Todo from "./Todo";
 import "./todosapplet.css";
 
