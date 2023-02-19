@@ -41,3 +41,20 @@
   margin-top: 0.8rem;
   margin-left: 0.4rem;
 }
+
+.body-holder {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.4rem;
+}
+
+.tag {
+  flex-wrap: wrap;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+}
+
+.text {
+  flex-direction: column;
+}
