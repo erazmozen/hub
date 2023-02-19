@@ -12,7 +12,7 @@ const ShowPage = () => {
     <div className="showpage">
       <ShowpageHeader />
       <Routes>
-        <Route path="/hub" element={<Portfolio />}></Route>
+        <Route path="" element={<Portfolio />}></Route>
         <Route
           path="/hub/applets"
           element={
