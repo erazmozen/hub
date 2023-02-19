@@ -27,6 +27,7 @@ const Portfolio = () => {
         <ContentBox
           key={section.id}
           id={section.id}
+          type={section.type}
           title={section.title}
           body={section.body}
         />
