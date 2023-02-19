@@ -1,27 +1,26 @@
 {
   "section1": {
-    "id": "1",
-    "title": "Opis:",
-    "body": "Posedujem dugogodišnje iskustvo u različitim oblastima IT-a, programiranju, grafičkom dizajnu, foto i video montaži kao i u održavanju servera."
+    "id": "about",
+    "type": "text",
+    "title": "About me:",
+    "body": "Front-end web developer with a strong all around IT background looking to learn and expand my knowledge at every opportunity."
   },
   "section2": {
-    "id": "2",
-    "title": "Edukacija",
-    "body": "Gimnazija u Mladenovcu/n (Prirodno-matematički smer)"
+    "id": "strengths",
+    "type": "tags",
+    "title": "Strengths:",
+    "body": "HTML5 /nCSS3 /nSASS /nLESS /nBootstrap /nTailwind /nJavaScript /njQuery /nReact /nReact /nQuery /nZsh /nGit /nGitHub /nDocker /nNGINX /nSSH /nFTP"
   },
   "section3": {
-    "id": "3",
-    "title": "Radovi",
-    "body": "/n- github.com/erazmozen/n- kosmajkafa.rs"
+    "id": "learning",
+    "type": "tags",
+    "title": "Learning:",
+    "body": "TypeScript /nNode.js /nExpress.js /nRedux /nMongoDB /nFirebase"
   },
   "section4": {
-    "id": "4",
-    "title": "Radno iskustvo",
-    "body": "/n- Izrada web stranica./n- Održavanje Linux servera (Nginx, SSH, bash / zsh)./n- Rad u Wordpress, Shopify i ostalim CMS-ovima, kao i različitim FTP solucijama./n- Rad u većini Adobe kao i MS Office programima."
-  },
-  "section5": {
-    "id": "5",
-    "title": "Tehnologije",
-    "body": "/n- HTML5- CSS3 (Flexbox, Grid)/n- Bootstrap, Tailwind/n- Javascript- React (Hooks, API)/n- Firebase / MongoDB/n- Github/n- Python ( Scripts )"
+    "id": "languages",
+    "type": "text",
+    "title": "Languages:",
+    "body": "Serbian: Native /n English: Fluent / C2/nRussian: Intermediate / B2"
   }
 }
